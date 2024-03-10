@@ -1,8 +1,16 @@
 .wheels-background{
-    background-color: rgb(235, 235, 235);
+    background: rgb(88,88,88);
+    background: linear-gradient(302deg, rgb(43, 43, 43) 31%, rgb(14, 14, 14) 100%);
+    background-size: cover;
+}
+.card-background{
+    background: rgb(88,88,88);
+    background: linear-gradient(120deg, rgb(15, 15, 15) 30%, rgb(68, 68, 68) 100%);
     background-size: cover;
 }
 .section-wheels-background{
     background-color: rgb(100, 100, 100);
-    background: url('../assets/background/asphalt.webp');
+    background: url('../assets/background/blackbg.webp');
+    background-attachment: fixed;
+    background-size: cover;
 }

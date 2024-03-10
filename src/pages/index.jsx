@@ -6,6 +6,8 @@ import WheelsEditor from "../components/WheelsEditor";
 import banner1 from '../assets/dummy/banner/banner1.webp'
 import banner2 from '../assets/dummy/banner/banner2.webp'
 import banner3 from '../assets/dummy/banner/banner3.webp'
+import ProductCard from "../components/ProductCard";
+import SectionProduct from "../components/SectionProduct";
 
 function Dashboard() {
   return (
@@ -21,7 +23,7 @@ function Dashboard() {
           <img src={banner3} className="w-full h-full cover"></img>
         </div>
       </Carousel>
-      <div className="w-full pt-16 flex flex-col items-center">
+      <div className="w-full mt-24 mb-8 flex flex-col items-center">
         <div className="w-11/12 md:w-10/12 flex justify-start">
           <div
             className="text-white mb-8 text-4xl md:text-6xl font-bold"
@@ -34,14 +36,39 @@ function Dashboard() {
         <WheelsEditor></WheelsEditor>
       </div>
 
-      {/* <div className="w-full pt-16  flex flex-col items-center">
-        <div className="w-11/12 md:w-10/12 flex justify-start">
+      <div className="w-full mt-16 mb-8 flex flex-col items-center">
+        <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
           <div
             className="text-white mb-8 text-4xl md:text-6xl font-bold"
             data-aos="fade-up"
             data-aos-once="true"
           >
             Our Products
+          </div>
+          <SectionProduct>
+
+          </SectionProduct>
+        </div>
+      </div>
+      {/* <div className="w-full mt-16 mb-8 flex flex-col items-center">
+        <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
+          <div
+            className="text-white mb-8 text-4xl md:text-6xl font-bold"
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            Why Rota Wheels?
+          </div>
+        </div>
+      </div>
+      <div className="w-full mt-16 mb-8 flex flex-col items-center">
+        <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
+          <div
+            className="text-white mb-8 text-4xl md:text-6xl font-bold"
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            Contact Us!
           </div>
         </div>
       </div> */}
