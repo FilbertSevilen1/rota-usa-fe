@@ -1,0 +1,8 @@
+.wheels-background{
+    background-color: rgb(235, 235, 235);
+    background-size: cover;
+}
+.section-wheels-background{
+    background-color: rgb(100, 100, 100);
+    background: url('../assets/background/asphalt.webp');
+}
