@@ -36,7 +36,7 @@ function Dashboard() {
         <WheelsEditor></WheelsEditor>
       </div>
 
-      <div className="w-full mt-16 mb-8 flex flex-col items-center">
+      <div className="w-full mt-16 mb-8 flex flex-col items-center" data-aos="fade-up" data-aos-once="true">
         <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
           <div
             className="text-white mb-8 text-4xl md:text-6xl font-bold"
