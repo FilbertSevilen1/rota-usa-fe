@@ -42,7 +42,7 @@ function Navbar() {
         <button onClick={()=>navigate('/')} className="w-48 xl:w-64 h-full flex items-center transition-all hover:scale-100 active:scale-95">
           <img src={navlogo}></img>
         </button>
-        <div className="h-full hidden xl:gap-20 md:flex items-center">
+        <div className="h-full hidden md:flex items-center">
           {generateNavbarMenu()}
         </div>
         <div className="h-full flex md:hidden items-center">

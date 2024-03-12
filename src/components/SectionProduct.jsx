@@ -94,7 +94,9 @@ import wheel78 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIPST
 
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
+import { useNavigate } from "react-router-dom";
 function SectionProduct() {
+  const navigate = useNavigate();
   const [listWheel, setListWheel] = useState([
     {
       wheelId: 1,
@@ -577,6 +579,7 @@ function SectionProduct() {
               key={index}
               productImage={item.wheelImage}
               productName={item.wheelName}
+              productPrice={item.wheelPrice}
             ></ProductCard>
           );
       });
@@ -585,6 +588,11 @@ function SectionProduct() {
   return (
     <div className="flex gap-2 sm:gap-4 justify-center md:justify-between flex-wrap mb-8">
       {generateProductList()}
+      <div className="w-full flex justify-center mt-4">
+        <button onClick={()=>navigate("/wheels")} className="transition-all hover:scale-105 active:scale-100 card-background w-full sm:w-64 p-4 font-bold text-white text-xl sm:text-2xl rounded-xl border-[0.5px] hover:border-gray-400">
+          See More
+        </button>
+      </div>
     </div>
   );
 }

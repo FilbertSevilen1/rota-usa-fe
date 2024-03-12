@@ -1,4 +1,4 @@
-import '../css/background.css'
+import "../css/background.css";
 // Brand
 import brandBmw from "../assets/brand/bmw.webp";
 import brandFerrari from "../assets/brand/ferrari.webp";
@@ -662,13 +662,30 @@ function WheelsEditor() {
     {
       brandId: 1,
       carImage: carBmw1Color1,
-      carTemplate: 0,
+      carWheelElement1: `
+      mt-[-126.5px] md:mt-[-253px] w-[3.3rem] h-[4.45rem] ml-[11px] md:w-[6.6rem] md:h-[8.9rem] md:ml-[22px] rounded-full relative z-10 bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-116px] md:mt-[-232px] w-[4.4rem] h-[5.2rem] mr-[151.5px] md:w-[8.8rem] md:h-[10.4rem] md:mr-[303px] rounded-full relative z-10 bg-gray-950
+      `,
       carColorImage: [carBmw1Color1],
     },
     {
       brandId: 2,
       carImage: carFerrari1Color1,
-      carTemplate: 1,
+      carWheelElement1: `
+      mt-[-150px] md:mt-[-300px]
+      w-[3.3rem] h-[5.5rem] ml-[0px]
+      md:w-[6.6rem] md:h-[11rem] md:ml-[0px] 
+      rounded-full relative z-10 bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-130px] md:mt-[-260px]
+      w-[4.6rem] h-[6.45rem] mr-[207px] 
+      md:w-[9.2rem] md:h-[12.9rem] md:mr-[414px] 
+      rounded-full relative z-10 
+      wheels bg-gray-950"
+      `,
       carColorImage: [
         carFerrari1Color1,
         carFerrari1Color2,
@@ -681,7 +698,19 @@ function WheelsEditor() {
     {
       brandId: 3,
       carImage: carHonda1Color1,
-      carTemplate: 2,
+      carWheelElement1: `
+      mt-[-125px] md:mt-[-250px]
+      w-[3.3rem] h-[4.5rem] ml-[25px]
+      md:w-[6.6rem] md:h-[9rem] md:ml-[50px] 
+      rounded-full relative z-10 bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-109px] md:mt-[-218px]
+      w-[4.6rem] h-[4.8rem] mr-[117px] 
+      md:w-[9.2rem] md:h-[9.6rem] md:mr-[234px] 
+      rounded-full relative z-10
+      bg-gray-950
+      `,
       carColorImage: [
         carHonda1Color1,
         carHonda1Color2,
@@ -697,7 +726,18 @@ function WheelsEditor() {
     {
       brandId: 4,
       carImage: carLamborghini1Color1,
-      carTemplate: 3,
+      carWheelElement1: `
+      mt-[-136px] md:mt-[-272px] 
+      w-[2.8rem] h-[5.5rem] ml-[0px]
+      md:w-[5.6rem] md:h-[11rem] md:ml-[0px] 
+      rounded-full relative z-10 bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-126px] md:mt-[-252px] 
+      w-[4.45rem] h-[6.25rem] mr-[208px] 
+      md:w-[8.9rem] md:h-[12.5rem] md:mr-[416px] 
+      rounded-full relative z-10 bg-gray-950
+      `,
       carColorImage: [
         carLamborghini1Color1,
         carLamborghini1Color2,
@@ -709,7 +749,19 @@ function WheelsEditor() {
     {
       brandId: 6,
       carImage: carSubaru1Color1,
-      carTemplate: 5,
+      carWheelElement1: `
+      mt-[-126px] md:mt-[-252px]
+      w-[2.9rem] h-[5.5rem] ml-[40px]
+      md:w-[5.8rem] md:h-[11rem] md:ml-[80px]
+      rounded-full relative  wheels bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-126.5px] md:mt-[-253px]
+      w-[4.45rem] h-[6.25rem] mr-[156.5px]
+      md:w-[8.9rem] md:h-[12.5rem] md:mr-[313px]
+      rounded-full relative
+      wheels bg-gray-950"
+      `,
       carColorImage: [
         carSubaru1Color1,
         carSubaru1Color2,
@@ -721,7 +773,19 @@ function WheelsEditor() {
     {
       brandId: 7,
       carImage: carToyota1Color1,
-      carTemplate: 6,
+      carWheelElement1: `
+      mt-[-123px] md:mt-[-246px]
+      w-[2.2rem] h-[4.0rem] ml-[42.5px]
+      md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px]
+      rounded-full relative  wheels bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-110px] md:mt-[-220px]
+      w-[3.6rem] h-[5.2rem] mr-[169px]
+      md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px]
+      rounded-full relative
+      wheels bg-gray-950"
+      `,
       carColorImage: [
         carToyota1Color1,
         carToyota1Color2,
@@ -738,6 +802,19 @@ function WheelsEditor() {
       brandId: 8,
       carImage: carMitsubishi1Color1,
       carTemplate: 7,
+      carWheelElement1: `
+      mt-[-130px] md:mt-[-260px]
+      w-[2.4rem] h-[4.7rem] ml-[17.5px]
+      md:w-[4.8rem] md:h-[9.4rem] md:ml-[35px]
+      rounded-full relative  wheels bg-gray-950
+      `,
+      carWheelElement2: `
+      mt-[-121px] md:mt-[-242px]
+      w-[3.4rem] h-[5.4rem] mr-[225px]
+      md:w-[6.8rem] md:h-[10.8rem] md:mr-[450px]
+      rounded-full relative
+      wheels bg-gray-950"
+      `,
       carColorImage: [
         carMitsubishi1Color1,
         carMitsubishi1Color2,
@@ -758,6 +835,7 @@ function WheelsEditor() {
   const [wheel, setWheel] = useState(wheel1);
 
   const [selectedCar, setSelectedCar] = useState(listCar[0]);
+  const [selectedCarTemplate, setSelectedCarTemplate] = useState(listCar[0]);
   const [selectedWheel, setSelectedWheel] = useState(listWheel[0]);
 
   const [type, setType] = useState(0);
@@ -765,12 +843,13 @@ function WheelsEditor() {
 
   const setCarBrand = (item) => {
     setBrand(item);
-    setSelectedCar();
+    setSelectedCar("");
   };
 
-  const setCarImage = (img, type, color) => {
-    setCar(img.carColorImage[color]);
-    setSelectedCar(img);
+  const setCarImage = (car, type, color) => {
+    setCar(car.carColorImage[color]);
+    setSelectedCar(car);
+    setSelectedCarTemplate(car);
     setType(type);
   };
 
@@ -788,8 +867,10 @@ function WheelsEditor() {
           >
             <button
               className={`${
-                item == selectedWheel ? "scale-105 bg-gray-300" : "scale-100 bg-white"
-              } my-4 shadow-md rounded-xl transition-all hover:scale-105 active:scale-95 font-bold `}
+                item == selectedWheel
+                  ? "scale-105 bg-gray-300"
+                  : "scale-100 bg-white"
+              } my-4 shadow-md rounded-xl transition-all hover:scale-105 active:scale-95 font-bold`}
               onClick={() =>
                 setWheelImage(item.wheelVariant[0].wheelImage, item)
               }
@@ -811,10 +892,14 @@ function WheelsEditor() {
     if (selectedWheel) {
       return selectedWheel.wheelVariant.map((item, index) => {
         return (
-          <div className="flex flex-col items-center">
+          <div
+            className={`transition-all flex flex-col items-center mx-0 md:mx-2`}
+          >
             <button
               className={`${
-                item.wheelImage == wheel ? "scale-105 bg-gray-300" : "scale-100 bg-white"
+                item.wheelImage == wheel
+                  ? "scale-105 bg-gray-300"
+                  : "scale-100 bg-white"
               } my-4 shadow-md rounded-xl transition-all hover:scale-105 active:scale-95 font-bold`}
               onClick={() => setWheelImage(item.wheelImage, selectedWheel)}
             >
@@ -823,7 +908,7 @@ function WheelsEditor() {
                 className="w-16 h-16 md:w-24 md:h-24 rounded-xl"
               ></img>
             </button>
-            <div className="sm:text-sm md:text-l font-bold flex-wrap wrapword">
+            <div className="text-sm text-center md:text-lg font-bold w-16 md:w-24">
               {/* {item.wheelName} */}
             </div>
           </div>
@@ -842,10 +927,7 @@ function WheelsEditor() {
             } w-14 h-14 mt-0 mb-2 md:mt-2 md:mb-4 shadow-md rounded-xl transition-all active:scale-95 font-bold flex justify-center items-center `}
             onClick={() => setCarBrand(item)}
           >
-            <img
-              src={item.brandImage}
-              className="w-12 h-12 contain"
-            ></img>
+            <img src={item.brandImage} className="w-12 h-12 contain"></img>
           </button>
         );
       });
@@ -889,237 +971,52 @@ function WheelsEditor() {
   };
 
   const generateCarImage = () => {
-    switch (type) {
-      case 0:
-        return (
-          <div className="">
+    return (
+      <div className="">
+        <img
+          src={car}
+          className="w-full car shadow-md rounded-2xl z-30 relative"
+        ></img>
+        <div className="flex justify-between h-auto mx-auto relative">
+          <div>
             <img
-              src={car}
-              className=" w-full car shadow-md rounded-2xl z-30 relative"
+              src={wheel}
+              className={selectedCarTemplate.carWheelElement1}
             ></img>
-            <div className="flex justify-between h-auto mx-auto relative">
-              <div className="mt-[-126.5px] md:mt-[-253px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[3.3rem] h-[4.45rem] ml-[11px] 
-                  md:w-[6.6rem] md:h-[8.9rem] md:ml-[22px] 
-                  rounded-full relative z-10 bg-gray-950"
-                ></img>
-              </div>
-              <div className="mt-[-116px] md:mt-[-232px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[4.4rem] h-[5.2rem] mr-[151.5px]
-                  md:w-[8.8rem] md:h-[10.4rem] md:mr-[303px]
-                  rounded-full relative z-10 bg-gray-950"
-                ></img>
-              </div>
-            </div>
           </div>
-        );
-      case 1:
-        return (
-          <div className="">
+          <div>
             <img
-              src={car}
-              className=" w-full car shadow-md rounded-2xl z-30 relative"
+              src={wheel}
+              className={selectedCarTemplate.carWheelElement2}
             ></img>
-            <div className="flex justify-between h-auto mx-auto relative">
-              <div className="mt-[-150px] md:mt-[-300px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[3.3rem] h-[5.5rem] ml-[0px]
-                  md:w-[6.6rem] md:h-[11rem] md:ml-[0px] 
-                  rounded-full relative z-10 bg-gray-950"
-                ></img>
-              </div>
-              <div className="mt-[-130px] md:mt-[-260px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[4.6rem] h-[6.45rem] mr-[207px] 
-                  md:w-[9.2rem] md:h-[12.9rem] md:mr-[414px] 
-                  rounded-full relative z-10 
-                  wheels bg-gray-950"
-                ></img>
-              </div>
-            </div>
           </div>
-        );
+        </div>
+      </div>
+    );
 
-        case 2:
-        return (
-          <div className="">
-            <img
-              src={car}
-              className=" w-full car shadow-md rounded-2xl z-30 relative"
-            ></img>
-            <div className="flex justify-between h-auto mx-auto relative">
-              <div className="mt-[-125px] md:mt-[-250px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[3.3rem] h-[4.5rem] ml-[25px]
-                  md:w-[6.6rem] md:h-[9rem] md:ml-[50px] 
-                  rounded-full relative z-10 bg-gray-950"
-                ></img>
-              </div>
-              <div className="mt-[-109px] md:mt-[-218px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[4.6rem] h-[4.8rem] mr-[117px] 
-                  md:w-[9.2rem] md:h-[9.6rem] md:mr-[234px] 
-                  rounded-full relative z-10
-                   bg-gray-950"
-                ></img>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 3:
-        return (
-          <div className="">
-            <img
-              src={car}
-              className=" w-full car shadow-md rounded-2xl z-30 relative"
-            ></img>
-            <div className="flex justify-between h-auto mx-auto relative">
-              <div className="mt-[-136px] md:mt-[-272px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[2.8rem] h-[5.5rem] ml-[0px]
-                  md:w-[5.6rem] md:h-[11rem] md:ml-[0px] 
-                  rounded-full relative z-10 bg-gray-950"
-                ></img>
-              </div>
-              <div className="mt-[-126px] md:mt-[-252px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[4.45rem] h-[6.25rem] mr-[208px] 
-                  md:w-[8.9rem] md:h-[12.5rem] md:mr-[416px] 
-                  rounded-full relative z-10 bg-gray-950"
-                ></img>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 5:
-        return (
-          <div className="">
-            <img
-              src={car}
-              className=" w-full car shadow-md rounded-2xl z-30 relative"
-            ></img>
-            <div className="flex justify-between h-auto mx-auto relative">
-              <div className="mt-[-126px] md:mt-[-252px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[2.9rem] h-[5.5rem] ml-[40px] 
-                  md:w-[5.8rem] md:h-[11rem] md:ml-[80px] 
-                  
-                  rounded-full relative  wheels bg-gray-950"
-                ></img>
-              </div>
-              <div className="mt-[-126.5px] md:mt-[-253px]">
-                <img
-                  src={wheel}
-                  className="flex 
-                  w-[4.45rem] h-[6.25rem] mr-[156.5px] 
-                  md:w-[8.9rem] md:h-[12.5rem] md:mr-[313px] 
-                  rounded-full relative 
-                  wheels bg-gray-950"
-                ></img>
-              </div>
-            </div>
-          </div>
-        );
-
-        case 6:
-          return (
-            <div className="">
-              <img
-                src={car}
-                className=" w-full car shadow-md rounded-2xl z-30 relative"
-              ></img>
-              <div className="flex justify-between h-auto mx-auto relative">
-                <div className="mt-[-123px] md:mt-[-246px]">
-                  <img
-                    src={wheel}
-                    className="flex 
-                    w-[2.2rem] h-[4.0rem] ml-[42.5px] 
-                    md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px] 
-                    
-                    rounded-full relative  wheels bg-gray-950"
-                  ></img>
-                </div>
-                <div className="mt-[-110px] md:mt-[-220px]">
-                  <img
-                    src={wheel}
-                    className="flex 
-                    w-[3.6rem] h-[5.2rem] mr-[169px] 
-                    md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px] 
-                    rounded-full relative 
-                    wheels bg-gray-950"
-                  ></img>
-                </div>
-              </div>
-            </div>
-          );
-
-          case 7:
-          return (
-            <div className="">
-              <img
-                src={car}
-                className=" w-full car shadow-md rounded-2xl z-30 relative"
-              ></img>
-              <div className="flex justify-between h-auto mx-auto relative">
-                <div className="mt-[-123px] md:mt-[-260px]">
-                  <img
-                    src={wheel}
-                    className="flex 
-                    w-[2.2rem] h-[4.0rem] ml-[42.5px] 
-                    md:w-[4.8rem] md:h-[9.4rem] md:ml-[35px] 
-                    
-                    rounded-full relative  wheels bg-gray-950"
-                  ></img>
-                </div>
-                <div className="mt-[-110px] md:mt-[-242px]">
-                  <img
-                    src={wheel}
-                    className="flex 
-                    w-[3.6rem] h-[5.2rem] mr-[169px] 
-                    md:w-[6.8rem] md:h-[10.8rem] md:mr-[450px] 
-                    rounded-full relative 
-                    wheels bg-gray-950"
-                  ></img>
-                </div>
-              </div>
-            </div>
-          );
-
-      default:
-        break;
-    }
+    // default:
+    //   break;
+    // }
   };
 
   return (
     <div className="text-white px-4 md:px-0  w-11/12 md:w-10/12 w-full flex flex-col overflow-y-hidden overflow-x-hidden mx-auto">
       <div className="w-full flex flex-col xl:flex-row items-center md:items-center justify-between">
-        <div data-aos="fade-right" data-aos-once="true" className="w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4">
+        <div
+          data-aos="fade-right"
+          data-aos-once="true"
+          className="w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4"
+        >
           {generateCarImage()}
         </div>
-        <div data-aos="fade-left" data-aos-once="true" className="w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0 border-[0.5px] border-gray-600">
-          <div className="text-2xl md:text-4xl font-bold mb-4">Select Your Favorite Car</div>
+        <div
+          data-aos="fade-left"
+          data-aos-once="true"
+          className="w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0 border-[0.5px] border-gray-600"
+        >
+          <div className="text-2xl md:text-4xl font-bold mb-4">
+            Select Your Favorite Car
+          </div>
           <div className="gap-4 flex justify-start flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
             {generateBrandList()}
           </div>
@@ -1131,16 +1028,20 @@ function WheelsEditor() {
           </div>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-once="true" className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 border-[0.5px] border-gray-600">
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
+        className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 border-[0.5px] border-gray-600"
+      >
         <div className="text-2xl md:text-4xl font-bold mb-4">Our Wheels</div>
         <div className="gap-4 flex overflow-x-scroll justify-start p-2">
           {generateWheelList()}
         </div>
-        <div className="gap-4 flex overflow-x-scroll justify-start border-gray-200 p-2">
+        <div className="gap-4 flex overflow-x-scroll justify-start p-2">
           {generateWheelVariantList()}
         </div>
       </div>
     </div>
-  )
+  );
 }
 export default WheelsEditor;
