@@ -155,8 +155,27 @@ import wheel76 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIP S
 import wheel77 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIP STREAM_15X7_40_5X114.3_73_SATIN BLACK/plain/DSCF7567nobg.webp";
 import wheel78 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIPSTREAM R_18X9.5_40_5X120_64.1_MAG BLK/plain/DSCF8591nobg.webp";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 function WheelsEditor() {
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 550; // Adjust this value based on your needs
+      const thresholdEnd = 1450;
+      // Check if scroll position is beyond the threshold
+      setIsSticky(scrollPosition > threshold && scrollPosition < thresholdEnd);
+    };
+
+    // Add event listener for scroll events
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [listBrand, setListBrand] = useState([
     {
       brandId: 1,
@@ -1002,19 +1021,19 @@ function WheelsEditor() {
   return (
     <div className="text-white px-4 md:px-0  w-11/12 md:w-10/12 w-full flex flex-col overflow-y-hidden overflow-x-hidden mx-auto">
       <div className="w-full flex flex-col xl:flex-row items-center md:items-center justify-between">
+          <div
+            data-aos="fade md:fade-right"
+            data-aos-once="true"
+            className={`${isSticky?"fixed top-16 z-50 md:flex md:top-0 md:z-10":""} transition-all w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4`}
+          >
+            {generateCarImage()}
+          </div>
         <div
-          data-aos="fade-right"
+          data-aos="fade md:fade-left"
           data-aos-once="true"
-          className="w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4"
+          className={`${isSticky?"mt-[300px] md:mt-0":""}  w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0 border-[0.5px] border-gray-600`}
         >
-          {generateCarImage()}
-        </div>
-        <div
-          data-aos="fade-left"
-          data-aos-once="true"
-          className="w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0 border-[0.5px] border-gray-600"
-        >
-          <div className="text-2xl md:text-4xl font-bold mb-4">
+          <div className={`text-2xl md:text-4xl font-bold mb-4`}>
             Select Your Favorite Car
           </div>
           <div className="gap-4 flex justify-start flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
