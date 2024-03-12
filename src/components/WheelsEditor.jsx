@@ -1031,7 +1031,7 @@ function WheelsEditor() {
         <div
           data-aos="fade md:fade-left"
           data-aos-once="true"
-          className={`${isSticky?"mt-[300px] md:mt-0":""}  w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0 border-[0.5px] border-gray-600`}
+          className={`${isSticky?"mt-[300px] md:mt-0":""}  w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0`}
         >
           <div className={`text-2xl md:text-4xl font-bold mb-4`}>
             Select Your Favorite Car
@@ -1050,7 +1050,7 @@ function WheelsEditor() {
       <div
         data-aos="fade-up"
         data-aos-once="true"
-        className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 border-[0.5px] border-gray-600"
+        className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8"
       >
         <div className="text-2xl md:text-4xl font-bold mb-4">Our Wheels</div>
         <div className="gap-4 flex overflow-x-scroll justify-start p-2">
