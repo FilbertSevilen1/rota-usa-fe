@@ -26,12 +26,12 @@ function About() {
   `);
   return (
     <div className="w-full page-background flex justify-center">
-      <div className="w-11/12 md:w-10/12">
+      <div className="w-11/12 md:w-10/12" data-aos="fade-up" data-aos-once="true">
         <div className="shadow-md text-white flex flex-col md:flex-row my-12 w-full wheels-background rounded-xl">
           <div className="w-full md:w-2/3 p-8">
             <img src={cosmic} className="mx-auto md:mx-0 mb-8 rounded-xl"></img>
             <p
-              className="text-lg md:text-xl text-justify"
+              className="text-md md:text-lg xl:text-xl text-justify"
               dangerouslySetInnerHTML={{ __html: description }}
             ></p>
           </div>

@@ -19,7 +19,7 @@ function App() {
     <Navbar>
 
     </Navbar>
-    <div className='h-16 md:h-20'>
+    <div className='h-16 xl:h-20'>
       
     </div>
     <Routes>

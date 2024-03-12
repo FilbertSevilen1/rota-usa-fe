@@ -24,7 +24,6 @@ function Navbar() {
   const generateNavbarMenu = () => {
     if (menu) {
       return menu.map((item, index) => {
-        console.log(item.menuName, item.menuLink);
         return (
           <NavbarButton
             key={index}
@@ -55,9 +54,9 @@ function Navbar() {
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 17h14M5 12h14M5 7h14"
             />
           </svg>

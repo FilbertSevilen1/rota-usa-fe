@@ -18,13 +18,13 @@ function Dashboard() {
         className="h-96 md:h-[91.5vh] bg-black shadow-2xl"
       >
         <div className="flex h-full items-center justify-center bg-black">
-          <img src={banner1} className="w-full h-full cover"></img>
+          <img src={banner1} className="w-full h-full object-contain xl:object-cover"></img>
         </div>
         <div className="flex h-full items-center justify-center bg-black">
-          <img src={banner2} className="w-full h-full cover"></img>
+          <img src={banner2} className="w-full h-full object-contain xl:object-cover"></img>
         </div>
         <div className="flex h-full items-center justify-center bg-black">
-          <img src={banner3} className="w-full h-full cover"></img>
+          <img src={banner3} className="w-full h-full object-contain xl:object-cover"></img>
         </div>
       </Carousel>
       <div className="w-full mt-24 mb-8 flex flex-col items-center">
