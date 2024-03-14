@@ -177,7 +177,10 @@ function WheelsEditor() {
 
     // Add event listener for scroll events
     window.addEventListener("scroll", handleScroll);
+
     getAllBrands();
+    getAllCars();
+
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -192,7 +195,52 @@ function WheelsEditor() {
           if(item.data){
             setListBrand(item.data)
             setBrand(item.data[0]);
-            generateBrandList();
+            console.log(brand)
+          }
+          else{
+            toast.error("Failed to Get Data", {
+              position: "bottom-center",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              progress: undefined,
+              theme: "dark",
+            });
+          }
+        })
+        .catch((error) => {
+          toast.error(error, {
+            position: "bottom-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            progress: undefined,
+            theme: "dark",
+          });
+
+        });
+    } catch (error) {
+      toast.error(error, {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  };
+
+  const getAllCars = () => {
+    console.log(API_URL);
+    try {
+      Axios.get(API_URL + "/car")
+        .then((item) => {
+          if(item.data){
+            console.log(item.data)
+            setListCar(item.data)
+            setCar(item.data[0].car_image);
+            setSelectedCar(item.data[0])
             console.log(brand)
           }
           else{
@@ -705,17 +753,10 @@ function WheelsEditor() {
       brand_id: 2,
       car_image: carFerrari1Color1,
       car_wheel_element1: `
-      mt-[-150px] md:mt-[-300px]
-      w-[3.3rem] h-[5.5rem] ml-[0px]
-      md:w-[6.6rem] md:h-[11rem] md:ml-[0px] 
-      rounded-full relative z-10 bg-gray-950
+      mt-[-150px] md:mt-[-300px] w-[3.3rem] h-[5.5rem] ml-[0px] md:w-[6.6rem] md:h-[11rem] md:ml-[0px] rounded-full relative z-10 bg-gray-950
       `,
       car_wheel_element2: `
-      mt-[-130px] md:mt-[-260px]
-      w-[4.6rem] h-[6.45rem] mr-[207px] 
-      md:w-[9.2rem] md:h-[12.9rem] md:mr-[414px] 
-      rounded-full relative z-10 
-      wheels bg-gray-950"
+      mt-[-130px] md:mt-[-260px] w-[4.6rem] h-[6.45rem] mr-[207px] md:w-[9.2rem] md:h-[12.9rem] md:mr-[414px] rounded-full relative z-10 wheels bg-gray-950
       `,
       car_details: [
         carFerrari1Color1,
@@ -730,17 +771,10 @@ function WheelsEditor() {
       brand_id: 3,
       car_image: carHonda1Color1,
       car_wheel_element1: `
-      mt-[-125px] md:mt-[-250px]
-      w-[3.3rem] h-[4.5rem] ml-[25px]
-      md:w-[6.6rem] md:h-[9rem] md:ml-[50px] 
-      rounded-full relative z-10 bg-gray-950
+      mt-[-125px] md:mt-[-250px] w-[3.3rem] h-[4.5rem] ml-[25px] md:w-[6.6rem] md:h-[9rem] md:ml-[50px] rounded-full relative z-10 bg-gray-950
       `,
       car_wheel_element2: `
-      mt-[-109px] md:mt-[-218px]
-      w-[4.6rem] h-[4.8rem] mr-[117px] 
-      md:w-[9.2rem] md:h-[9.6rem] md:mr-[234px] 
-      rounded-full relative z-10
-      bg-gray-950
+      mt-[-109px] md:mt-[-218px] w-[4.6rem] h-[4.8rem] mr-[117px] md:w-[9.2rem] md:h-[9.6rem] md:mr-[234px] rounded-full relative z-10 bg-gray-950
       `,
       car_details: [
         carHonda1Color1,
@@ -758,16 +792,10 @@ function WheelsEditor() {
       brand_id: 4,
       car_image: carLamborghini1Color1,
       car_wheel_element1: `
-      mt-[-136px] md:mt-[-272px] 
-      w-[2.8rem] h-[5.5rem] ml-[0px]
-      md:w-[5.6rem] md:h-[11rem] md:ml-[0px] 
-      rounded-full relative z-10 bg-gray-950
+      mt-[-136px] md:mt-[-272px] w-[2.8rem] h-[5.5rem] ml-[0px]md:w-[5.6rem] md:h-[11rem] md:ml-[0px] rounded-full relative z-10 bg-gray-950
       `,
       car_wheel_element2: `
-      mt-[-126px] md:mt-[-252px] 
-      w-[4.45rem] h-[6.25rem] mr-[208px] 
-      md:w-[8.9rem] md:h-[12.5rem] md:mr-[416px] 
-      rounded-full relative z-10 bg-gray-950
+      mt-[-126px] md:mt-[-252px] w-[4.45rem] h-[6.25rem] mr-[208px] md:w-[8.9rem] md:h-[12.5rem] md:mr-[416px] rounded-full relative z-10 bg-gray-950
       `,
       car_details: [
         carLamborghini1Color1,
@@ -781,17 +809,10 @@ function WheelsEditor() {
       brand_id: 6,
       car_image: carSubaru1Color1,
       car_wheel_element1: `
-      mt-[-126px] md:mt-[-252px]
-      w-[2.9rem] h-[5.5rem] ml-[40px]
-      md:w-[5.8rem] md:h-[11rem] md:ml-[80px]
-      rounded-full relative  wheels bg-gray-950
+      mt-[-126px] md:mt-[-252px]w-[2.9rem] h-[5.5rem] ml-[40px]md:w-[5.8rem] md:h-[11rem] md:ml-[80px] rounded-full relative wheels bg-gray-950
       `,
       car_wheel_element2: `
-      mt-[-126.5px] md:mt-[-253px]
-      w-[4.45rem] h-[6.25rem] mr-[156.5px]
-      md:w-[8.9rem] md:h-[12.5rem] md:mr-[313px]
-      rounded-full relative
-      wheels bg-gray-950"
+      mt-[-126.5px] md:mt-[-253px] w-[4.45rem] h-[6.25rem] mr-[156.5px] md:w-[8.9rem] md:h-[12.5rem] md:mr-[313px] rounded-full relative wheels bg-gray-950
       `,
       car_details: [
         carSubaru1Color1,
@@ -805,17 +826,10 @@ function WheelsEditor() {
       brand_id: 7,
       car_image: carToyota1Color1,
       car_wheel_element1: `
-      mt-[-123px] md:mt-[-246px]
-      w-[2.2rem] h-[4.0rem] ml-[42.5px]
-      md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px]
-      rounded-full relative  wheels bg-gray-950
+      mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.0rem] ml-[42.5px] md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px] rounded-full relative  wheels bg-gray-950
       `,
       car_wheel_element2: `
-      mt-[-110px] md:mt-[-220px]
-      w-[3.6rem] h-[5.2rem] mr-[169px]
-      md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px]
-      rounded-full relative
-      wheels bg-gray-950"
+      mt-[-110px] md:mt-[-220px] w-[3.6rem] h-[5.2rem] mr-[169px] md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px] rounded-full relative wheels bg-gray-950
       `,
       car_details: [
         carToyota1Color1,
@@ -834,17 +848,10 @@ function WheelsEditor() {
       car_image: carMitsubishi1Color1,
       carTemplate: 7,
       car_wheel_element1: `
-      mt-[-130px] md:mt-[-260px]
-      w-[2.4rem] h-[4.7rem] ml-[17.5px]
-      md:w-[4.8rem] md:h-[9.4rem] md:ml-[35px]
-      rounded-full relative  wheels bg-gray-950
+      mt-[-130px] md:mt-[-260px] w-[2.4rem] h-[4.7rem] ml-[17.5px] md:w-[4.8rem] md:h-[9.4rem] md:ml-[35px] rounded-full relative wheels bg-gray-950
       `,
       car_wheel_element2: `
-      mt-[-121px] md:mt-[-242px]
-      w-[3.4rem] h-[5.4rem] mr-[225px]
-      md:w-[6.8rem] md:h-[10.8rem] md:mr-[450px]
-      rounded-full relative
-      wheels bg-gray-950"
+      mt-[-121px] md:mt-[-242px] w-[3.4rem] h-[5.4rem] mr-[225px] md:w-[6.8rem] md:h-[10.8rem] md:mr-[450px] rounded-full relative wheels bg-gray-950"
       `,
       car_details: [
         carMitsubishi1Color1,
@@ -877,7 +884,7 @@ function WheelsEditor() {
     setSelectedCar("");
   };
 
-  const setcar_image = (car, type, color) => {
+  const setCarImage = (car, type, color) => {
     setCar(car.car_details[color]);
     setSelectedCar(car);
     setSelectedCarTemplate(car);
@@ -921,7 +928,7 @@ function WheelsEditor() {
       });
     }
   };
-  const generatewheel_detailsList = () => {
+  const generateWheelDetailList = () => {
     if (selectedWheel) {
       return selectedWheel.wheel_details.map((item, index) => {
         return (
@@ -982,11 +989,11 @@ function WheelsEditor() {
             <button
               key={index}
               className="my-4 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
-              onClick={() => setcar_image(car, car.carTemplate, 0)}
+              onClick={() => setCarImage(car, car.carTemplate, 0)}
             >
               <img
                 loading="lazy"
-                src={car.car_image}
+                src={PUBLIC_URL + car.car_image}
                 className="w-20 h-14 rounded-xl contain"
               ></img>
             </button>
@@ -1003,12 +1010,12 @@ function WheelsEditor() {
           key={index}
             className="mt-2 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
             onClick={() =>
-              setcar_image(selectedCar, selectedCar.carTemplate, index)
+              setCarImage(selectedCar, selectedCar.carTemplate, index)
             }
           >
             <img
               loading="lazy"
-              src={car}
+              src={PUBLIC_URL + car}
               className="w-20 h-14 rounded-xl contain"
             ></img>
           </button>
@@ -1017,12 +1024,12 @@ function WheelsEditor() {
     }
   };
 
-  const generatecar_image = () => {
+  const generateCarImage = () => {
     return (
       <div className="">
         <img
           loading="lazy"
-          src={car}
+          src={PUBLIC_URL + car}
           className="w-full car shadow-md rounded-2xl z-30 relative"
         ></img>
         <div className="flex justify-between h-auto mx-auto relative">
@@ -1060,7 +1067,7 @@ function WheelsEditor() {
             isSticky ? "fixed top-16 z-50 md:flex md:top-0 md:z-10" : ""
           } transition-all w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4`}
         >
-          {generatecar_image()}
+          {generateCarImage()}
         </div>
         <div
           data-aos="fade md:fade-left"
@@ -1093,7 +1100,7 @@ function WheelsEditor() {
           {generateWheelList()}
         </div>
         <div className="gap-4 flex overflow-x-scroll justify-start p-2">
-          {generatewheel_detailsList()}
+          {generateWheelDetailList()}
         </div>
       </div>
     </div>

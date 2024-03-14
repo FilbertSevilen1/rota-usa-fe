@@ -96,13 +96,14 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import Axios from 'axios';
 function SectionWheels() {
   const navigate = useNavigate();
   const [listWheel, setListWheel] = useState([
     {
       wheel_id: 1,
       wheel_name: "ATLAS 1",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "ATLAS 1 17_17x8.5_4_5x139.7_106.1_ RL YMH BLK",
           wheel_details_image: wheel1,
@@ -112,7 +113,7 @@ function SectionWheels() {
     {
       wheel_id: 2,
       wheel_name: "CIRCUIT 8",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "CIRCUIT 8_15x6.5_38_8x100x100_67.1_BRONZE",
           wheel_details_image: wheel2,
@@ -122,7 +123,7 @@ function SectionWheels() {
     {
       wheel_id: 3,
       wheel_name: "CIRCUIT 10",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "CIRCUIT 10_15X6.5_45_4X100_67.1_RF SP BRONZE",
           wheel_details_image: wheel3,
@@ -132,7 +133,7 @@ function SectionWheels() {
     {
       wheel_id: 4,
       wheel_name: "D2",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "D2_16x7_40_5x114_73_RL CARBON FIBER",
           wheel_details_image: wheel4,
@@ -142,7 +143,7 @@ function SectionWheels() {
     {
       wheel_id: 5,
       wheel_name: "DPT",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "DPT_17x8_48_10x114x100_73_HYPER BLACK",
           wheel_details_image: wheel5,
@@ -152,7 +153,7 @@ function SectionWheels() {
     {
       wheel_id: 6,
       wheel_name: "FIGHTER",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name:
             "FIGHTER 10H 1670_16X7_40_10X114.3X100_73_HYPER SILVER IMP1",
@@ -163,7 +164,7 @@ function SectionWheels() {
     {
       wheel_id: 7,
       wheel_name: "FIVE STAR OFF",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "FIVE STAR OFF_16x8_10_6x139.7_110_BRONZE",
           wheel_details_image: wheel7,
@@ -173,7 +174,7 @@ function SectionWheels() {
     {
       wheel_id: 8,
       wheel_name: "G-FORCE",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "G-FORCE_17x9_42_5x100_73_HYPER BLACK",
           wheel_details_image: wheel8,
@@ -183,7 +184,7 @@ function SectionWheels() {
     {
       wheel_id: 9,
       wheel_name: "GRID CLASSIC",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "GRID CLASSIC_15x7_0_4x100_67.1_RF SP BRONZE",
           wheel_details_image: wheel9,
@@ -221,7 +222,7 @@ function SectionWheels() {
     {
       wheel_id: 10,
       wheel_name: "GRID CONCAVE",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "GRID CONCAVE_15x8_20_5x114_73_HYPER BLACK",
           wheel_details_image: wheel17,
@@ -267,7 +268,7 @@ function SectionWheels() {
     {
       wheel_id: 11,
       wheel_name: "GRID RACING",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "GRID RACING_15x6.5_38_4x100_67.1_SPORT BRONZE",
           wheel_details_image: wheel27,
@@ -341,7 +342,7 @@ function SectionWheels() {
     {
       wheel_id: 12,
       wheel_name: "HB10",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "HB10_15x7_35_4x100_56.1_RL GUNMETALLIC",
           wheel_details_image: wheel44,
@@ -351,7 +352,7 @@ function SectionWheels() {
     {
       wheel_id: 13,
       wheel_name: "HUNTER",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "HUNTER_15x7_35_4x100_67.1_SPORT BRONZE",
           wheel_details_image: wheel45,
@@ -361,7 +362,7 @@ function SectionWheels() {
     {
       wheel_id: 14,
       wheel_name: "J-SPL",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "J-SPL_15x6.5_37_4x100_67.1_RL CARBON FIBER",
           wheel_details_image: wheel46,
@@ -371,7 +372,7 @@ function SectionWheels() {
     {
       wheel_id: 15,
       wheel_name: "KB-R",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "KBR_18X9.5_38_5X100_73_WHITE",
           wheel_details_image: wheel47,
@@ -389,7 +390,7 @@ function SectionWheels() {
     {
       wheel_id: 16,
       wheel_name: "KENSEI",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "KENSEI_15x9_-15_4x114_73_RL HYP BLK",
           wheel_details_image: wheel50,
@@ -399,7 +400,7 @@ function SectionWheels() {
     {
       wheel_id: 17,
       wheel_name: "MXR",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "MXR-R2 18_18x11_20_5x114_73_RL HYP BLK",
           wheel_details_image: wheel51,
@@ -409,7 +410,7 @@ function SectionWheels() {
     {
       wheel_id: 18,
       wheel_name: "OS MESH",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "OS MESH 15_15x8_20_4x100_67.1_RL STEEL GRAY",
           wheel_details_image: wheel52,
@@ -419,7 +420,7 @@ function SectionWheels() {
     {
       wheel_id: 19,
       wheel_name: "PSD",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
           wheel_details_image: wheel53,
@@ -445,7 +446,7 @@ function SectionWheels() {
     {
       wheel_id: 20,
       wheel_name: "R-SPEC",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "R-SPEC 16_16x7_45_4x100_67.1_SATIN BLACK",
           wheel_details_image: wheel58,
@@ -455,7 +456,7 @@ function SectionWheels() {
     {
       wheel_id: 21,
       wheel_name: "RB",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "RB 15_15x7_4_4x114_73_RL P SILVER",
           wheel_details_image: wheel59,
@@ -513,7 +514,7 @@ function SectionWheels() {
     {
       wheel_id: 22,
       wheel_name: "RECCE",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "RECCE_17X7.5_40_4X108_63.35_HYPER BLACK",
           wheel_details_image: wheel72,
@@ -523,7 +524,7 @@ function SectionWheels() {
     {
       wheel_id: 23,
       wheel_name: "SHAKOTAN",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "SHAKOTAN_15X8_0_4X100_67.1_RF YMH BLACK",
           wheel_details_image: wheel73,
@@ -533,7 +534,7 @@ function SectionWheels() {
     {
       wheel_id: 24,
       wheel_name: "SLIP STREAM",
-      wheelVariant: [
+      wheel_details: [
         {
           wheel_details_name: "SLIP STREAM_15X6.5_40_4X100_67.1_RF GUNMETALLIC",
           wheel_details_image: wheel74,
@@ -563,7 +564,7 @@ function SectionWheels() {
     for (let i = 0; i < listWheel.length; i++) {
       printWheel.push({
         wheel_details_name: listWheel[i].wheel_name,
-        wheel_details_image: listWheel[i].wheelVariant[0].wheel_details_image,
+        wheel_details_image: listWheel[i].wheel_details[0].wheel_details_image,
       });
     }
     getMaxPage(printWheel)
@@ -579,10 +580,10 @@ function SectionWheels() {
     const printWheel = [];
 
     for (let i = 0; i < listWheel.length; i++) {
-      // for (let j = 0; j < listWheel[i].wheelVariant.length; j++) {
+      // for (let j = 0; j < listWheel[i].wheel_details.length; j++) {
         printWheel.push({
           wheel_details_name: listWheel[i].wheel_name,
-          wheel_details_image: listWheel[i].wheelVariant[0].wheel_details_image,
+          wheel_details_image: listWheel[i].wheel_details[0].wheel_details_image,
         });
         //   if (printWheel.length > 9) break;
       // }
