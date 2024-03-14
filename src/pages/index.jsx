@@ -9,22 +9,35 @@ import banner3 from "../assets/dummy/banner/banner3.webp";
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
 import Heading from "../components/base/Heading";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  const navigate = useNavigate();
   return (
     <div className="w-full flex flex-col page-background bg-scroll">
       <Carousel
+        data-aos="fade-up"
+        data-aos-once="true"
         slide={false}
         className="h-96 md:h-[91.5vh] bg-black shadow-2xl"
       >
         <div className="flex h-full items-center justify-center bg-black">
-          <img src={banner1} className="w-full h-full object-contain xl:object-cover"></img>
+          <img loading="lazy"
+            src={banner1}
+            className="w-full h-full object-contain xl:object-cover"
+          ></img>
         </div>
         <div className="flex h-full items-center justify-center bg-black">
-          <img src={banner2} className="w-full h-full object-contain xl:object-cover"></img>
+          <img loading="lazy"
+            src={banner2}
+            className="w-full h-full object-contain xl:object-cover"
+          ></img>
         </div>
         <div className="flex h-full items-center justify-center bg-black">
-          <img src={banner3} className="w-full h-full object-contain xl:object-cover"></img>
+          <img loading="lazy"
+            src={banner3}
+            className="w-full h-full object-contain xl:object-cover"
+          ></img>
         </div>
       </Carousel>
       <div className="w-full mt-24 mb-8 flex flex-col items-center">
@@ -42,6 +55,11 @@ function Dashboard() {
         <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
           <Heading title={"Our Products"}></Heading>
           <SectionProduct></SectionProduct>
+          <div className="w-full flex justify-center mt-4">
+        <button onClick={()=>navigate("/wheels")} className="transition-all hover:scale-105 active:scale-100 card-background w-full sm:w-64 p-4 font-bold text-white text-xl sm:text-2xl rounded-xl border-[0.5px] hover:border-gray-400">
+          See More
+        </button>
+      </div>
         </div>
       </div>
       {/* <div className="w-full mt-16 mb-8 flex flex-col items-center">

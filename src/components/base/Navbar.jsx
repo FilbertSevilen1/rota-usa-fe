@@ -39,7 +39,7 @@ function Navbar() {
     <div className="fixed nav-background w-full h-16 xl:h-20 flex justify-center items-center shadow-md z-50">
       <div className="w-11/12 xl:w-10/12 h-full flex justify-between items-center">
         <button onClick={()=>navigate('/')} className="w-48 xl:w-64 h-full flex items-center transition-all hover:scale-100 active:scale-95">
-          <img src={navlogo}></img>
+          <img loading="lazy" src={navlogo}></img>
         </button>
         <div className="h-full hidden md:flex items-center">
           {generateNavbarMenu()}

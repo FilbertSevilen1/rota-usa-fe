@@ -9,6 +9,7 @@ import Footer from './components/base/Footer';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import About from './pages/about';
+import Wheels from './pages/wheels';
 
 function App() {
   useEffect(()=>{
@@ -24,6 +25,7 @@ function App() {
     </div>
     <Routes>
       <Route path="/" element={<Dashboard />}></Route>
+      <Route path="/wheels" element={<Wheels />}></Route>
       <Route path="/about" element={<About />}></Route>
     </Routes>
     <Footer>
