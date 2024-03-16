@@ -49,3 +49,23 @@ code {
   word-break: break-all;
   white-space: normal;
 }
+
+.input{
+  border: none;
+  outline: none;
+  color:white;
+  background:none;
+  border-bottom:2px solid white;
+  transition: 150ms all ease;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.input:hover{
+  border-color: rgb(0, 170, 9);
+}
+.input:active{
+  border-color: rgb(0, 170, 9);
+}
+.input:focus{
+  outline: none;
+}
