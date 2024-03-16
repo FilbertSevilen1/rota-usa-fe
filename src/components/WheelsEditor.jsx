@@ -284,7 +284,7 @@ function WheelsEditor() {
       wheel_name: "ATLAS 1",
       wheel_details: [
         {
-          wheel_name: "ATLAS 1 17_17x8.5_4_5x139.7_106.1_ RL YMH BLK",
+          wheel_details_name: "ATLAS 1 17_17x8.5_4_5x139.7_106.1_ RL YMH BLK",
           wheel_image: wheel1,
         },
       ],
@@ -294,7 +294,7 @@ function WheelsEditor() {
       wheel_name: "CIRCUIT 8",
       wheel_details: [
         {
-          wheel_name: "CIRCUIT 8_15x6.5_38_8x100x100_67.1_BRONZE",
+          wheel_details_name: "CIRCUIT 8_15x6.5_38_8x100x100_67.1_BRONZE",
           wheel_image: wheel2,
         },
       ],
@@ -304,7 +304,7 @@ function WheelsEditor() {
       wheel_name: "CIRCUIT 10",
       wheel_details: [
         {
-          wheel_name: "CIRCUIT 10_15X6.5_45_4X100_67.1_RF SP BRONZE",
+          wheel_details_name: "CIRCUIT 10_15X6.5_45_4X100_67.1_RF SP BRONZE",
           wheel_image: wheel3,
         },
       ],
@@ -314,7 +314,7 @@ function WheelsEditor() {
       wheel_name: "D2",
       wheel_details: [
         {
-          wheel_name: "D2_16x7_40_5x114_73_RL CARBON FIBER",
+          wheel_details_name: "D2_16x7_40_5x114_73_RL CARBON FIBER",
           wheel_image: wheel4,
         },
       ],
@@ -324,7 +324,7 @@ function WheelsEditor() {
       wheel_name: "DPT",
       wheel_details: [
         {
-          wheel_name: "DPT_17x8_48_10x114x100_73_HYPER BLACK",
+          wheel_details_name: "DPT_17x8_48_10x114x100_73_HYPER BLACK",
           wheel_image: wheel5,
         },
       ],
@@ -334,7 +334,7 @@ function WheelsEditor() {
       wheel_name: "FIGHTER",
       wheel_details: [
         {
-          wheel_name:
+          wheel_details_name:
             "FIGHTER 10H 1670_16X7_40_10X114.3X100_73_HYPER SILVER IMP1",
           wheel_image: wheel6,
         },
@@ -345,7 +345,7 @@ function WheelsEditor() {
       wheel_name: "FIVE STAR OFF",
       wheel_details: [
         {
-          wheel_name: "FIVE STAR OFF_16x8_10_6x139.7_110_BRONZE",
+          wheel_details_name: "FIVE STAR OFF_16x8_10_6x139.7_110_BRONZE",
           wheel_image: wheel7,
         },
       ],
@@ -355,7 +355,7 @@ function WheelsEditor() {
       wheel_name: "G-FORCE",
       wheel_details: [
         {
-          wheel_name: "G-FORCE_17x9_42_5x100_73_HYPER BLACK",
+          wheel_details_name: "G-FORCE_17x9_42_5x100_73_HYPER BLACK",
           wheel_image: wheel8,
         },
       ],
@@ -365,35 +365,35 @@ function WheelsEditor() {
       wheel_name: "GRID CLASSIC",
       wheel_details: [
         {
-          wheel_name: "GRID CLASSIC_15x7_0_4x100_67.1_RF SP BRONZE",
+          wheel_details_name: "GRID CLASSIC_15x7_0_4x100_67.1_RF SP BRONZE",
           wheel_image: wheel9,
         },
         {
-          wheel_name: "GRID CLASSIC_15x7_20_4x100_67.1_BRONZE",
+          wheel_details_name: "GRID CLASSIC_15x7_20_4x100_67.1_BRONZE",
           wheel_image: wheel10,
         },
         {
-          wheel_name: "GRID CLASSIC_15x7_20_4x100_67.1_WHITE",
+          wheel_details_name: "GRID CLASSIC_15x7_20_4x100_67.1_WHITE",
           wheel_image: wheel11,
         },
         {
-          wheel_name: "GRID CLASSIC_15x8_0_4x100_67.1_RF P SILVER",
+          wheel_details_name: "GRID CLASSIC_15x8_0_4x100_67.1_RF P SILVER",
           wheel_image: wheel12,
         },
         {
-          wheel_name: "GRID CLASSIC_15x8_0_5x114_73_FLAT GUN YMH BLK LIP",
+          wheel_details_name: "GRID CLASSIC_15x8_0_5x114_73_FLAT GUN YMH BLK LIP",
           wheel_image: wheel13,
         },
         {
-          wheel_name: "GRID CLASSIC_15x9_-15_4x114_73_RF SP BRONZE",
+          wheel_details_name: "GRID CLASSIC_15x9_-15_4x114_73_RF SP BRONZE",
           wheel_image: wheel14,
         },
         {
-          wheel_name: "GRID CLASSIC_16x8_20_4x100_67.1_SATIN BLACK",
+          wheel_details_name: "GRID CLASSIC_16x8_20_4x100_67.1_SATIN BLACK",
           wheel_image: wheel15,
         },
         {
-          wheel_name: "GRID CLASSIC_16x8_20_5x114_73_WHITE",
+          wheel_details_name: "GRID CLASSIC_16x8_20_5x114_73_WHITE",
           wheel_image: wheel16,
         },
       ],
@@ -403,43 +403,43 @@ function WheelsEditor() {
       wheel_name: "GRID CONCAVE",
       wheel_details: [
         {
-          wheel_name: "GRID CONCAVE_15x8_20_5x114_73_HYPER BLACK",
+          wheel_details_name: "GRID CONCAVE_15x8_20_5x114_73_HYPER BLACK",
           wheel_image: wheel17,
         },
         {
-          wheel_name: "GRID CONCAVE_15x8_20_5x114_73_WHITE",
+          wheel_details_name: "GRID CONCAVE_15x8_20_5x114_73_WHITE",
           wheel_image: wheel18,
         },
         {
-          wheel_name: "GRID CONCAVE_15X8_20_5X114.3_73_PLAIN SILVER",
+          wheel_details_name: "GRID CONCAVE_15X8_20_5X114.3_73_PLAIN SILVER",
           wheel_image: wheel19,
         },
         {
-          wheel_name: "GRID CONCAVE_15X8_20_5X114.3_73_RF P SILVER",
+          wheel_details_name: "GRID CONCAVE_15X8_20_5X114.3_73_RF P SILVER",
           wheel_image: wheel20,
         },
         {
-          wheel_name: "GRID CONCAVE_15X8_20_5X114.3_73_RF SP BRONZE",
+          wheel_details_name: "GRID CONCAVE_15X8_20_5X114.3_73_RF SP BRONZE",
           wheel_image: wheel21,
         },
         {
-          wheel_name: "GRID CONCAVE_15x9_36_4x100_67.1_HYPER BLACK",
+          wheel_details_name: "GRID CONCAVE_15x9_36_4x100_67.1_HYPER BLACK",
           wheel_image: wheel22,
         },
         {
-          wheel_name: "GRID CONCAVE_15x9_36_4x100_67.1_SPEED BRONZE",
+          wheel_details_name: "GRID CONCAVE_15x9_36_4x100_67.1_SPEED BRONZE",
           wheel_image: wheel23,
         },
         {
-          wheel_name: "GRID CONCAVE_16X8_20_5X114.3_73_RF P SILVER",
+          wheel_details_name: "GRID CONCAVE_16X8_20_5X114.3_73_RF P SILVER",
           wheel_image: wheel24,
         },
         {
-          wheel_name: "GRID CONCAVE_16X8_20_5X114.3_73_SATIN BLACK",
+          wheel_details_name: "GRID CONCAVE_16X8_20_5X114.3_73_SATIN BLACK",
           wheel_image: wheel25,
         },
         {
-          wheel_name: "GRID CONCAVE_16X8_20_5X114.3_73_WHITE",
+          wheel_details_name: "GRID CONCAVE_16X8_20_5X114.3_73_WHITE",
           wheel_image: wheel26,
         },
       ],
@@ -449,71 +449,71 @@ function WheelsEditor() {
       wheel_name: "GRID RACING",
       wheel_details: [
         {
-          wheel_name: "GRID RACING_15x6.5_38_4x100_67.1_SPORT BRONZE",
+          wheel_details_name: "GRID RACING_15x6.5_38_4x100_67.1_SPORT BRONZE",
           wheel_image: wheel27,
         },
         {
-          wheel_name: "GRID RACING_15x7_38_4x100_67.1_PCWH_WHITE",
+          wheel_details_name: "GRID RACING_15x7_38_4x100_67.1_PCWH_WHITE",
           wheel_image: wheel28,
         },
         {
-          wheel_name: "GRID RACING_16x7_42_4x108_63.35_SATIN BLACK",
+          wheel_details_name: "GRID RACING_16x7_42_4x108_63.35_SATIN BLACK",
           wheel_image: wheel29,
         },
         {
-          wheel_name: "GRID RACING_17x7.5_45_5x114_73_PCSB_RF SP BRONZE",
+          wheel_details_name: "GRID RACING_17x7.5_45_5x114_73_PCSB_RF SP BRONZE",
           wheel_image: wheel30,
         },
         {
-          wheel_name: "GRID RACING_17x8_40_4x108_73_HYPER BLACK",
+          wheel_details_name: "GRID RACING_17x8_40_4x108_73_HYPER BLACK",
           wheel_image: wheel31,
         },
         {
-          wheel_name: "GRID RACING_17x8_40_4x108_73_WHITE",
+          wheel_details_name: "GRID RACING_17x8_40_4x108_73_WHITE",
           wheel_image: wheel32,
         },
         {
-          wheel_name: "GRID RACING_17x8_44_5x100_73_PLAIN GOLD",
+          wheel_details_name: "GRID RACING_17x8_44_5x100_73_PLAIN GOLD",
           wheel_image: wheel33,
         },
         {
-          wheel_name: "GRID RACING_17x9_42_5x114_73_SATIN BLACK",
+          wheel_details_name: "GRID RACING_17x9_42_5x114_73_SATIN BLACK",
           wheel_image: wheel34,
         },
         {
-          wheel_name: "GRID RACING_18x9.5_20_5x114_73_PLAIN GOLD",
+          wheel_details_name: "GRID RACING_18x9.5_20_5x114_73_PLAIN GOLD",
           wheel_image: wheel35,
         },
         {
-          wheel_name: "GRID RACING_18x10_30_5x100_73_FLAT BLACK",
+          wheel_details_name: "GRID RACING_18x10_30_5x100_73_FLAT BLACK",
           wheel_image: wheel36,
         },
         {
-          wheel_name: "GRID RACING_19x8.5_44_5x114_73_CHAMELEON",
+          wheel_details_name: "GRID RACING_19x8.5_44_5x114_73_CHAMELEON",
           wheel_image: wheel37,
         },
         {
-          wheel_name: "GRID RACING_19x8.5_44_5x114_73_SPEED BRONZE",
+          wheel_details_name: "GRID RACING_19x8.5_44_5x114_73_SPEED BRONZE",
           wheel_image: wheel38,
         },
         {
-          wheel_name: "GRID RACING_19x9.5_38_5x114_73_TITANIUM CHROME",
+          wheel_details_name: "GRID RACING_19x9.5_38_5x114_73_TITANIUM CHROME",
           wheel_image: wheel39,
         },
         {
-          wheel_name: "GRID RACING_19X9.5_45_5X120_64.1_COSMIC BLUE",
+          wheel_details_name: "GRID RACING_19X9.5_45_5X120_64.1_COSMIC BLUE",
           wheel_image: wheel40,
         },
         {
-          wheel_name: "GRID RACING_19X9.5_45_5X120_64.1_RF SP BRONZE",
+          wheel_details_name: "GRID RACING_19X9.5_45_5X120_64.1_RF SP BRONZE",
           wheel_image: wheel41,
         },
         {
-          wheel_name: "GRID RACING_19x9.5_45_5X120_64.1_SATIN BLACK",
+          wheel_details_name: "GRID RACING_19x9.5_45_5X120_64.1_SATIN BLACK",
           wheel_image: wheel42,
         },
         {
-          wheel_name: "GRID RACING_19x10.5_15_5x114_73_FLAT BLACK",
+          wheel_details_name: "GRID RACING_19x10.5_15_5x114_73_FLAT BLACK",
           wheel_image: wheel43,
         },
       ],
@@ -523,7 +523,7 @@ function WheelsEditor() {
       wheel_name: "HB10",
       wheel_details: [
         {
-          wheel_name: "HB10_15x7_35_4x100_56.1_RL GUNMETALLIC",
+          wheel_details_name: "HB10_15x7_35_4x100_56.1_RL GUNMETALLIC",
           wheel_image: wheel44,
         },
       ],
@@ -533,7 +533,7 @@ function WheelsEditor() {
       wheel_name: "HUNTER",
       wheel_details: [
         {
-          wheel_name: "HUNTER_15x7_35_4x100_67.1_SPORT BRONZE",
+          wheel_details_name: "HUNTER_15x7_35_4x100_67.1_SPORT BRONZE",
           wheel_image: wheel45,
         },
       ],
@@ -543,7 +543,7 @@ function WheelsEditor() {
       wheel_name: "J-SPL",
       wheel_details: [
         {
-          wheel_name: "J-SPL_15x6.5_37_4x100_67.1_RL CARBON FIBER",
+          wheel_details_name: "J-SPL_15x6.5_37_4x100_67.1_RL CARBON FIBER",
           wheel_image: wheel46,
         },
       ],
@@ -553,15 +553,15 @@ function WheelsEditor() {
       wheel_name: "KB-R",
       wheel_details: [
         {
-          wheel_name: "KBR_18X9.5_38_5X100_73_WHITE",
+          wheel_details_name: "KBR_18X9.5_38_5X100_73_WHITE",
           wheel_image: wheel47,
         },
         {
-          wheel_name: "KBR_18x9.5_38_5x114_73_SATIN BLACK",
+          wheel_details_name: "KBR_18x9.5_38_5x114_73_SATIN BLACK",
           wheel_image: wheel48,
         },
         {
-          wheel_name: "KBR_18X9.5_38_5X114.3_73_PLAIN GOLD",
+          wheel_details_name: "KBR_18X9.5_38_5X114.3_73_PLAIN GOLD",
           wheel_image: wheel49,
         },
       ],
@@ -571,7 +571,7 @@ function WheelsEditor() {
       wheel_name: "KENSEI",
       wheel_details: [
         {
-          wheel_name: "KENSEI_15x9_-15_4x114_73_RL HYP BLK",
+          wheel_details_name: "KENSEI_15x9_-15_4x114_73_RL HYP BLK",
           wheel_image: wheel50,
         },
       ],
@@ -581,7 +581,7 @@ function WheelsEditor() {
       wheel_name: "MXR",
       wheel_details: [
         {
-          wheel_name: "MXR-R2 18_18x11_20_5x114_73_RL HYP BLK",
+          wheel_details_name: "MXR-R2 18_18x11_20_5x114_73_RL HYP BLK",
           wheel_image: wheel51,
         },
       ],
@@ -591,7 +591,7 @@ function WheelsEditor() {
       wheel_name: "OS MESH",
       wheel_details: [
         {
-          wheel_name: "OS MESH 15_15x8_20_4x100_67.1_RL STEEL GRAY",
+          wheel_details_name: "OS MESH 15_15x8_20_4x100_67.1_RL STEEL GRAY",
           wheel_image: wheel52,
         },
       ],
@@ -601,23 +601,23 @@ function WheelsEditor() {
       wheel_name: "PSD",
       wheel_details: [
         {
-          wheel_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
+          wheel_details_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
           wheel_image: wheel53,
         },
         {
-          wheel_name: "PSD 17_17x7.5_35_5x130_71.6_RL YMH BLACK",
+          wheel_details_name: "PSD 17_17x7.5_35_5x130_71.6_RL YMH BLACK",
           wheel_image: wheel54,
         },
         {
-          wheel_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
+          wheel_details_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
           wheel_image: wheel55,
         },
         {
-          wheel_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
+          wheel_details_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
           wheel_image: wheel56,
         },
         {
-          wheel_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
+          wheel_details_name: "PSD 17_17x7.5_35_5x130_71.6_FSL FSB FBI",
           wheel_image: wheel57,
         },
       ],
@@ -627,7 +627,7 @@ function WheelsEditor() {
       wheel_name: "R-SPEC",
       wheel_details: [
         {
-          wheel_name: "R-SPEC 16_16x7_45_4x100_67.1_SATIN BLACK",
+          wheel_details_name: "R-SPEC 16_16x7_45_4x100_67.1_SATIN BLACK",
           wheel_image: wheel58,
         },
       ],
@@ -637,55 +637,55 @@ function WheelsEditor() {
       wheel_name: "RB",
       wheel_details: [
         {
-          wheel_name: "RB 15_15x7_4_4x114_73_RL P SILVER",
+          wheel_details_name: "RB 15_15x7_4_4x114_73_RL P SILVER",
           wheel_image: wheel59,
         },
         {
-          wheel_name: "RB 15_15X7_4_4X114.3_73_SATIN BLACK",
+          wheel_details_name: "RB 15_15X7_4_4X114.3_73_SATIN BLACK",
           wheel_image: wheel60,
         },
         {
-          wheel_name: "RB 15_15x7_12_4x114_73_RL P SILVER",
+          wheel_details_name: "RB 15_15x7_12_4x114_73_RL P SILVER",
           wheel_image: wheel61,
         },
         {
-          wheel_name: "RB 16_16X7_40_4X100_56.1_RL GUNMETALLIC",
+          wheel_details_name: "RB 16_16X7_40_4X100_56.1_RL GUNMETALLIC",
           wheel_image: wheel62,
         },
         {
-          wheel_name: "RB 17_17X7.5_45_4X100_56.1_RL P SILVER",
+          wheel_details_name: "RB 17_17X7.5_45_4X100_56.1_RL P SILVER",
           wheel_image: wheel63,
         },
         {
-          wheel_name: "RB REAR 17_17X8.5_4_4X114.3_73_RL HYP BLACK",
+          wheel_details_name: "RB REAR 17_17X8.5_4_4X114.3_73_RL HYP BLACK",
           wheel_image: wheel64,
         },
         {
-          wheel_name: "RB_13x8_4_4x114_73_RL P SILVER",
+          wheel_details_name: "RB_13x8_4_4x114_73_RL P SILVER",
           wheel_image: wheel65,
         },
         {
-          wheel_name: "RB-X 17_17X9_-13_4X114.3_73_RL GUNMETALLIC",
+          wheel_details_name: "RB-X 17_17X9_-13_4X114.3_73_RL GUNMETALLIC",
           wheel_image: wheel66,
         },
         {
-          wheel_name: "RB-X 17_17X9_-13_4X114.3_73_RL HYP BLACK",
+          wheel_details_name: "RB-X 17_17X9_-13_4X114.3_73_RL HYP BLACK",
           wheel_image: wheel67,
         },
         {
-          wheel_name: "RB-X 17_17X9_-13_4X114.3_73_RL YMH BLK",
+          wheel_details_name: "RB-X 17_17X9_-13_4X114.3_73_RL YMH BLK",
           wheel_image: wheel68,
         },
         {
-          wheel_name: "RB-X 17_17X9.5_-19_4X114.3_73_RL GUNMETALLIC",
+          wheel_details_name: "RB-X 17_17X9.5_-19_4X114.3_73_RL GUNMETALLIC",
           wheel_image: wheel69,
         },
         {
-          wheel_name: "RB-X 17_17X9.5_-19_4X114.3_73_RL HYP BLACK",
+          wheel_details_name: "RB-X 17_17X9.5_-19_4X114.3_73_RL HYP BLACK",
           wheel_image: wheel70,
         },
         {
-          wheel_name: "RB-X 17_17X9_-13_4X114.3_73_RL YMH BLK",
+          wheel_details_name: "RB-X 17_17X9_-13_4X114.3_73_RL YMH BLK",
           wheel_image: wheel71,
         },
       ],
@@ -695,7 +695,7 @@ function WheelsEditor() {
       wheel_name: "RECCE",
       wheel_details: [
         {
-          wheel_name: "RECCE_17X7.5_40_4X108_63.35_HYPER BLACK",
+          wheel_details_name: "RECCE_17X7.5_40_4X108_63.35_HYPER BLACK",
           wheel_image: wheel72,
         },
       ],
@@ -705,7 +705,7 @@ function WheelsEditor() {
       wheel_name: "SHAKOTAN",
       wheel_details: [
         {
-          wheel_name: "SHAKOTAN_15X8_0_4X100_67.1_RF YMH BLACK",
+          wheel_details_name: "SHAKOTAN_15X8_0_4X100_67.1_RF YMH BLACK",
           wheel_image: wheel73,
         },
       ],
@@ -715,23 +715,23 @@ function WheelsEditor() {
       wheel_name: "SLIP STREAM",
       wheel_details: [
         {
-          wheel_name: "SLIP STREAM_15X6.5_40_4X100_67.1_RF GUNMETALLIC",
+          wheel_details_name: "SLIP STREAM_15X6.5_40_4X100_67.1_RF GUNMETALLIC",
           wheel_image: wheel74,
         },
         {
-          wheel_name: "SLIP STREAM_15X7_35_5X100_57.1_PLAIN SILVER",
+          wheel_details_name: "SLIP STREAM_15X7_35_5X100_57.1_PLAIN SILVER",
           wheel_image: wheel75,
         },
         {
-          wheel_name: "SLIP STREAM_15X7_40_4X100_56.1_RF GUNMETALLIC",
+          wheel_details_name: "SLIP STREAM_15X7_40_4X100_56.1_RF GUNMETALLIC",
           wheel_image: wheel76,
         },
         {
-          wheel_name: "SLIP STREAM_15X7_40_5X114.3_73_SATIN BLACK",
+          wheel_details_name: "SLIP STREAM_15X7_40_5X114.3_73_SATIN BLACK",
           wheel_image: wheel77,
         },
         {
-          wheel_name: "SLIPSTREAM R_18X9.5_40_5X120_64.1_MAG BLK",
+          wheel_details_name: "SLIPSTREAM R_18X9.5_40_5X120_64.1_MAG BLK",
           wheel_image: wheel78,
         },
       ],
