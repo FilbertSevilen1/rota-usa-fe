@@ -578,12 +578,17 @@ function Wheels() {
     } else setMaxPage(Math.floor(item.length / 10) + 1);
   };
 
+  const gotoWheelDetails = (item) => {
+    navigate(`/wheels/${item.wheel_id}`);
+  };
+
   const generateProductList = () => {
     const printWheel = [];
 
     for (let i = 0; i < listWheel.length; i++) {
       // for (let j = 0; j < listWheel[i].wheel_details.length; j++) {
       printWheel.push({
+        wheel_id: listWheel[i].wheel_id,
         wheel_details_name: listWheel[i].wheel_name,
         wheel_details_image: listWheel[i].wheel_details[0].wheel_details_image,
       });
@@ -595,12 +600,14 @@ function Wheels() {
       return printWheel.map((item, index) => {
         if ((page - 1) * 10 < index + 1 && index + 1 <= page * 10)
           return (
-            <ProductCard
-              key={index}
-              productImage={item.wheel_details_image}
-              productName={item.wheel_details_name}
-              // productPrice={item.wheelPrice}
-            ></ProductCard>
+            <div onClick={() => gotoWheelDetails(item)}>
+              <ProductCard
+                key={index}
+                productImage={item.wheel_details_image}
+                productName={item.wheel_details_name}
+                // productPrice={item.wheelPrice}
+              ></ProductCard>
+            </div>
           );
       });
     }
@@ -617,6 +624,20 @@ function Wheels() {
   const nextPage = () => {
     if (page >= maxPage) return;
     setPage(page + 1);
+  };
+
+  const [searchInput, setSearchInput] = useState("");
+  const [filterInput, setFilterInput] = useState("");
+  const [sortInput, setSortInput] = useState("");
+
+  const handleSearchInput = (event) => {
+    setSearchInput(event.target.value);
+  };
+  const handleFilterInput = (event) => {
+    setSortInput(event.target.value);
+  };
+  const handleSortInput = (event) => {
+    setFilterInput(event.target.value);
   };
 
   return (
@@ -645,6 +666,7 @@ function Wheels() {
               <input
                 className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
                 placeholder="Search by Wheel's Name"
+                onChange={handleSearchInput}
               ></input>
             </div>
             <div className="w-full md:w-1/4 flex items-center">
@@ -662,6 +684,7 @@ function Wheels() {
               <select
                 className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
                 placeholder="Search"
+                onChange={handleFilterInput}
               >
                 <option value="">Filter By</option>
               </select>
@@ -681,6 +704,7 @@ function Wheels() {
               <select
                 className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
                 placeholder="Search"
+                onChange={handleSortInput}
               >
                 <option value="">Sort By</option>
               </select>

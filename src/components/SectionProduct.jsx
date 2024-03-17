@@ -92,10 +92,10 @@ import wheel76 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIP S
 import wheel77 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIP STREAM_15X7_40_5X114.3_73_SATIN BLACK/plain/DSCF7567nobg.webp";
 import wheel78 from "../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIPSTREAM R_18X9.5_40_5X120_64.1_MAG BLK/plain/DSCF8591nobg.webp";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { useNavigate } from "react-router-dom";
-function SectionProduct() {
+function SectionProduct({ curr }) {
   const navigate = useNavigate();
   const [listWheel, setListWheel] = useState([
     {
@@ -200,7 +200,8 @@ function SectionProduct() {
           wheel_image: wheel12,
         },
         {
-          wheel_details_name: "GRID CLASSIC_15x8_0_5x114_73_FLAT GUN YMH BLK LIP",
+          wheel_details_name:
+            "GRID CLASSIC_15x8_0_5x114_73_FLAT GUN YMH BLK LIP",
           wheel_image: wheel13,
         },
         {
@@ -280,7 +281,8 @@ function SectionProduct() {
           wheel_image: wheel29,
         },
         {
-          wheel_details_name: "GRID RACING_17x7.5_45_5x114_73_PCSB_RF SP BRONZE",
+          wheel_details_name:
+            "GRID RACING_17x7.5_45_5x114_73_PCSB_RF SP BRONZE",
           wheel_image: wheel30,
         },
         {
@@ -557,28 +559,47 @@ function SectionProduct() {
     },
   ]);
 
-  const generateProductList = () => {
+  const [activeWheels, setActiveWheels] = useState([]);
+
+  useEffect(() => {
+    readProductList();
+  }, []);
+
+  const readProductList = () => {
     const printWheel = [];
 
     for (let i = 0; i < listWheel.length; i++) {
-      printWheel.push({
-        wheel_details_name: listWheel[i].wheel_name,
-        wheel_image: listWheel[i].wheel_details[0].wheel_image,
-      });
-      if (printWheel.length > 9) break;
+      if (curr == listWheel[i].wheel_id) {
+      } else
+        printWheel.push({
+          wheel_id: listWheel[i].wheel_id,
+          wheel_details_name: listWheel[i].wheel_name,
+          wheel_image: listWheel[i].wheel_details[0].wheel_image,
+        });
+      if (printWheel.length > 3) break;
     }
 
-    console.log(printWheel);
+    setActiveWheels(printWheel);
+  };
 
-    if (printWheel) {
-      return printWheel.map((item, index) => {
+  const gotoWheelDetails = (item) => {
+    localStorage.setItem("selectedWheel", JSON.stringify(item))
+    navigate(`/wheels/${item.wheel_id}`);
+    window.location.reload();
+  };
+
+  const generateProductList = () => {
+    if (activeWheels) {
+      return activeWheels.map((item, index) => {
         if (index < 10)
           return (
-            <ProductCard
-              key={index}
-              productImage={item.wheel_image}
-              productName={item.wheel_details_name}
-            ></ProductCard>
+            <div key={index} onClick={() => gotoWheelDetails(item)}>
+              <ProductCard
+                
+                productImage={item.wheel_image}
+                productName={item.wheel_details_name}
+              ></ProductCard>
+            </div>
           );
       });
     }

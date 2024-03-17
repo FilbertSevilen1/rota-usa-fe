@@ -10,6 +10,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import About from './pages/about';
 import Wheels from './pages/wheels';
+import WheelDetails from './pages/wheels/details';
 
 function App() {
   useEffect(()=>{
@@ -26,6 +27,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Dashboard />}></Route>
       <Route path="/wheels" element={<Wheels />}></Route>
+      <Route path="/wheels/:id" element={<WheelDetails />}></Route>
       <Route path="/about" element={<About />}></Route>
     </Routes>
     <Footer>
