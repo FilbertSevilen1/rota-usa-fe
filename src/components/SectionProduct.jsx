@@ -576,7 +576,7 @@ function SectionProduct({ curr }) {
           wheel_details_name: listWheel[i].wheel_name,
           wheel_image: listWheel[i].wheel_details[0].wheel_image,
         });
-      if (printWheel.length > 3) break;
+      if (printWheel.length > 9) break;
     }
 
     setActiveWheels(printWheel);

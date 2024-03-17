@@ -112,6 +112,58 @@ function WheelDetails() {
           wheel_details_image: wheel1,
         },
       ],
+      size_details: [
+        {
+          size_id: 1,
+          size_name: "17 x 8.0",
+          offset_details: [
+            {
+              offset_id: 1,
+              offset_name: "et10 only",
+              bolt_details: [
+                {
+                  bolt_id: 1,
+                  bolt_name: "5 x 139.70",
+                },
+                {
+                  bolt_id: 2,
+                  bolt_name: "6 x 114.3",
+                },
+                {
+                  bolt_id: 3,
+                  bolt_name: "6.139.70",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id: 1,
+          size_name: "17 x 8.0",
+          offset_details: [
+            {
+              offset_id: 2,
+              offset_name: "et4 / et10 only",
+              bolt_details: [
+                {
+                  bolt_id: 4,
+                  bolt_name: "6 x 139.70",
+                },
+              ],
+            },
+            {
+              offset_id: 3,
+              offset_name: "et10 only",
+              bolt_details: [
+                {
+                  bolt_id: 5,
+                  bolt_name: "6 x 114.3",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
     {
       wheel_id: 2,
@@ -564,13 +616,13 @@ function WheelDetails() {
     },
   ]);
 
-  useEffect(()=>{
-    window.scrollTo(0, 0)
-  })
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+  });
 
   const generateListWheel = () => {
-    if (listWheel[wheelId-1].wheel_details) {
-      return listWheel[wheelId-1].wheel_details.map((item, index) => {
+    if (listWheel[wheelId - 1].wheel_details) {
+      return listWheel[wheelId - 1].wheel_details.map((item, index) => {
         return (
           <div
             key={index}
@@ -588,6 +640,66 @@ function WheelDetails() {
       });
     }
   };
+
+  const generateTableBolt = (item) => {
+    console.log(item.bolt_details);
+    if (item.bolt_details) {
+      return item.bolt_details.map((bolt, index) => {
+        return (
+          <div className="w-full border-[1px] border-white py-4">
+            {bolt.bolt_name}
+          </div>
+        );
+      });
+    }
+  };
+
+  const generateTableOffset = (item) => {
+    if (item.offset_details) {
+      return item.offset_details.map((offset, index) => {
+        return (
+          <div className="w-full flex">
+            <div className="w-1/2 border-[1px] border-white py-4">
+              {offset.offset_name}
+            </div>
+            <div className="w-1/2">{generateTableBolt(offset)}</div>
+          </div>
+        );
+      });
+    }
+  };
+
+  const generateTableBody = () => {
+    const data = listWheel[wheelId - 1]||"";
+    if (data.size_details) {
+      return data.size_details.map((item, index) => {
+        return (
+          <div key={index} className="w-full text-lg md:text-xl flex text-white">
+            <div className="w-1/3 text-center border-[1px] border-white py-4">
+              {item.size_name}
+            </div>
+            <div className="w-2/3 text-center ">
+              {generateTableOffset(item)}
+            </div>
+          </div>
+        );
+      });
+    }
+    // return (
+    //   <div className="w-full text-lg md:text-xl flex text-white border-b-[1px] border-white">
+    //     <div className="w-1/3 text-center border-[1px] border-white py-4">
+    //       Size
+    //     </div>
+    //     <div className="w-1/3 text-center border-[1px] border-white py-4">
+    //       Bolt Pattern
+    //     </div>
+    //     <div className="w-1/3 text-center border-[1px] border-white py-4">
+    //       Offset
+    //     </div>
+    //   </div>
+    // );
+  };
+
   return (
     <div className="w-full page-background flex justify-center">
       <div
@@ -596,45 +708,62 @@ function WheelDetails() {
         data-aos-once="true"
       >
         <div className="w-11/12 md:w-10/12 flex flex-col items-center md:items-start justify-start rounded-2xl mt-12">
-          <Heading title={listWheel[wheelId-1].wheel_name}></Heading>
-          <div className="w-full flex flex-col md:flex-row justify-between mt-4 gap-8">
-            <div className="w-full flex flex-col items-center md:w-1/2 xl:w-1/4">
+          <Heading title={listWheel[wheelId - 1].wheel_name}></Heading>
+          <div className="w-full flex flex-col xl:flex-row justify-between mt-4 gap-8">
+            <div className="w-full flex flex-col items-center xl:w-1/4">
               <img
-                className="w-48 md:w-full mb-4 bg-gray-300 rounded-xl"
+                className="w-48 xl:w-full mb-8 xl:mb-4 bg-gray-300 rounded-xl"
                 src={
-                  listWheel[wheelId-1].wheel_details[activeWheel].wheel_details_image
+                  listWheel[wheelId - 1].wheel_details[activeWheel]
+                    .wheel_details_image
                 }
-                alt={listWheel[wheelId-1].wheel_details[activeWheel].wheel_details_name}
+                alt={
+                  listWheel[wheelId - 1].wheel_details[activeWheel]
+                    .wheel_details_name
+                }
                 title={
-                  listWheel[wheelId-1].wheel_details[activeWheel].wheel_details_name
+                  listWheel[wheelId - 1].wheel_details[activeWheel]
+                    .wheel_details_name
                 }
               ></img>
               <div className="wheels-background rounded-xl px-2 flex justify-start w-full overflow-x-scroll overflow-y-hidden py-4 gap-4">
                 {generateListWheel()}
               </div>
             </div>
-            <div className="w-full flex flex-col md:w-1/2 xl:w-3/4 wheels-background rounded-xl text-white p-8">
-              <div className="text-xl md:text-2xl">
-                Wheel Variant Name :
+            <div className="w-full flex flex-col xl:w-3/4 wheels-background rounded-xl text-white p-8">
+              <div className="text-lg sm:text-2xl md:text-4xl wrapword">
+                Wheel Variant :
                 <b>
-                  {listWheel[wheelId-1].wheel_details[activeWheel].wheel_details_name}
+                  {
+                    listWheel[wheelId - 1].wheel_details[activeWheel]
+                      .wheel_details_name
+                  }
                 </b>
+                <div className="w-full my-8">
+                  <div className="w-full wheels-background rounded-xl p-4">
+                    {/* Headers */}
+                    <div className="w-full text-xl md:text-2xl flex text-white font-bold">
+                      <div className="w-1/3 text-center border-[1px] border-white py-4">
+                        Size
+                      </div>
+                      <div className="w-1/3 text-center border-[1px] border-white py-4">
+                        Offset
+                      </div>
+                      <div className="w-1/3 text-center border-[1px] border-white py-4">
+                        Bolt Pattern
+                      </div>
+                    </div>
+                    {/* Body */}
+                    {generateTableBody()}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="w-full mt-12 mb-8">
-            <SubHeading title="Sizes"></SubHeading>
-            <div className="w-full h-96 bg-black rounded-xl">
-                Bla
-            </div>
-          </div>
-
-          <div className="w-full mt-12 mb-8">
             <SubHeading title="Related Products"></SubHeading>
-            <SectionProduct curr={wheelId}>
-
-            </SectionProduct>
+            <SectionProduct curr={wheelId}></SectionProduct>
           </div>
         </div>
       </div>

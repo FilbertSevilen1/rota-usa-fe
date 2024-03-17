@@ -178,8 +178,8 @@ function WheelsEditor() {
     // Add event listener for scroll events
     window.addEventListener("scroll", handleScroll);
 
-    getAllBrands();
-    getAllCars();
+    // getAllBrands();
+    // getAllCars();
 
     // Clean up the event listener on component unmount
     return () => {
@@ -192,12 +192,11 @@ function WheelsEditor() {
     try {
       Axios.get(API_URL + "/brand")
         .then((item) => {
-          if(item.data){
-            setListBrand(item.data)
+          if (item.data) {
+            setListBrand(item.data);
             setBrand(item.data[0]);
-            console.log(brand)
-          }
-          else{
+            console.log(brand);
+          } else {
             toast.error("Failed to Get Data", {
               position: "bottom-center",
               autoClose: 3000,
@@ -217,7 +216,6 @@ function WheelsEditor() {
             progress: undefined,
             theme: "dark",
           });
-
         });
     } catch (error) {
       toast.error(error, {
@@ -236,14 +234,13 @@ function WheelsEditor() {
     try {
       Axios.get(API_URL + "/car")
         .then((item) => {
-          if(item.data){
-            console.log(item.data)
-            setListCar(item.data)
+          if (item.data) {
+            console.log(item.data);
+            setListCar(item.data);
             setCar(item.data[0].car_image);
-            setSelectedCar(item.data[0])
-            console.log(brand)
-          }
-          else{
+            setSelectedCar(item.data[0]);
+            console.log(brand);
+          } else {
             toast.error("Failed to Get Data", {
               position: "bottom-center",
               autoClose: 3000,
@@ -263,7 +260,6 @@ function WheelsEditor() {
             progress: undefined,
             theme: "dark",
           });
-
         });
     } catch (error) {
       toast.error(error, {
@@ -277,7 +273,48 @@ function WheelsEditor() {
     }
   };
 
-  const [listBrand, setListBrand] = useState([]);
+  const [listBrand, setListBrand] = useState([
+    {
+      brand_id: 1,
+      brand_name: "Bmw",
+      brand_image: "/brands/bmw.webp",
+    },
+    {
+      brand_id: 2,
+      brand_name: "Ferrari",
+      brand_image: "/brands/ferrari.webp",
+    },
+    {
+      brand_id: 3,
+      brand_name: "Honda",
+      brand_image: "/brands/honda.webp",
+    },
+    {
+      brand_id: 4,
+      brand_name: "Lamborghini",
+      brand_image: "/brands/lamborghini.webp",
+    },
+    {
+      brand_id: 5,
+      brand_name: "Mercedes Benz",
+      brand_image: "/brands/mercedes-benz.webp",
+    },
+    {
+      brand_id: 6,
+      brand_name: "Subaru",
+      brand_image: "/brands/subaru.webp",
+    },
+    {
+      brand_id: 7,
+      brand_name: "Toyota",
+      brand_image: "/brands/toyota.webp",
+    },
+    {
+      brand_id: 8,
+      brand_name: "Mitsubishi",
+      brand_image: "/brands/mitsubishi.webp",
+    },
+  ]);
   const [listWheel, setListWheel] = useState([
     {
       wheel_id: 1,
@@ -381,7 +418,8 @@ function WheelsEditor() {
           wheel_image: wheel12,
         },
         {
-          wheel_details_name: "GRID CLASSIC_15x8_0_5x114_73_FLAT GUN YMH BLK LIP",
+          wheel_details_name:
+            "GRID CLASSIC_15x8_0_5x114_73_FLAT GUN YMH BLK LIP",
           wheel_image: wheel13,
         },
         {
@@ -461,7 +499,8 @@ function WheelsEditor() {
           wheel_image: wheel29,
         },
         {
-          wheel_details_name: "GRID RACING_17x7.5_45_5x114_73_PCSB_RF SP BRONZE",
+          wheel_details_name:
+            "GRID RACING_17x7.5_45_5x114_73_PCSB_RF SP BRONZE",
           wheel_image: wheel30,
         },
         {
@@ -993,7 +1032,8 @@ function WheelsEditor() {
             >
               <img
                 loading="lazy"
-                src={PUBLIC_URL + car.car_image}
+                // src={PUBLIC_URL + car.car_image}
+                src={car.car_image}
                 className="w-20 h-14 rounded-xl contain"
               ></img>
             </button>
@@ -1007,7 +1047,7 @@ function WheelsEditor() {
       return selectedCar.car_details.map((car, index) => {
         return (
           <button
-          key={index}
+            key={index}
             className="mt-2 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
             onClick={() =>
               setCarImage(selectedCar, selectedCar.carTemplate, index)
@@ -1015,7 +1055,8 @@ function WheelsEditor() {
           >
             <img
               loading="lazy"
-              src={PUBLIC_URL + car}
+              // src={PUBLIC_URL + car}
+              src={car}
               className="w-20 h-14 rounded-xl contain"
             ></img>
           </button>
@@ -1029,7 +1070,8 @@ function WheelsEditor() {
       <div className="">
         <img
           loading="lazy"
-          src={PUBLIC_URL + car}
+          // src={PUBLIC_URL + car}
+          src={car}
           className="w-full car shadow-md rounded-2xl z-30 relative"
         ></img>
         <div className="flex justify-between h-auto mx-auto relative">
