@@ -398,7 +398,6 @@ function WheelDetails() {
                   bolt_id: 59,
                   bolt_name: "5 x 114.3",
                 },
-
               ],
             }
           ],
@@ -551,6 +550,140 @@ function WheelDetails() {
         {
           wheel_details_name: "G-FORCE_17x9_42_5x100_73_HYPER BLACK",
           wheel_details_image: wheel8,
+        },
+      ],
+      size_details: [
+        {
+          size_id:11,
+          size_name: "17 x 7.5",
+          offset_details: [
+            {
+              offset_id: 13,
+              offset_name: "e35 / e45",
+              bolt_details: [
+                {
+                  bolt_id: 62,
+                  bolt_name: "4 x 100",
+                },
+              ],
+            },
+            {
+              offset_id: 14,
+              offset_name: "e45 / e48 to e53",
+              bolt_details: [
+                {
+                  bolt_id: 63,
+                  bolt_name: "5 x 100",
+                },
+              ],
+            },
+            {
+              offset_id: 15,
+              offset_name: "e45 / e48",
+              bolt_details: [
+                {
+                  bolt_id: 63,
+                  bolt_name: "5 x 100",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id:12,
+          size_name: "17 x 8.0",
+          offset_details: [
+            {
+              offset_id: 16,
+              offset_name: "e48",
+              bolt_details: [
+                {
+                  bolt_id: 64,
+                  bolt_name: "4 x 100",
+                },
+              ],
+            },
+            {
+              offset_id: 17,
+              offset_name: "e35",
+              bolt_details: [
+                {
+                  bolt_id: 65,
+                  bolt_name: "4 x 114.3",
+                },
+              ],
+            },
+            {
+              offset_id: 18,
+              offset_name: "e35 / e48",
+              bolt_details: [
+                {
+                  bolt_id: 66,
+                  bolt_name: "5 x 100",
+                },
+              ],
+            },
+            {
+              offset_id: 19,
+              offset_name: "e48",
+              bolt_details: [
+                {
+                  bolt_id: 67,
+                  bolt_name: "5 x 108",
+                },
+              ],
+            },
+            {
+              offset_id: 20,
+              offset_name: "e35 / e48",
+              bolt_details: [
+                {
+                  bolt_id: 68,
+                  bolt_name: "5 x 114.3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id:13,
+          size_name: "17 x 9.0",
+          offset_details: [
+            {
+              offset_id: 21,
+              offset_name: "e30 to e42",
+              bolt_details: [
+                {
+                  bolt_id: 69,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 70,
+                  bolt_name: "5 x 105",
+                },
+                {
+                  bolt_id: 71,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 72,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 73,
+                  bolt_name: "5 x 114.3",
+                },
+                {
+                  bolt_id: 74,
+                  bolt_name: "5 x 115",
+                },
+                {
+                  bolt_id: 75,
+                  bolt_name: "5 x 120",
+                },
+              ],
+            },
+          ],
         },
       ],
     },

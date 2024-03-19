@@ -188,7 +188,6 @@ function WheelsEditor() {
   }, []);
 
   const getAllBrands = () => {
-    console.log(API_URL);
     try {
       Axios.get(API_URL + "/brand")
         .then((item) => {
