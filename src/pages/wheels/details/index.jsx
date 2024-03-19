@@ -97,6 +97,12 @@ import { useLocation } from "react-router-dom";
 import Heading from "../../../components/base/Heading";
 import SubHeading from "../../../components/base/SubHeading";
 import SectionProduct from "../../../components/SectionProduct";
+import Axios from "axios";
+import axios from "axios";
+import { toast } from "react-toastify";
+
+const API_URL = process.env.REACT_APP_API_URL;
+const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
 function WheelDetails() {
   const location = useLocation();
   const [wheelId, setWheelId] = useState(location.pathname.substring(8));
@@ -108,6 +114,7 @@ function WheelDetails() {
       wheel_name: "ATLAS 1",
       wheel_details: [
         {
+          wheel_details_id: 1,
           wheel_details_name: "ATLAS 1 17_17x8.5_4_5x139.7_106.1_ RL YMH BLK",
           wheel_details_image: wheel1,
         },
@@ -131,14 +138,14 @@ function WheelDetails() {
                 },
                 {
                   bolt_id: 3,
-                  bolt_name: "6.139.70",
+                  bolt_name: "6 x 139.70",
                 },
               ],
             },
           ],
         },
         {
-          size_id: 1,
+          size_id: 2,
           size_name: "17 x 8.0",
           offset_details: [
             {
@@ -173,15 +180,228 @@ function WheelDetails() {
           wheel_details_name: "CIRCUIT 8_15x6.5_38_8x100x100_67.1_BRONZE",
           wheel_details_image: wheel2,
         },
+        {
+          wheel_details_name: "CIRCUIT 10_15X6.5_45_4X100_67.1_RF SP BRONZE",
+          wheel_details_image: wheel3,
+        },
+      ],
+      size_details: [
+        {
+          size_id: 3,
+          size_name: "17 x 7.0",
+          offset_details: [
+            {
+              offset_id: 4,
+              offset_name: "et38 to e45",
+              bolt_details: [
+                {
+                  bolt_id: 6,
+                  bolt_name: "4 x 100",
+                },
+                {
+                  bolt_id: 7,
+                  bolt_name: "4 x 108",
+                },
+                {
+                  bolt_id: 8,
+                  bolt_name: "4 x 110",
+                },
+                {
+                  bolt_id: 9,
+                  bolt_name: "4 x 114.3",
+                },
+                {
+                  bolt_id: 10,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 11,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 12,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 13,
+                  bolt_name: "5 x 114.3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id: 4,
+          size_name: "17 x 7.5",
+          offset_details: [
+            {
+              offset_id: 5,
+              offset_name: "e45 to e48",
+              bolt_details: [
+                {
+                  bolt_id: 14,
+                  bolt_name: "4 x 100",
+                },
+                {
+                  bolt_id: 15,
+                  bolt_name: "4 x 108",
+                },
+                {
+                  bolt_id: 16,
+                  bolt_name: "4 x 110",
+                },
+                {
+                  bolt_id: 17,
+                  bolt_name: "4 x 114.3",
+                },
+                {
+                  bolt_id: 18,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 19,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 20,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 21,
+                  bolt_name: "5 x 114.3",
+                },
+              ],
+            }
+          ],
+        },
       ],
     },
     {
       wheel_id: 3,
-      wheel_name: "CIRCUIT 10",
+      wheel_name: "FLUSH",
       wheel_details: [
         {
-          wheel_details_name: "CIRCUIT 10_15X6.5_45_4X100_67.1_RF SP BRONZE",
-          wheel_details_image: wheel3,
+          wheel_details_name: "Flush - White",
+          wheel_details_image: "",
+        },
+      ],
+      size_details: [
+        {
+          size_id: 7,
+          size_name: "17 x 9.0",
+          offset_details: [
+            {
+              offset_id: 8,
+              offset_name: "e7 to e40 / e42 to e52",
+              bolt_details: [
+                {
+                  bolt_id: 40,
+                  bolt_name: "4 x 95.25",
+                },
+                {
+                  bolt_id: 41,
+                  bolt_name: "4 x 98",
+                },
+                {
+                  bolt_id: 42,
+                  bolt_name: "4 x 100",
+                },
+                {
+                  bolt_id: 43,
+                  bolt_name: "4 x 108",
+                },
+                {
+                  bolt_id: 44,
+                  bolt_name: "4 x 110",
+                },
+                {
+                  bolt_id: 45,
+                  bolt_name: "4 x 114.3",
+                },
+              ],
+            },
+            {
+              offset_id: 9,
+              offset_name: "e15 to e40 / e42 to e52",
+              bolt_details: [
+                {
+                  bolt_id: 46,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 47,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 48,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 49,
+                  bolt_name: "5 x 114.3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id: 8,
+          size_name: "17 x 9.0",
+          offset_details: [
+            {
+              offset_id: 10,
+              offset_name: "e12 to e42 / e45 to e55",
+              bolt_details: [
+                {
+                  bolt_id: 50,
+                  bolt_name: "4 x 95.25",
+                },
+                {
+                  bolt_id: 51,
+                  bolt_name: "4 x 98",
+                },
+                {
+                  bolt_id: 52,
+                  bolt_name: "4 x 100",
+                },
+                {
+                  bolt_id: 53,
+                  bolt_name: "4 x 108",
+                },
+                {
+                  bolt_id: 54,
+                  bolt_name: "4 x 110",
+                },
+                {
+                  bolt_id: 55,
+                  bolt_name: "4 x 114.3",
+                },
+              ],
+            },
+            {
+              offset_id: 11,
+              offset_name: "e20 to e42 / e45 to e55",
+              bolt_details: [
+                {
+                  bolt_id: 56,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 57,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 58,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 59,
+                  bolt_name: "5 x 114.3",
+                },
+
+              ],
+            }
+          ],
         },
       ],
     },
@@ -192,6 +412,104 @@ function WheelDetails() {
         {
           wheel_details_name: "D2_16x7_40_5x114_73_RL CARBON FIBER",
           wheel_details_image: wheel4,
+        },
+      ],
+      size_details: [
+        {
+          size_id: 5,
+          size_name: "17 x 7.5",
+          offset_details: [
+            {
+              offset_id: 6,
+              offset_name: "e20 to e30 / e35 to e40 / e45 to e48",
+              bolt_details: [
+                {
+                  bolt_id: 22,
+                  bolt_name: "4 x 100",
+                },
+                {
+                  bolt_id: 23,
+                  bolt_name: "4 x 108",
+                },
+                {
+                  bolt_id: 24,
+                  bolt_name: "4 x 110",
+                },
+                {
+                  bolt_id: 25,
+                  bolt_name: "4 x 114.3",
+                },
+                {
+                  bolt_id: 26,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 27,
+                  bolt_name: "5 x 105",
+                },
+                {
+                  bolt_id: 28,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 29,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 30,
+                  bolt_name: "5 x 114.3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id: 6,
+          size_name: "17 x 8.5",
+          offset_details: [
+            {
+              offset_id: 7,
+              offset_name: "e20 to e30 / e35 to e40 / e45 to e50",
+              bolt_details: [
+                {
+                  bolt_id: 31,
+                  bolt_name: "4 x 100",
+                },
+                {
+                  bolt_id: 32,
+                  bolt_name: "4 x 108",
+                },
+                {
+                  bolt_id: 33,
+                  bolt_name: "4 x 110",
+                },
+                {
+                  bolt_id: 34,
+                  bolt_name: "4 x 114.3",
+                },
+                {
+                  bolt_id: 35,
+                  bolt_name: "5 x 100",
+                },
+                {
+                  bolt_id: 36,
+                  bolt_name: "5 x 105",
+                },
+                {
+                  bolt_id: 37,
+                  bolt_name: "5 x 108",
+                },
+                {
+                  bolt_id: 38,
+                  bolt_name: "5 x 112",
+                },
+                {
+                  bolt_id: 39,
+                  bolt_name: "5 x 114.3",
+                },
+              ],
+            }
+          ],
         },
       ],
     },
@@ -618,11 +936,47 @@ function WheelDetails() {
 
   useEffect(() => {
     // window.scrollTo(0, 0);
-  });
+    getDataWheelById();
+  },[]);
+
+  const getDataWheelById = () => {
+    const body = {
+      wheel_id: wheelId,
+    };
+
+    axios
+      .post(API_URL + `/wheel`, body)
+      .then((res) => {
+        if (res.data) {
+          console.log(res.data)
+          setListWheel(res.data)
+        } 
+        else {
+          toast.error("Failed to Get Data", {
+            position: "bottom-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      })
+      .catch((error) => {
+        toast.error("Failed to Get Data", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      });
+  };
 
   const generateListWheel = () => {
-    if (listWheel[wheelId - 1].wheel_details) {
-      return listWheel[wheelId - 1].wheel_details.map((item, index) => {
+    if (listWheel[0].wheel_details) {
+      return listWheel[0].wheel_details.map((item, index) => {
         return (
           <div
             key={index}
@@ -631,14 +985,34 @@ function WheelDetails() {
           >
             <img
               className="min-w-16 h-16"
-              src={item.wheel_details_image}
-              alt={item.wheel_details_name}
-              title={item.wheel_details_name}
+              src={PUBLIC_URL + item.wheel_details_image}
+              alt={PUBLIC_URL + item.wheel_details_name}
+              title={PUBLIC_URL + item.wheel_details_name}
             ></img>
           </div>
         );
       });
     }
+
+    // if (listWheel[wheelId - 1].wheel_details) {
+    //   return listWheel[wheelId - 1].wheel_details.map((item, index) => {
+    //     return (
+    //       <div
+    //         key={index}
+    //         className="min-w-16 h-16 cursor-pointer bg-white rounded-2xl hover:scale-105 active:scale-100 transition-all"
+    //         onClick={() => setActiveWheel(index)}
+    //       >
+    //         <img
+    //           className="min-w-16 h-16"
+    //           src={item.wheel_details_image}
+    //           alt={item.wheel_details_name}
+    //           title={item.wheel_details_name}
+    //         ></img>
+    //       </div>
+    //     );
+    //   });
+    // }
+    
   };
 
   const generateTableBolt = (item) => {
@@ -646,7 +1020,7 @@ function WheelDetails() {
     if (item.bolt_details) {
       return item.bolt_details.map((bolt, index) => {
         return (
-          <div className="w-full border-[1px] border-white py-4">
+          <div className="w-full border-[1px] border-white py-2">
             {bolt.bolt_name}
           </div>
         );
@@ -659,7 +1033,7 @@ function WheelDetails() {
       return item.offset_details.map((offset, index) => {
         return (
           <div className="w-full flex">
-            <div className="w-1/2 border-[1px] border-white py-4">
+            <div className="w-1/2 border-[1px] border-white py-2">
               {offset.offset_name}
             </div>
             <div className="w-1/2">{generateTableBolt(offset)}</div>
@@ -670,12 +1044,15 @@ function WheelDetails() {
   };
 
   const generateTableBody = () => {
-    const data = listWheel[wheelId - 1]||"";
+    const data = listWheel[0] || "";
     if (data.size_details) {
       return data.size_details.map((item, index) => {
         return (
-          <div key={index} className="w-full text-lg md:text-xl flex text-white">
-            <div className="w-1/3 text-center border-[1px] border-white py-4">
+          <div
+            key={index}
+            className="w-full text-lg md:text-xl flex text-white"
+          >
+            <div className="w-1/3 text-center border-[1px] border-white py-2">
               {item.size_name}
             </div>
             <div className="w-2/3 text-center ">
@@ -685,20 +1062,9 @@ function WheelDetails() {
         );
       });
     }
-    // return (
-    //   <div className="w-full text-lg md:text-xl flex text-white border-b-[1px] border-white">
-    //     <div className="w-1/3 text-center border-[1px] border-white py-4">
-    //       Size
-    //     </div>
-    //     <div className="w-1/3 text-center border-[1px] border-white py-4">
-    //       Bolt Pattern
-    //     </div>
-    //     <div className="w-1/3 text-center border-[1px] border-white py-4">
-    //       Offset
-    //     </div>
-    //   </div>
-    // );
   };
+
+  console.log(PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image)
 
   return (
     <div className="w-full page-background flex justify-center">
@@ -708,22 +1074,22 @@ function WheelDetails() {
         data-aos-once="true"
       >
         <div className="w-11/12 md:w-10/12 flex flex-col items-center md:items-start justify-start rounded-2xl mt-12">
-          <Heading title={listWheel[wheelId - 1].wheel_name}></Heading>
+          <Heading title={listWheel[0].wheel_name}></Heading>
           <div className="w-full flex flex-col xl:flex-row justify-between mt-4 gap-8">
             <div className="w-full flex flex-col items-center xl:w-1/4">
               <img
                 className="w-48 xl:w-full mb-8 xl:mb-4 bg-gray-300 rounded-xl"
                 src={
-                  listWheel[wheelId - 1].wheel_details[activeWheel]
-                    .wheel_details_image
+                  PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image
+                  // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_image
                 }
                 alt={
-                  listWheel[wheelId - 1].wheel_details[activeWheel]
-                    .wheel_details_name
+                  PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image
+                  // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
                 }
                 title={
-                  listWheel[wheelId - 1].wheel_details[activeWheel]
-                    .wheel_details_name
+                  PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image
+                  // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
                 }
               ></img>
               <div className="wheels-background rounded-xl px-2 flex justify-start w-full overflow-x-scroll overflow-y-hidden py-4 gap-4">
@@ -732,15 +1098,17 @@ function WheelDetails() {
             </div>
             <div className="w-full flex flex-col xl:w-3/4 wheels-background rounded-xl text-white p-8">
               <div className="text-lg sm:text-2xl md:text-4xl wrapword">
-                Wheel Variant :
+                <div className="gap-2 flex"><p>Wheel Color:</p>
                 <b>
                   {
-                    listWheel[wheelId - 1].wheel_details[activeWheel]
-                      .wheel_details_name
+                    listWheel[0].wheel_details[activeWheel].wheel_details_name
+                    // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
                   }
                 </b>
+                </div>
+              </div>
                 <div className="w-full my-8">
-                  <div className="w-full wheels-background rounded-xl p-4">
+                  <div className="w-full rounded-xl p-4">
                     {/* Headers */}
                     <div className="w-full text-xl md:text-2xl flex text-white font-bold">
                       <div className="w-1/3 text-center border-[1px] border-white py-4">
@@ -757,7 +1125,6 @@ function WheelDetails() {
                     {generateTableBody()}
                   </div>
                 </div>
-              </div>
             </div>
           </div>
 
