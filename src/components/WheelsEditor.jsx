@@ -178,14 +178,19 @@ function WheelsEditor() {
     // Add event listener for scroll events
     window.addEventListener("scroll", handleScroll);
 
-    // getAllBrands();
-    // getAllCars();
+    getAllBrands();
+    getAllCars();
+    getAllWheels();
 
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const getAllWheels = () =>{
+    
+  }
 
   const getAllBrands = () => {
     try {
@@ -954,7 +959,7 @@ function WheelsEditor() {
             >
               <img
                 loading="lazy"
-                src={item.wheel_details[0].wheel_image}
+                src={ item.wheel_details[0].wheel_image}
                 className="w-16 h-16 md:w-24 md:h-24 rounded-xl"
               ></img>
             </button>
@@ -1031,8 +1036,8 @@ function WheelsEditor() {
             >
               <img
                 loading="lazy"
-                // src={PUBLIC_URL + car.car_image}
-                src={car.car_image}
+                src={PUBLIC_URL + car.car_image}
+                // src={car.car_image}
                 className="w-20 h-14 rounded-xl contain"
               ></img>
             </button>
@@ -1054,8 +1059,8 @@ function WheelsEditor() {
           >
             <img
               loading="lazy"
-              // src={PUBLIC_URL + car}
-              src={car}
+              src={PUBLIC_URL + car}
+              // src={car}
               className="w-20 h-14 rounded-xl contain"
             ></img>
           </button>
@@ -1069,8 +1074,8 @@ function WheelsEditor() {
       <div className="">
         <img
           loading="lazy"
-          // src={PUBLIC_URL + car}
-          src={car}
+          src={PUBLIC_URL + car}
+          // src={car}
           className="w-full car shadow-md rounded-2xl z-30 relative"
         ></img>
         <div className="flex justify-between h-auto mx-auto relative">

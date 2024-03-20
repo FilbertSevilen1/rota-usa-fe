@@ -586,11 +586,14 @@ function SectionProduct({ curr }) {
             if (curr == res.data[i].wheel_id) {
               continue;
             } else {
-              printWheel.push({
-                wheel_id: res.data[i].wheel_id,
-                wheel_details_name: res.data[i].wheel_name,
-                wheel_image: res.data[i].wheel_details[0].wheel_details_image,
-              });
+              if(res.data[i].wheel_details[0]){
+
+                printWheel.push({
+                  wheel_id: res.data[i].wheel_id,
+                  wheel_details_name: res.data[i].wheel_name,
+                  wheel_image: res.data[i].wheel_details[0].wheel_details_image,
+                });
+              }
             }
             if (printWheel.length > 9) break;
           }
