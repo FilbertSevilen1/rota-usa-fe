@@ -725,6 +725,58 @@ function WheelDetails() {
           wheel_details_image: wheel16,
         },
       ],
+      size_details: [
+        {
+          size_id: 1,
+          size_name: "17 x 8.0",
+          offset_details: [
+            {
+              offset_id: 1,
+              offset_name: "et10 only",
+              bolt_details: [
+                {
+                  bolt_id: 1,
+                  bolt_name: "5 x 139.70",
+                },
+                {
+                  bolt_id: 2,
+                  bolt_name: "6 x 114.3",
+                },
+                {
+                  bolt_id: 3,
+                  bolt_name: "6 x 139.70",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          size_id: 2,
+          size_name: "17 x 8.0",
+          offset_details: [
+            {
+              offset_id: 2,
+              offset_name: "et4 / et10 only",
+              bolt_details: [
+                {
+                  bolt_id: 4,
+                  bolt_name: "6 x 139.70",
+                },
+              ],
+            },
+            {
+              offset_id: 3,
+              offset_name: "et10 only",
+              bolt_details: [
+                {
+                  bolt_id: 5,
+                  bolt_name: "6 x 114.3",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
     {
       wheel_id: 10,
