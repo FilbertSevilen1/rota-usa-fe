@@ -191,6 +191,7 @@ function WheelsEditor() {
   const getAllWheels = () => {
     Axios.get(API_URL + "/wheel").then((res) => {
       setListWheel(res.data);
+      setWheel(res.data[0].wheel_details[0].wheel_details_image)
     });
   };
 
@@ -285,7 +286,7 @@ function WheelsEditor() {
   const [brand, setBrand] = useState("");
 
   const [car, setCar] = useState("");
-  const [wheel, setWheel] = useState(wheel1);
+  const [wheel, setWheel] = useState("");
   const [selectedCar, setSelectedCar] = useState(listCar[0]);
   const [selectedCarTemplate, setSelectedCarTemplate] = useState("");
 
@@ -443,6 +444,7 @@ function WheelsEditor() {
   };
 
   const generateCarImage = () => {
+    console.log(wheel)
     return (
       <div className="">
         <img
@@ -455,14 +457,14 @@ function WheelsEditor() {
           <div>
             <img
               loading="lazy"
-              src={wheel}
+              src={PUBLIC_URL + wheel}
               className={selectedCarTemplate.car_wheel_element1}
             ></img>
           </div>
           <div>
             <img
               loading="lazy"
-              src={wheel}
+              src={PUBLIC_URL + wheel}
               className={selectedCarTemplate.car_wheel_element2}
             ></img>
           </div>
