@@ -191,7 +191,7 @@ function WheelsEditor() {
   const getAllWheels = () => {
     Axios.get(API_URL + "/wheel").then((res) => {
       setListWheel(res.data);
-      setWheel(res.data[0].wheel_details[0].wheel_details_image)
+      setWheel(res.data[0].wheel_details[0].wheel_details_image);
     });
   };
 
@@ -444,7 +444,67 @@ function WheelsEditor() {
   };
 
   const generateCarImage = () => {
-    console.log(wheel)
+    console.log(selectedCarTemplate);
+
+    const template = [
+      {
+        car_id: 1,
+        wheelTemplate1:
+          "mt-[-126.5px] md:mt-[-253px] w-[3.3rem] h-[4.45rem] ml-[11px] md:w-[6.6rem] md:h-[8.9rem] md:ml-[22px] rounded-full relative z-10 bg-gray-950",
+        wheelTemplate2:
+          "mt-[-116px] md:mt-[-232px] w-[4.4rem] h-[5.2rem] mr-[151.5px] md:w-[8.8rem] md:h-[10.4rem] md:mr-[303px] rounded-full relative z-10 bg-gray-950",
+      },
+      {
+        car_id: 2,
+        wheelTemplate1:
+          "mt-[-150px] md:mt-[-300px] w-[3.3rem] h-[5.5rem] ml-[0px] md:w-[6.6rem] md:h-[11rem] md:ml-[0px] rounded-full relative z-10 bg-gray-950",
+        wheelTemplate2:
+          "mt-[-130px] md:mt-[-260px] w-[4.6rem] h-[6.45rem] mr-[207px] md:w-[9.2rem] md:h-[12.9rem] md:mr-[414px] rounded-full relative z-10 wheels bg-gray-950",
+      },
+      {
+        car_id: 3,
+        wheelTemplate1:
+          "mt-[-125px] md:mt-[-250px] w-[3.3rem] h-[4.5rem] ml-[25px] md:w-[6.6rem] md:h-[9rem] md:ml-[50px] rounded-full relative z-10 bg-gray-950",
+        wheelTemplate2:
+          "mt-[-109px] md:mt-[-218px] w-[4.6rem] h-[4.8rem] mr-[117px] md:w-[9.2rem] md:h-[9.6rem] md:mr-[234px] rounded-full relative z-10 bg-gray-950",
+      },
+      {
+        car_id: 4,
+        wheelTemplate1:
+          "mt-[-136px] md:mt-[-272px] w-[2.8rem] h-[5.5rem] ml-[0px] md:w-[5.6rem] md:h-[11rem] md:ml-[0px] rounded-full relative z-10 bg-gray-950",
+        wheelTemplate2:
+          "mt-[-126px] md:mt-[-252px] w-[4.45rem] h-[6.25rem] mr-[208px] md:w-[8.9rem] md:h-[12.5rem] md:mr-[416px] rounded-full relative z-10 bg-gray-950",
+      },
+      {
+        car_id: 6,
+        wheelTemplate1:
+          "mt-[-126px] md:mt-[-252px] w-[2.9rem] h-[5.5rem] ml-[40px] md:w-[5.8rem] md:h-[11rem] md:ml-[80px] rounded-full relative wheels bg-gray-950",
+        wheelTemplate2:
+          "mt-[-126.5px] md:mt-[-253px] w-[4.45rem] h-[6.25rem] mr-[156.5px] md:w-[8.9rem] md:h-[12.5rem] md:mr-[313px] rounded-full relative wheels bg-gray-950",
+      },
+      {
+        car_id: 7,
+        wheelTemplate1:
+        "mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.0rem] ml-[42.5px] md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px] rounded-full relative  wheels bg-gray-950",
+        wheelTemplate2:
+        "mt-[-110px] md:mt-[-220px] w-[3.6rem] h-[5.2rem] mr-[169px] md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px] rounded-full relative wheels bg-gray-950",
+      },
+      {
+        car_id: 8,
+        wheelTemplate1:
+          "mt-[-130px] md:mt-[-260px] w-[2.4rem] h-[4.7rem] ml-[17.5px] md:w-[4.8rem] md:h-[9.4rem] md:ml-[35px] rounded-full relative wheels bg-gray-950",
+        wheelTemplate2:
+          "mt-[-121px] md:mt-[-242px] w-[3.4rem] h-[5.4rem] mr-[225px] md:w-[6.8rem] md:h-[10.8rem] md:mr-[450px] rounded-full relative wheels bg-gray-950",
+      },
+    ];
+
+    let printTemplate = "";
+
+    template.forEach((item) => {
+      if (item.car_id == selectedCarTemplate.car_id) {
+        printTemplate = item;
+      }
+    });
     return (
       <div className="">
         <img
@@ -458,14 +518,14 @@ function WheelsEditor() {
             <img
               loading="lazy"
               src={PUBLIC_URL + wheel}
-              className={selectedCarTemplate.car_wheel_element1}
+              className={printTemplate.wheelTemplate1}
             ></img>
           </div>
           <div>
             <img
               loading="lazy"
               src={PUBLIC_URL + wheel}
-              className={selectedCarTemplate.car_wheel_element2}
+              className={printTemplate.wheelTemplate2}
             ></img>
           </div>
         </div>
