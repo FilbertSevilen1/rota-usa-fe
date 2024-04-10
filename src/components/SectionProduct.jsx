@@ -97,11 +97,13 @@ import ProductCard from "./ProductCard";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import { toast } from "react-toastify";
+import Loading from "./base/Loading";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
 function SectionProduct({ curr }) {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [listWheel, setListWheel] = useState(
     []
     //   [
@@ -572,10 +574,12 @@ function SectionProduct({ curr }) {
   const getDataAllWheels = async () => {};
 
   useEffect(() => {
+    
     readProductList();
   }, []);
 
   const readProductList = () => {
+    setLoading(true)
     Axios.get(API_URL + "/wheel")
       .then((res) => {
         if (res.data) {
@@ -586,8 +590,7 @@ function SectionProduct({ curr }) {
             if (curr == res.data[i].wheel_id) {
               continue;
             } else {
-              if(res.data[i].wheel_details[0]){
-
+              if (res.data[i].wheel_details[0]) {
                 printWheel.push({
                   wheel_id: res.data[i].wheel_id,
                   wheel_details_name: res.data[i].wheel_name,
@@ -609,6 +612,7 @@ function SectionProduct({ curr }) {
             theme: "dark",
           });
         }
+        setLoading(false)
       })
       .catch((error) => {
         toast.error("Failed to Get Data", {
@@ -619,6 +623,7 @@ function SectionProduct({ curr }) {
           progress: undefined,
           theme: "dark",
         });
+        setLoading(false)
       });
   };
 
@@ -644,9 +649,19 @@ function SectionProduct({ curr }) {
     }
   };
   return (
-    <div className="flex gap-2 sm:gap-4 justify-center md:justify-between flex-wrap mb-8">
-      {generateProductList()}
-    </div>
+    <>
+      {loading ? (
+        <div className="w-48 h-48 mx-auto my-12">
+            <Loading>
+
+            </Loading>
+        </div>
+      ) : (
+        <div className="flex gap-2 sm:gap-4 justify-center md:justify-between flex-wrap mb-8">
+          {generateProductList()}
+        </div>
+      )}
+    </>
   );
 }
 export default SectionProduct;

@@ -161,10 +161,12 @@ import Axios from "axios";
 import ErrorMessage from "../composables/ErrorMessage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "./base/Loading";
 
 const API_URL = process.env.REACT_APP_API_URL;
 const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
 function WheelsEditor() {
+  const [loading, setLoading] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -189,14 +191,22 @@ function WheelsEditor() {
   }, []);
 
   const getAllWheels = () => {
-    Axios.get(API_URL + "/wheel").then((res) => {
-      setListWheel(res.data);
-      setWheel(res.data[0].wheel_details[0].wheel_details_image);
-    });
+    setLoading(true);
+    Axios.get(API_URL + "/wheel")
+      .then((res) => {
+        setListWheel(res.data);
+        setWheel(res.data[0].wheel_details[0].wheel_details_image);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+      });
   };
 
   const getAllBrands = () => {
     try {
+      setLoading(true);
       Axios.get(API_URL + "/brand")
         .then((item) => {
           if (item.data) {
@@ -213,6 +223,7 @@ function WheelsEditor() {
               theme: "dark",
             });
           }
+          setLoading(false);
         })
         .catch((error) => {
           toast.error(error, {
@@ -223,6 +234,7 @@ function WheelsEditor() {
             progress: undefined,
             theme: "dark",
           });
+          setLoading(false);
         });
     } catch (error) {
       toast.error(error, {
@@ -237,7 +249,7 @@ function WheelsEditor() {
   };
 
   const getAllCars = () => {
-    console.log(API_URL);
+    setLoading(true);
     try {
       Axios.get(API_URL + "/car")
         .then((item) => {
@@ -257,6 +269,7 @@ function WheelsEditor() {
               theme: "dark",
             });
           }
+          setLoading(false);
         })
         .catch((error) => {
           toast.error(error, {
@@ -267,6 +280,7 @@ function WheelsEditor() {
             progress: undefined,
             theme: "dark",
           });
+          setLoading(false);
         });
     } catch (error) {
       toast.error(error, {
@@ -277,6 +291,7 @@ function WheelsEditor() {
         progress: undefined,
         theme: "dark",
       });
+      setLoading(false);
     }
   };
 
@@ -485,9 +500,9 @@ function WheelsEditor() {
       {
         car_id: 7,
         wheelTemplate1:
-        "mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.0rem] ml-[42.5px] md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px] rounded-full relative  wheels bg-gray-950",
+          "mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.0rem] ml-[42.5px] md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px] rounded-full relative  wheels bg-gray-950",
         wheelTemplate2:
-        "mt-[-110px] md:mt-[-220px] w-[3.6rem] h-[5.2rem] mr-[169px] md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px] rounded-full relative wheels bg-gray-950",
+          "mt-[-110px] md:mt-[-220px] w-[3.6rem] h-[5.2rem] mr-[169px] md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 8,
@@ -540,50 +555,60 @@ function WheelsEditor() {
   return (
     <div className="text-white px-4 md:px-0  w-11/12 md:w-10/12 w-full flex flex-col overflow-y-hidden overflow-x-hidden mx-auto">
       <ToastContainer />
-      <div className="w-full flex flex-col xl:flex-row items-center md:items-center justify-between">
-        <div
-          data-aos="fade md:fade-right"
-          data-aos-once="true"
-          className={`${
-            isSticky ? "fixed top-16 z-50 md:flex md:top-0 md:z-10" : ""
-          } transition-all w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4`}
-        >
-          {generateCarImage()}
+      {loading ? (
+        <div className="w-48 h-48 mx-auto my-12">
+          <Loading></Loading>
         </div>
-        <div
-          data-aos="fade md:fade-left"
-          data-aos-once="true"
-          className={`${
-            isSticky ? "mt-[300px] md:mt-0" : ""
-          }  w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0`}
-        >
-          <div className={`text-2xl md:text-4xl font-bold mb-4`}>
-            Select Your Favorite Car
+      ) : (
+        <>
+          <div className="w-full flex flex-col xl:flex-row items-center md:items-center justify-between">
+            <div
+              data-aos="fade md:fade-right"
+              data-aos-once="true"
+              className={`${
+                isSticky ? "fixed top-16 z-50 md:flex md:top-0 md:z-10" : ""
+              } transition-all w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4`}
+            >
+              {generateCarImage()}
+            </div>
+            <div
+              data-aos="fade md:fade-left"
+              data-aos-once="true"
+              className={`${
+                isSticky ? "mt-[300px] md:mt-0" : ""
+              }  w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0`}
+            >
+              <div className={`text-2xl md:text-4xl font-bold mb-4`}>
+                Select Your Favorite Car
+              </div>
+              <div className="gap-4 flex justify-start flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
+                {generateBrandList()}
+              </div>
+              <div className="gap-4 flex justify-center flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
+                {generateCarList()}
+              </div>
+              <div className="gap-4 flex justify-center flex-wrap md:justify-start border-gray-200 p-2">
+                {generateColorList()}
+              </div>
+            </div>
           </div>
-          <div className="gap-4 flex justify-start flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
-            {generateBrandList()}
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8"
+          >
+            <div className="text-2xl md:text-4xl font-bold mb-4">
+              Our Wheels
+            </div>
+            <div className="gap-4 flex overflow-x-scroll justify-start p-2">
+              {generateWheelList()}
+            </div>
+            <div className="gap-4 flex overflow-x-scroll justify-start p-2">
+              {generateWheelDetailList()}
+            </div>
           </div>
-          <div className="gap-4 flex justify-center flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
-            {generateCarList()}
-          </div>
-          <div className="gap-4 flex justify-center flex-wrap md:justify-start border-gray-200 p-2">
-            {generateColorList()}
-          </div>
-        </div>
-      </div>
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
-        className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8"
-      >
-        <div className="text-2xl md:text-4xl font-bold mb-4">Our Wheels</div>
-        <div className="gap-4 flex overflow-x-scroll justify-start p-2">
-          {generateWheelList()}
-        </div>
-        <div className="gap-4 flex overflow-x-scroll justify-start p-2">
-          {generateWheelDetailList()}
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 }

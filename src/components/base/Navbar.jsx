@@ -11,10 +11,10 @@ function Navbar() {
       menuName: "Wheels",
       menuLink: "/wheels",
     },
-    {
-      menuName: "Gallery",
-      menuLink: "/gallery",
-    },
+    // {
+    //   menuName: "Gallery",
+    //   menuLink: "/gallery",
+    // },
     {
       menuName: "About Us",
       menuLink: "/about",
