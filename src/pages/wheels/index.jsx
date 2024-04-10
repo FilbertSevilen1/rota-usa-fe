@@ -100,10 +100,12 @@ import ProductCard from "../../components/ProductCard";
 
 import Axios from "axios";
 import { toast } from "react-toastify";
+import Loading from "../../components/base/Loading";
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Wheels() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
   const [listWheel, setListWheel] = useState([]);
 
   const [searchInput, setSearchInput] = useState("");
@@ -115,20 +117,21 @@ function Wheels() {
   }, []);
 
   const getDataAllWheels = () => {
-    let query = ""
-    if(searchInput || filterInput || sortInput){
-      query = "?"
+    setLoading(true);
+    let query = "";
+    if (searchInput || filterInput || sortInput) {
+      query = "?";
     }
 
-    if(searchInput){
-      query = query + "_name=" + searchInput
+    if (searchInput) {
+      query = query + "_name=" + searchInput;
     }
 
-    if(filterInput){
-      if(searchInput){
-        query += "&"
+    if (filterInput) {
+      if (searchInput) {
+        query += "&";
       }
-      query += query + "_filter=" + filterInput
+      query += query + "_filter=" + filterInput;
     }
 
     Axios.get(API_URL + "/wheel" + query)
@@ -146,6 +149,7 @@ function Wheels() {
             theme: "dark",
           });
         }
+        setLoading(false);
       })
       .catch((error) => {
         toast.error("Failed to Get Data", {
@@ -156,6 +160,7 @@ function Wheels() {
           progress: undefined,
           theme: "dark",
         });
+        setLoading(false);
       });
   };
 
@@ -218,10 +223,10 @@ function Wheels() {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       getDataAllWheels();
     }
-  }
+  };
 
   const handleSearchInput = (event) => {
     setSearchInput(event.target.value);
@@ -304,14 +309,25 @@ function Wheels() {
               </select>
             </div> */}
             <div className="w-full md:w-1/4 flex items-center">
-              <Button variant="contained" color="success" onClick={()=>getDataAllWheels()}>
+              <Button
+                variant="contained"
+                color="success"
+                onClick={() => getDataAllWheels()}
+              >
                 Search
               </Button>
             </div>
           </div>
 
           <div className="flex gap-1 sm:gap-4 md:gap-8 justify-center md:justify-between flex-wrap mb-8">
-            {generateProductList()}
+            {loading ? (
+              <div className="w-48 h-48 my-12 mx-auto">
+                <Loading></Loading>
+              </div>
+            ) : (
+              <>{generateProductList()}</>
+            )}
+
             <div className="w-full justify-end items-center mt-4 flex">
               <Button onClick={prevPage}>
                 <svg

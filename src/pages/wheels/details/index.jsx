@@ -100,10 +100,12 @@ import SectionProduct from "../../../components/SectionProduct";
 import Axios from "axios";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Loading from "../../../components/base/Loading";
 
 const API_URL = process.env.REACT_APP_API_URL;
 const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
 function WheelDetails() {
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
   const [wheelId, setWheelId] = useState(location.pathname.substring(8));
   // Dummy
@@ -116,21 +118,20 @@ function WheelDetails() {
         {
           wheel_details_id: 1,
           wheel_details_name: "",
-          wheel_details_image: wheel1,
+          wheel_details_image: "",
         },
       ],
-      size_details: [
-        
-      ],
+      size_details: [],
     },
   ]);
 
   useEffect(() => {
     // window.scrollTo(0, 0);
     getDataWheelById();
-  },[]);
+  }, []);
 
   const getDataWheelById = () => {
+    setLoading(true);
     const body = {
       wheel_id: wheelId,
     };
@@ -139,10 +140,9 @@ function WheelDetails() {
       .post(API_URL + `/wheel`, body)
       .then((res) => {
         if (res.data) {
-          console.log(res.data)
-          setListWheel(res.data)
-        } 
-        else {
+          console.log(res.data);
+          setListWheel(res.data);
+        } else {
           toast.error("Failed to Get Data", {
             position: "bottom-center",
             autoClose: 3000,
@@ -152,6 +152,7 @@ function WheelDetails() {
             theme: "dark",
           });
         }
+        setLoading(false);
       })
       .catch((error) => {
         toast.error("Failed to Get Data", {
@@ -162,6 +163,7 @@ function WheelDetails() {
           progress: undefined,
           theme: "dark",
         });
+        setLoading(false);
       });
   };
 
@@ -203,7 +205,6 @@ function WheelDetails() {
     //     );
     //   });
     // }
-    
   };
 
   const generateTableBolt = (item) => {
@@ -255,8 +256,6 @@ function WheelDetails() {
     }
   };
 
-  console.log(PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image)
-
   return (
     <div className="w-full page-background flex justify-center">
       <div
@@ -268,54 +267,69 @@ function WheelDetails() {
           <Heading title={listWheel[0].wheel_name}></Heading>
           <div className="w-full flex flex-col xl:flex-row justify-between mt-4 gap-8">
             <div className="w-full flex flex-col items-center xl:w-1/4">
-              <img
-                className="w-48 xl:w-full mb-8 xl:mb-4 bg-gray-300 rounded-xl"
-                src={
-                  PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image
-                  // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_image
-                }
-                alt={
-                  PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image
-                  // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
-                }
-                title={
-                  PUBLIC_URL + listWheel[0].wheel_details[activeWheel].wheel_details_image
-                  // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
-                }
-              ></img>
-              <div className="wheels-background rounded-xl px-2 flex justify-start w-full overflow-x-scroll overflow-y-hidden py-4 gap-4">
-                {generateListWheel()}
-              </div>
+              {loading ? (
+                <div className="w-48 h-48 my-12 mx-auto">
+                  <Loading></Loading>
+                </div>
+              ) : (
+                <>
+                  <img
+                    className="w-48 xl:w-full mb-8 xl:mb-4 bg-gray-300 rounded-xl"
+                    src={
+                      PUBLIC_URL +
+                      listWheel[0].wheel_details[activeWheel]
+                        .wheel_details_image
+                      // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_image
+                    }
+                    alt={
+                      PUBLIC_URL +
+                      listWheel[0].wheel_details[activeWheel]
+                        .wheel_details_image
+                      // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
+                    }
+                    title={
+                      PUBLIC_URL +
+                      listWheel[0].wheel_details[activeWheel]
+                        .wheel_details_image
+                      // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
+                    }
+                  ></img>
+                  <div className="wheels-background rounded-xl px-2 flex justify-start w-full overflow-x-scroll overflow-y-hidden py-4 gap-4">
+                    {generateListWheel()}
+                  </div>
+                </>
+              )}
             </div>
             <div className="w-full flex flex-col xl:w-3/4 wheels-background rounded-xl text-white p-8">
               <div className="text-lg sm:text-2xl md:text-4xl wrapword">
-                <div className="gap-2 flex"><p>Wheel Color:</p>
-                <b>
-                  {
-                    listWheel[0].wheel_details[activeWheel].wheel_details_name
-                    // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
-                  }
-                </b>
+                <div className="gap-2 flex">
+                  <p>Wheel Color:</p>
+                  <b>
+                    {
+                      listWheel[0].wheel_details[activeWheel].wheel_details_name
+                      // listWheel[wheelId - 1].wheel_details[activeWheel].wheel_details_name
+                    }
+                  </b>
                 </div>
               </div>
-                <div className="w-full my-8">
-                  <div className="w-full rounded-xl p-4">
-                    {/* Headers */}
-                    <div className="w-full text-xl md:text-2xl flex text-white font-bold">
-                      <div className="w-1/3 text-center border-[1px] border-white py-4">
-                        Size
-                      </div>
-                      <div className="w-1/3 text-center border-[1px] border-white py-4">
-                        Offset
-                      </div>
-                      <div className="w-1/3 text-center border-[1px] border-white py-4">
-                        Bolt Pattern
-                      </div>
+              <div className="w-full my-8">
+                <div className="w-full rounded-xl p-4">
+                  {/* Headers */}
+                  <div className="w-full text-xl md:text-2xl flex text-white font-bold">
+                    <div className="w-1/3 text-center border-[1px] border-white py-4">
+                      Size
                     </div>
-                    {/* Body */}
-                    {generateTableBody()}
+                    <div className="w-1/3 text-center border-[1px] border-white py-4">
+                      Offset
+                    </div>
+                    <div className="w-1/3 text-center border-[1px] border-white py-4">
+                      Bolt Pattern
+                    </div>
                   </div>
+                  {/* Body */}
+                  {generateTableBody()}
                 </div>
+              </div>
             </div>
           </div>
 
