@@ -5,7 +5,7 @@ function NavbarButton({ menuLink, menuName }) {
   return (
     <button
       onClick={() => navigate(menuLink)}
-      className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white"
+      className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
     >
       {menuName}
     </button>

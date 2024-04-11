@@ -246,29 +246,29 @@ function Wheels() {
         data-aos-once="true"
       >
         <div className="w-11/12 md:w-10/12 flex flex-col justify-start mt-8 wheels-background p-2 md:p-12 rounded-2xl">
-          <Heading title={"Wheels"}></Heading>
-
-          <div className="w-full flex flex-col gap-8 md:flex-row py-4 mb-4 rounded-xl">
-            <div className="w-full md:w-1/4 flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#ffffff"
-                  d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14"
-                />
-              </svg>
-              <input
-                onKeyDown={handleKeyDown}
-                className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
-                placeholder="Search by Wheel's Name"
-                onChange={handleSearchInput}
-              ></input>
-            </div>
-            {/* <div className="w-full md:w-1/4 flex items-center">
+          <div className="mx-2">
+            <Heading title={"Wheels"}></Heading>
+            <div className="w-full flex flex-col gap-8 md:flex-row py-4 mb-4 rounded-xl">
+              <div className="w-full md:w-1/4 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#ffffff"
+                    d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14"
+                  />
+                </svg>
+                <input
+                  onKeyDown={handleKeyDown}
+                  className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
+                  placeholder="Search by Wheel's Name"
+                  onChange={handleSearchInput}
+                ></input>
+              </div>
+              {/* <div className="w-full md:w-1/4 flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -308,14 +308,15 @@ function Wheels() {
                 <option value="">Sort By</option>
               </select>
             </div> */}
-            <div className="w-full md:w-1/4 flex items-center">
-              <Button
-                variant="contained"
-                color="success"
-                onClick={() => getDataAllWheels()}
-              >
-                Search
-              </Button>
+              <div className="w-full md:w-1/4 flex items-center">
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => getDataAllWheels()}
+                >
+                  Search
+                </Button>
+              </div>
             </div>
           </div>
 

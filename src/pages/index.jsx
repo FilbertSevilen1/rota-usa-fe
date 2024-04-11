@@ -22,21 +22,24 @@ function Dashboard() {
         className="h-96 md:h-[91.5vh] bg-black shadow-2xl"
       >
         <div className="flex h-full items-center justify-center bg-black">
-          <img loading="lazy"
+          <img
+            loading="lazy"
             src={banner1}
-            className="w-full h-full object-contain xl:object-cover"
+            className="w-full h-full object-contain xl:object-cover "
           ></img>
         </div>
         <div className="flex h-full items-center justify-center bg-black">
-          <img loading="lazy"
+          <img
+            loading="lazy"
             src={banner2}
-            className="w-full h-full object-contain xl:object-cover"
+            className="w-full h-full object-contain xl:object-cover "
           ></img>
         </div>
         <div className="flex h-full items-center justify-center bg-black">
-          <img loading="lazy"
+          <img
+            loading="lazy"
             src={banner3}
-            className="w-full h-full object-contain xl:object-cover"
+            className="w-full h-full object-contain xl:object-cover "
           ></img>
         </div>
       </Carousel>
@@ -56,10 +59,13 @@ function Dashboard() {
           <Heading title={"Our Products"}></Heading>
           <SectionProduct></SectionProduct>
           <div className="w-full flex justify-center mt-4">
-        <button onClick={()=>navigate("/wheels")} className="transition-all hover:scale-105 active:scale-100 card-background w-full sm:w-64 p-4 font-bold text-white text-xl sm:text-2xl rounded-xl border-[0.5px] hover:border-gray-400">
-          See More
-        </button>
-      </div>
+            <button
+              onClick={() => navigate("/wheels")}
+              className="transition-all hover:scale-105 active:scale-100 card-background w-full sm:w-64 p-4 font-bold text-white text-xl sm:text-2xl rounded-xl border-[0.5px] hover:border-gray-400"
+            >
+              See More
+            </button>
+          </div>
         </div>
       </div>
       {/* <div className="w-full mt-16 mb-8 flex flex-col items-center">
