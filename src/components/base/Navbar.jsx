@@ -63,7 +63,7 @@ function Navbar() {
             </svg>
           </div>
           {dropMenu ? (
-            <div className="rounded-b-xl shadow-md flex flex-col absolute right-0 w-32 bg-neutral-800 top-16 text-xl">
+            <div className="rounded-b-xl shadow-md flex flex-col absolute right-0 w-32 bg-neutral-800 top-16 text-xl z-50">
               {generateNavbarMenu()}
             </div>
           ) : (

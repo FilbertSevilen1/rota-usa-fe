@@ -566,7 +566,7 @@ function WheelsEditor() {
               data-aos="fade md:fade-right"
               data-aos-once="true"
               className={`${
-                isSticky ? "fixed top-16 z-50 md:flex md:top-0 md:z-10" : ""
+                isSticky ? "fixed top-16 z-40 md:flex md:top-0 md:z-10" : ""
               } transition-all w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4`}
             >
               {generateCarImage()}
