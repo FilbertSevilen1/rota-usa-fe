@@ -29,17 +29,17 @@ function About() {
       <div className="w-11/12 md:w-10/12" data-aos="fade-up" data-aos-once="true">
         <div className="shadow-md text-white flex flex-col md:flex-row my-12 w-full wheels-background rounded-xl">
           <div className="w-full md:w-2/3 p-8">
-            <img loading="lazy" src={cosmic} className="mx-auto md:mx-0 mb-8 rounded-xl"></img>
+            <img alt="" loading="lazy" src={cosmic} className="mx-auto md:mx-0 mb-8 rounded-xl"></img>
             <p
               className="text-md md:text-lg xl:text-xl text-justify"
               dangerouslySetInnerHTML={{ __html: description }}
             ></p>
           </div>
           <div className="w-full flex flex-col items-center md:items-center md:w-1/3 p-8">
-            <img loading="lazy" src={headquarters} className="w-full mb-8 rounded-xl">
+            <img alt="" loading="lazy" src={headquarters} className="w-full mb-8 rounded-xl">
 
             </img>
-            <img loading="lazy" src={maps} className="w-full object-cover h-72 rounded-xl">
+            <img alt="" loading="lazy" src={maps} className="w-full object-cover h-72 rounded-xl">
                 
             </img>
           </div>
