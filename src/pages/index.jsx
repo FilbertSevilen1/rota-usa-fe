@@ -12,6 +12,10 @@ import gallery1 from "../assets/about/rota1.webp";
 import gallery2 from "../assets/about/rota2.webp";
 import gallery3 from "../assets/about/rotadriver.webp";
 import gallery4 from "../assets/about/carrota.webp";
+import gallery5 from "../assets/about/rota3.webp";
+import gallery6 from "../assets/about/rota4.webp";
+import gallery7 from "../assets/about/rota5.webp";
+import gallery8 from "../assets/about/rota6.webp";
 
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
@@ -86,7 +90,7 @@ function Dashboard() {
       <div className="w-full mt-16 mb-8 flex flex-col items-center">
         <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
           <div
-            className="text-white mb-8 text-4xl md:text-6xl font-bold"
+            className="text-white text-4xl md:text-6xl font-bold"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -99,27 +103,53 @@ function Dashboard() {
             className="h-[480px] hidden xl:block"
           >
             <div className="w-full flex gap-8 justify-between">
-              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
                   src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
-              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
                   src={gallery2}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
-              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
                   src={gallery3}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
-              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
                   src={gallery4}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery5}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery6}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery7}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery8}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -132,13 +162,13 @@ function Dashboard() {
             className="h-[340px] hidden sm:block xl:hidden"
           >
             <div className="w-full flex gap-8 justify-between">
-              <div className="w-1/2 h-[250px] shadow-md rounded-2xl">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
-              <div className="w-1/2 h-[250px] shadow-md rounded-2xl">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery2}
                   className="w-full h-full object-cover rounded-2xl"
@@ -146,15 +176,43 @@ function Dashboard() {
               </div>
             </div>
             <div className="w-full flex gap-8 justify-between">
-              <div className="w-1/2 h-[250px] shadow-md rounded-2xl">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery3}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
-              <div className="w-1/2 h-[250px] shadow-md rounded-2xl">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery4}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery5}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery6}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery7}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery8}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -167,7 +225,7 @@ function Dashboard() {
             className="h-[340px] block sm:hidden "
           >
             <div className="w-full flex gap-8 justify-between">
-              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
@@ -175,7 +233,7 @@ function Dashboard() {
               </div>
             </div>
             <div className="w-full flex gap-8 justify-between">
-              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery2}
                   className="w-full h-full object-cover rounded-2xl"
@@ -183,7 +241,7 @@ function Dashboard() {
               </div>
             </div>
             <div className="w-full flex gap-8 justify-between">
-              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery3}
                   className="w-full h-full object-cover rounded-2xl"
@@ -191,9 +249,41 @@ function Dashboard() {
               </div>
             </div>
             <div className="w-full flex gap-8 justify-between">
-              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery4}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery5}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery6}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery7}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery8}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
