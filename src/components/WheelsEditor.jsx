@@ -174,7 +174,7 @@ function WheelsEditor() {
       const threshold = 550; // Adjust this value based on your needs
       const thresholdEnd = 1450;
       // Check if scroll position is beyond the threshold
-      setIsSticky(scrollPosition > threshold && scrollPosition < thresholdEnd);
+      setIsSticky(scrollPosition > threshold && scrollPosition < thresholdEnd && window.innerWidth < 768);
     };
 
     // Add event listener for scroll events
@@ -459,7 +459,7 @@ function WheelsEditor() {
   };
 
   const generateCarImage = () => {
-    console.log(selectedCarTemplate);
+
 
     const template = [
       {
