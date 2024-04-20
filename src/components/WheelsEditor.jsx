@@ -547,7 +547,7 @@ function WheelsEditor() {
           "mt-[-87px] md:mt-[-174px] w-[2.7rem] h-[2.8rem] mr-[128px] md:w-[5.4rem] md:h-[5.6rem] md:mr-[256px] rounded-full relative wheels bg-gray-950",
       },
       {
-        car_id: 12,
+        car_id: 13,
         wheelTemplate1:
           "mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.2rem] ml-[21.5px] md:w-[4.4rem] md:h-[8.4rem] md:ml-[43px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
