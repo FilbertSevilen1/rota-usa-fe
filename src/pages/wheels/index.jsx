@@ -268,46 +268,6 @@ function Wheels() {
                   onChange={handleSearchInput}
                 ></input>
               </div>
-              {/* <div className="w-full md:w-1/4 flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#ffffff"
-                  d="M11 20q-.425 0-.712-.288T10 19v-6L4.2 5.6q-.375-.5-.112-1.05T5 4h14q.65 0 .913.55T19.8 5.6L14 13v6q0 .425-.288.713T13 20z"
-                />
-              </svg>
-              <select
-                className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
-                placeholder="Search"
-                onChange={handleFilterInput}
-              >
-                <option value="">Filter By</option>
-              </select>
-            </div>
-            <div className="w-full md:w-1/4 flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#ffffff"
-                  d="M3 18v-2h6v2zm0-5v-2h12v2zm0-5V6h18v2z"
-                />
-              </svg>
-              <select
-                className="input text-white text-lg md:text-xl xl:text-2xl ml-2 w-full"
-                placeholder="Search"
-                onChange={handleSortInput}
-              >
-                <option value="">Sort By</option>
-              </select>
-            </div> */}
               <div className="w-full md:w-1/4 flex items-center">
                 <Button
                   variant="contained"

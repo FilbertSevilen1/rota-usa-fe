@@ -93,7 +93,7 @@ import wheel77 from "../../../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/
 import wheel78 from "../../../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIPSTREAM R_18X9.5_40_5X120_64.1_MAG BLK/plain/DSCF8591nobg.webp";
 
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Heading from "../../../components/base/Heading";
 import SubHeading from "../../../components/base/SubHeading";
 import SectionProduct from "../../../components/SectionProduct";
@@ -105,6 +105,8 @@ import Loading from "../../../components/base/Loading";
 const API_URL = process.env.REACT_APP_API_URL;
 const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
 function WheelDetails() {
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const [wheelId, setWheelId] = useState(location.pathname.substring(8));
@@ -336,6 +338,14 @@ function WheelDetails() {
           <div className="w-full mt-12 mb-8">
             <SubHeading title="Related Products"></SubHeading>
             <SectionProduct curr={wheelId}></SectionProduct>
+            <div className="w-full flex justify-center mt-4">
+              <button
+                onClick={() => navigate("/wheels")}
+                className="transition-all hover:scale-105 active:scale-100 card-background w-full sm:w-64 p-4 font-bold text-white text-xl sm:text-2xl rounded-xl border-[0.5px] hover:border-gray-400"
+              >
+                See More
+              </button>
+            </div>
           </div>
         </div>
       </div>
