@@ -256,7 +256,7 @@ function WheelsEditor() {
           if (item.data) {
             setSelectedCar(item.data[0]);
             setListCar(item.data);
-            setCar(item.data[0].car_image);
+            setCar(item.data[0].car_image[0].car_color_image);
 
             setCarImage(item.data[0], item.data[0], 0);
           } else {
@@ -315,7 +315,7 @@ function WheelsEditor() {
   };
 
   const setCarImage = (car, type, color) => {
-    setCar(car.car_details[color]);
+    setCar(car.car_details[color].car_color_image);
     setSelectedCar(car);
     setSelectedCarTemplate(car);
     setType(type);
@@ -425,7 +425,7 @@ function WheelsEditor() {
             >
               <img
                 loading="lazy"
-                src={PUBLIC_URL + car.car_image}
+                src={PUBLIC_URL + car.car_image[0].car_color_image}
                 // src={car.car_image}
                 className="w-20 h-14 rounded-xl contain"
               ></img>
@@ -448,7 +448,7 @@ function WheelsEditor() {
           >
             <img
               loading="lazy"
-              src={PUBLIC_URL + car}
+              src={PUBLIC_URL + car.car_color_image}
               // src={car}
               className="w-20 h-14 rounded-xl contain"
             ></img>
