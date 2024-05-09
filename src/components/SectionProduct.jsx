@@ -661,6 +661,7 @@ function SectionProduct({ curr }) {
           {generateProductList()}
         </div>
       )}
+      
     </>
   );
 }

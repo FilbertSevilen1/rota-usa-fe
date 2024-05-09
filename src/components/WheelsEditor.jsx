@@ -553,6 +553,13 @@ function WheelsEditor() {
         wheelTemplate2:
           "mt-[-103px] md:mt-[-206px] w-[3.6rem] h-[5.6rem] mr-[205px] md:w-[7.2rem] md:h-[11.2rem] md:mr-[410px] rounded-full relative wheels bg-gray-950",
       },
+      {
+        car_id: 14,
+        wheelTemplate1:
+          "mt-[-81px] md:mt-[-162px] w-[3.35rem] h-[3.8rem] ml-[62.5px] md:w-[6.7rem] md:h-[7.6rem] md:ml-[125px] rounded-full relative wheels bg-gray-950",
+        wheelTemplate2:
+          "mt-[-69px] md:mt-[-138px] w-[3.9rem] h-[4.1rem] mr-[121px] md:w-[7.8rem] md:h-[8.2rem] md:mr-[242px] rounded-full relative wheels bg-gray-950",
+      },
     ];
 
     let printTemplate = "";

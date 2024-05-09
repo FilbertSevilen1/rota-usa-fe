@@ -224,6 +224,7 @@ function Wheels() {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
+      setPage(1);
       getDataAllWheels();
     }
   };
