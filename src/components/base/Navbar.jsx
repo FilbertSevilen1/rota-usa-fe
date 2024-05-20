@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../css/navbar.css";
 
 import navlogo from "../../assets/logo/rotadarkthin.webp";
 import NavbarButton from "./NavbarButton";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 function Navbar() {
+  const path = useLocation();
+
   const navigate = useNavigate();
   const [dropMenu, setDropMenu] = useState(false);
   const [menu, setMenu] = useState([
@@ -31,6 +33,12 @@ function Navbar() {
       });
     }
   };
+
+  useEffect(()=>{
+    if(path.pathname.substring(1) == "index2.html"){
+      navigate('/')
+    }
+  })
 
   return (
     <div className="fixed nav-background w-full h-16 xl:h-20 flex justify-center items-center shadow-md z-50">
