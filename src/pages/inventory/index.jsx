@@ -5,7 +5,7 @@ function Inventory() {
   }, []);
   return (
     <div className="w-full page-background flex justify-center">
-      <div className="w-11/12">
+      <div className="w-10/12">
         <div
           className="text-white text-4xl md:text-6xl font-bold my-8"
           data-aos="fade-up"
