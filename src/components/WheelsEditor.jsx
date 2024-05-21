@@ -174,7 +174,11 @@ function WheelsEditor() {
       const threshold = 550; // Adjust this value based on your needs
       const thresholdEnd = 1450;
       // Check if scroll position is beyond the threshold
-      setIsSticky(scrollPosition > threshold && scrollPosition < thresholdEnd && window.innerWidth < 768);
+      setIsSticky(
+        scrollPosition > threshold &&
+          scrollPosition < thresholdEnd &&
+          window.innerWidth < 768
+      );
     };
 
     // Add event listener for scroll events
@@ -347,10 +351,10 @@ function WheelsEditor() {
               <img
                 loading="lazy"
                 src={PUBLIC_URL + item.wheel_details[0].wheel_details_image}
-                className="w-16 h-16 md:w-24 md:h-24 rounded-xl"
+                className="w-16 h-16 md:w-20 md:h-20 rounded-xl"
               ></img>
             </button>
-            <div className="text-sm text-center md:text-lg font-bold w-16 md:w-24">
+            <div className="text-sm text-center md:text-lg font-bold w-16 md:w-20">
               {item.wheel_name}
             </div>
           </div>
@@ -379,10 +383,10 @@ function WheelsEditor() {
               <img
                 loading="lazy"
                 src={PUBLIC_URL + item.wheel_details_image}
-                className="w-16 h-16 md:w-24 md:h-24 rounded-xl"
+                className="w-20 h-20 md:w-20 md:h-20 rounded-xl"
               ></img>
             </button>
-            <div className="text-sm text-center md:text-lg font-bold w-16 md:w-24">
+            <div className="text-sm text-center md:text-lg font-bold w-20 md:w-20">
               {/* {item.wheel_name} */}
             </div>
           </div>
@@ -399,13 +403,13 @@ function WheelsEditor() {
             key={index}
             className={`${
               item == brand ? "scale-105 bg-gray-300" : "scale-100 bg-white"
-            } w-14 h-14 mt-0 mb-2 md:mt-2 md:mb-4 shadow-md rounded-xl transition-all active:scale-95 font-bold flex justify-center items-center `}
+            } w-16 h-16 md:w-12 md:h-12 mb-1 shadow-md rounded-xl transition-all active:scale-95 font-bold flex justify-center items-center `}
             onClick={() => setCarBrand(item)}
           >
             <img
               loading="lazy"
               src={PUBLIC_URL + item.brand_image}
-              className="w-12 h-12 contain"
+              className="w-14 h-14 md:w-10 md:h-10 contain"
             ></img>
           </button>
         );
@@ -420,14 +424,14 @@ function WheelsEditor() {
           return (
             <button
               key={index}
-              className="my-4 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
+              className="my-2 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
               onClick={() => setCarImage(car, car.carTemplate, 0)}
             >
               <img
                 loading="lazy"
                 src={PUBLIC_URL + car.car_image[0].car_color_image}
                 // src={car.car_image}
-                className="w-20 h-14 rounded-xl contain"
+                className="w-18 h-14 xl:w-16 xl:h-12 rounded-xl object-cover"
               ></img>
             </button>
           );
@@ -441,7 +445,7 @@ function WheelsEditor() {
         return (
           <button
             key={index}
-            className="mt-2 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
+            className="mt-1 shadow-md rounded-xl transition-all active:scale-95 font-bold bg-black"
             onClick={() =>
               setCarImage(selectedCar, selectedCar.carTemplate, index)
             }
@@ -450,7 +454,7 @@ function WheelsEditor() {
               loading="lazy"
               src={PUBLIC_URL + car.car_color_image}
               // src={car}
-              className="w-20 h-14 rounded-xl contain"
+              className="w-14 h-14 xl:w-12 xl:h-12 rounded-xl object-cover"
             ></img>
           </button>
         );
@@ -459,8 +463,6 @@ function WheelsEditor() {
   };
 
   const generateCarImage = () => {
-
-
     const template = [
       {
         car_id: 1,
@@ -616,7 +618,7 @@ function WheelsEditor() {
   };
 
   return (
-    <div className="text-white px-4 md:px-0  w-11/12 md:w-10/12 w-full flex flex-col overflow-y-hidden overflow-x-hidden mx-auto">
+    <div className="text-white px-4 md:px-0  w-11/12 md:w-10/12 w-full flex flex-col overflow-y-hidden overflow-x-hidden mx-auto  wheels-background rounded-xl">
       <ToastContainer />
       {loading ? (
         <div className="w-48 h-48 mx-auto my-12">
@@ -624,13 +626,13 @@ function WheelsEditor() {
         </div>
       ) : (
         <>
-          <div className="w-full flex flex-col xl:flex-row items-center md:items-center justify-between">
+          <div className="w-full flex flex-col xl:flex-row items-center md:items-center rounded-xl justify-between shadow-lg">
             <div
               data-aos="fade md:fade-right"
               data-aos-once="true"
               className={`${
                 isSticky ? "fixed top-16 z-40 md:flex md:top-0 md:z-10" : ""
-              } transition-all w-[450px] md:w-[900px] md:relative shrink-0 md:mr-4`}
+              } transition-all w-[450px] xl:w-[900px] md:relative shrink-0 md:mr-4 `}
             >
               {generateCarImage()}
             </div>
@@ -639,34 +641,30 @@ function WheelsEditor() {
               data-aos-once="true"
               className={`${
                 isSticky ? "mt-[300px] md:mt-0" : ""
-              }  w-full h-full flex flex-col md:ml-4 p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8 md:mt-0`}
+              }  w-full h-fit flex flex-col p-3 md:p-3  mt-8 md:mt-0`}
             >
-              <div className={`text-2xl md:text-4xl font-bold mb-4`}>
-                Select Your Favorite Car
+              <div className={`text-xl md:text-2xl font-bold mb-4`}>
+                Select Your Favorite Car & Wheels
               </div>
-              <div className="gap-4 flex justify-start flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
+              <div className="gap-2 xl:gap-3 flex justify-center flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
                 {generateBrandList()}
               </div>
-              <div className="gap-4 flex justify-center flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
+              <div className="gap-2 xl:gap-3 flex justify-center flex-wrap md:justify-start border-b-2 border-gray-400 p-2">
                 {generateCarList()}
               </div>
-              <div className="gap-4 flex justify-center flex-wrap md:justify-start border-gray-200 p-2">
+              <div className="gap-2 xl:gap-3 flex justify-center flex-wrap md:justify-start border-gray-200 p-2">
                 {generateColorList()}
               </div>
             </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-once="true"
-            className="w-full p-4 md:p-8 shadow-lg rounded-xl wheels-background mt-8"
-          >
-            <div className="text-2xl md:text-4xl font-bold mb-4">
+          <div data-aos="fade-up" data-aos-once="true" className="w-full p-2">
+            {/* <div className="text-2xl md:text-4xl font-bold mb-4">
               Our Wheels
-            </div>
-            <div className="gap-4 flex overflow-x-scroll justify-start p-2">
+            </div> */}
+            <div className="gap-2 flex overflow-x-scroll justify-start pb-2">
               {generateWheelList()}
             </div>
-            <div className="gap-4 flex overflow-x-scroll justify-start p-2">
+            <div className="gap-2 flex overflow-x-scroll justify-start">
               {generateWheelDetailList()}
             </div>
           </div>
