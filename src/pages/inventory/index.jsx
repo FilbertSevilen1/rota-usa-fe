@@ -15,7 +15,7 @@ function Inventory() {
         </div>
         <iframe
           className="w-full h-[75vh] bg-white shadow-md mb-8"
-          src="http://rotausa.com/kim3.htm"
+          src="https://rotausa.com/kim3.htm"
           title="description"
         ></iframe>
       </div>
