@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import About from './pages/about';
 import Wheels from './pages/wheels';
 import WheelDetails from './pages/wheels/details';
+import Inventory from './pages/inventory';
 
 function App() {
   useEffect(()=>{
@@ -29,6 +30,7 @@ function App() {
       <Route path="/wheels" element={<Wheels />}></Route>
       <Route path="/wheels/:id" element={<WheelDetails />}></Route>
       <Route path="/about" element={<About />}></Route>
+      <Route path="/inventory" element={<Inventory />}></Route>
     </Routes>
     <Footer>
 
