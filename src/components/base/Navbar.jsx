@@ -18,6 +18,10 @@ function Navbar() {
       menuName: "About Us",
       menuLink: "/about",
     },
+    {
+      menuName: "Inventory",
+      menuLink: "http://rotausa.com/kim3.htm",
+    },
   ]);
 
   const generateNavbarMenu = () => {
@@ -34,11 +38,11 @@ function Navbar() {
     }
   };
 
-  useEffect(()=>{
-    if(path.pathname.substring(1) == "index2.html"){
-      navigate('/')
+  useEffect(() => {
+    if (path.pathname.substring(1) == "index2.html") {
+      navigate("/");
     }
-  })
+  });
 
   return (
     <div className="fixed nav-background w-full h-16 xl:h-20 flex justify-center items-center shadow-md z-50">
@@ -50,7 +54,23 @@ function Navbar() {
           <img loading="lazy" src={navlogo}></img>
         </button>
         <div className="h-full hidden md:flex items-center">
-          {generateNavbarMenu()}
+          <button
+            onClick={() => navigate("/wheels")}
+            className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
+          >
+            Wheels
+          </button>
+          <button
+            onClick={() => navigate("/about")}
+            className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
+          >
+            About Us
+          </button>
+          <a href="http://rotausa.com/kim3.htm">
+            <button className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none">
+              Inventory
+            </button>
+          </a>
         </div>
         <div className="h-full flex md:hidden items-center">
           <div onClick={() => setDropMenu(!dropMenu)}>
