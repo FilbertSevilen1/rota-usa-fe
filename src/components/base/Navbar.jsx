@@ -20,7 +20,7 @@ function Navbar() {
     },
     {
       menuName: "Inventory",
-      menuLink: "http://rotausa.com/kim3.htm",
+      menuLink: "/inventory",
     },
   ]);
 
@@ -71,7 +71,7 @@ function Navbar() {
               Inventory
             </button>
           </a> */}
-                    <button
+          <button
             onClick={() => navigate("/inventory")}
             className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
           >
