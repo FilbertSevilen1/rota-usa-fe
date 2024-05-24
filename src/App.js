@@ -12,6 +12,7 @@ import About from './pages/about';
 import Wheels from './pages/wheels';
 import WheelDetails from './pages/wheels/details';
 import Inventory from './pages/inventory';
+import UploadInventory from './pages/inventory/upload';
 
 function App() {
   useEffect(()=>{
@@ -31,6 +32,8 @@ function App() {
       <Route path="/wheels/:id" element={<WheelDetails />}></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/inventory" element={<Inventory />}></Route>
+
+      <Route path="/inventory/upload" element={<UploadInventory />}></Route>
     </Routes>
     <Footer>
 

@@ -59,11 +59,14 @@ code {
   transition: 150ms all ease;
   padding-top: 4px;
   padding-bottom: 4px;
+  outline: none;
 }
 .input:hover{
   border-color: rgb(0, 170, 9);
+  outline: none;
 }
 .input:active{
+  outline: none;
   border-color: rgb(0, 170, 9);
 }
 .input:focus{
