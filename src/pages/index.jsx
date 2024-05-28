@@ -8,7 +8,7 @@ import banner2 from "../assets/dummy/banner/banner1.webp";
 import banner3 from "../assets/dummy/banner/banner2.webp";
 import banner4 from "../assets/dummy/banner/banner3.webp";
 
-import gallery1 from "../assets/about/rota1.webp";
+import gallery1 from "../assets/cars/carhonda4color1.webp";
 import gallery2 from "../assets/about/rota2.webp";
 import gallery3 from "../assets/about/rotadriver.webp";
 import gallery4 from "../assets/about/carrota.webp";
