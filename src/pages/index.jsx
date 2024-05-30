@@ -3,15 +3,16 @@ import { Carousel } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import WheelsEditor from "../components/WheelsEditor";
 
-import banner1 from "../assets/about/carrota.webp";
-import banner2 from "../assets/dummy/banner/banner1.webp";
-import banner3 from "../assets/dummy/banner/banner2.webp";
-import banner4 from "../assets/dummy/banner/banner3.webp";
+import banner1 from "../assets/dummy/banner/banner1.webp";
+import banner2 from "../assets/dummy/banner/banner2.webp";
+import banner3 from "../assets/dummy/banner/banner3.webp";
+import banner4 from "../assets/dummy/banner/banner4.webp";
+import banner5 from "../assets/about/carrota.webp";
 
 import gallery1 from "../assets/cars/carhonda4color1.webp";
 import gallery2 from "../assets/about/rota2.webp";
 import gallery3 from "../assets/about/rotadriver.webp";
-import gallery4 from "../assets/about/carrota.webp";
+import gallery4 from "../assets/dummy/banner/banner1.webp";
 import gallery5 from "../assets/about/rota3.webp";
 import gallery6 from "../assets/about/rota4.webp";
 import gallery7 from "../assets/about/rota5.webp";
@@ -58,6 +59,13 @@ function Dashboard() {
           <img
             loading="lazy"
             src={banner4}
+            className="w-full h-full object-contain xl:object-cover "
+          ></img>
+        </div>
+        <div className="flex h-full items-center justify-center bg-black">
+          <img
+            loading="lazy"
+            src={banner5}
             className="w-full h-full object-contain xl:object-cover "
           ></img>
         </div>
