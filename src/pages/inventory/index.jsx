@@ -37,12 +37,12 @@ function Inventory() {
         >
           Our Inventory
         </div>
-        {/* <iframe
+        <iframe
           className="w-full h-[75vh] bg-white shadow-md mb-8"
-          src="https://rotausa.com/kim3.htm"
+          src="http://rotausa.com/stock.htm"
           title="description"
-        ></iframe> */}
-        {inventory.length > 0 ? (
+        ></iframe>
+        {/* {inventory.length > 0 ? (
           <div className="w-full md:w-fit p-8 bg-white mb-8">
             <table>
               <thead>
@@ -79,7 +79,7 @@ function Inventory() {
               <Loading></Loading>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
