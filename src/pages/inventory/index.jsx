@@ -39,7 +39,7 @@ function Inventory() {
         </div>
         <iframe
           className="w-full h-[75vh] bg-white shadow-md mb-8"
-          src="https://rotausa.com/stock.htm"
+          src="http://rotausa.com/stock.htm"
           title="description"
         ></iframe>
         {/* {inventory.length > 0 ? (
