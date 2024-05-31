@@ -66,17 +66,17 @@ function Navbar() {
           >
             About Us
           </button>
-          {/* <a href="http://rotausa.com/kim3.htm">
+          <a href="http://rotausa.com/stock.htm">
             <button className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none">
               Inventory
             </button>
-          </a> */}
-          <button
+          </a>
+          {/* <button
             onClick={() => navigate("/inventory")}
             className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
           >
             Inventory
-          </button>
+          </button> */}
         </div>
         <div className="h-full flex md:hidden items-center">
           <div onClick={() => setDropMenu(!dropMenu)}>
@@ -98,7 +98,24 @@ function Navbar() {
           </div>
           {dropMenu ? (
             <div className="rounded-b-xl shadow-md flex flex-col absolute right-0 w-32 bg-neutral-800 top-16 text-xl z-50">
-              {generateNavbarMenu()}
+              <NavbarButton
+                key={0}
+                menuLink={"/wheels"}
+                menuName={"Wheels"}
+              ></NavbarButton>
+              <NavbarButton
+                key={1}
+                menuLink={"/about"}
+                menuName={"About Us"}
+              ></NavbarButton>
+              <a className="text-center" href="http://rotausa.com/stock.htm">
+              <NavbarButton
+                key={2}
+                menuLink={""}
+                menuName={"Inventory"}
+              ></NavbarButton>
+              </a>
+
             </div>
           ) : (
             <></>
