@@ -386,7 +386,7 @@ function WheelsEditor() {
                 className="w-20 h-20 md:w-20 md:h-20 rounded-xl"
               ></img>
             </button>
-            <div className="text-sm text-center md:text-lg font-bold w-20 md:w-20">
+            <div className="text-sm text-center md:text-md font-bold w-20 md:w-20">
               {/* {item.wheel_name} */}
             </div>
           </div>
