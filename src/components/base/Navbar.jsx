@@ -80,7 +80,7 @@ function Navbar() {
             className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
           >
             New Wheels<br></br>
-            <p className="text-sm">FF Slipstream 17 x 8.5</p>
+            <p className="text-base">FF Slipstream 17 x 8.5</p>
           </button>
         </div>
         <div className="h-full flex md:hidden items-center">
