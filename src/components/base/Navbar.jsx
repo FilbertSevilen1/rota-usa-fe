@@ -22,6 +22,10 @@ function Navbar() {
       menuName: "Inventory",
       menuLink: "/inventory",
     },
+    {
+      menuName: "New Wheels",
+      menuLink: "/wheels/34",
+    },
   ]);
 
   const generateNavbarMenu = () => {
@@ -71,12 +75,13 @@ function Navbar() {
               Inventory
             </button>
           </a>
-          {/* <button
-            onClick={() => navigate("/inventory")}
+          <button
+            onClick={() => navigate("/wheels/34")}
             className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
           >
-            Inventory
-          </button> */}
+            New Wheels<br></br>
+            <p className="text-sm">FF Slipstream 17 x 8.5</p>
+          </button>
         </div>
         <div className="h-full flex md:hidden items-center">
           <div onClick={() => setDropMenu(!dropMenu)}>
@@ -109,13 +114,18 @@ function Navbar() {
                 menuName={"About Us"}
               ></NavbarButton>
               <a className="text-center" href="http://rotausa.com/stock.htm">
-              <NavbarButton
-                key={2}
-                menuLink={""}
-                menuName={"Inventory"}
-              ></NavbarButton>
+                <NavbarButton
+                  key={2}
+                  menuLink={""}
+                  menuName={"Inventory"}
+                ></NavbarButton>
               </a>
-
+              <button
+                onClick={() => navigate("/wheels/34")}
+                className="h-full text-center md:text-xl md:min-w-[140px] xl:min-w-[180px] xl:text-2xl transition-all hover:font-bold active:scale-95 text-white p-2 md:bg-none"
+              >
+                New Wheel <br></br><p className="text-sm">FF Slipstream 17 x 8.5</p>
+              </button>
             </div>
           ) : (
             <></>
