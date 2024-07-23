@@ -17,6 +17,13 @@ import gallery5 from "../assets/about/rota3.webp";
 import gallery6 from "../assets/about/rota4.webp";
 import gallery7 from "../assets/about/rota5.webp";
 import gallery8 from "../assets/about/rota6.webp";
+import gallery9 from "../assets/about/rota7.webp";
+import gallery10 from "../assets/about/rota8.webp";
+import gallery11 from "../assets/about/rota9.webp";
+import gallery12 from "../assets/about/rota10.webp";
+import gallery13 from "../assets/about/rota11.webp";
+import gallery14 from "../assets/about/rota12.webp";
+
 
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
@@ -37,6 +44,13 @@ function Dashboard() {
         <div className="flex h-full items-center justify-center bg-black">
           <img
             loading="lazy"
+            src={gallery12}
+            className="w-full h-full object-contain xl:object-cover "
+          ></img>
+        </div>
+        <div className="flex h-full items-center justify-center bg-black">
+          <img
+            loading="lazy"
             src={banner1}
             className="w-full h-full object-contain xl:object-cover "
           ></img>
@@ -44,14 +58,7 @@ function Dashboard() {
         <div className="flex h-full items-center justify-center bg-black">
           <img
             loading="lazy"
-            src={banner2}
-            className="w-full h-full object-contain xl:object-cover "
-          ></img>
-        </div>
-        <div className="flex h-full items-center justify-center bg-black">
-          <img
-            loading="lazy"
-            src={banner3}
+            src={gallery9}
             className="w-full h-full object-contain xl:object-cover "
           ></img>
         </div>
@@ -113,6 +120,58 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
+                  src={gallery11}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery12}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery13}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery14}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery7}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery8}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery9}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
+                  src={gallery10}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
+                <img
                   src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
@@ -169,6 +228,49 @@ function Dashboard() {
             slide={false}
             className="h-[340px] hidden sm:block xl:hidden"
           >
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery13}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery14}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery11}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery12}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery9}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+              <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery10}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
             <div className="w-full flex gap-8 justify-between">
               <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
@@ -232,6 +334,54 @@ function Dashboard() {
             slide={false}
             className="h-[340px] block sm:hidden "
           >
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery9}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery10}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery11}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery12}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery13}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
+            <div className="w-full flex gap-8 justify-between">
+              <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
+                <img
+                  src={gallery14}
+                  className="w-full h-full object-cover rounded-2xl"
+                ></img>
+              </div>
+            </div>
             <div className="w-full flex gap-8 justify-between">
               <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
