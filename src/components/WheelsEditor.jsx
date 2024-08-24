@@ -467,121 +467,121 @@ function WheelsEditor() {
       {
         car_id: 1,
         wheelTemplate1:
-          "mt-[-126.5px] md:mt-[-253px] w-[3.3rem] h-[4.45rem] ml-[11px] md:w-[6.6rem] md:h-[8.9rem] md:ml-[22px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-126.5px] xl:mt-[-253px] w-[3.3rem] h-[4.45rem] ml-[11px] xl:w-[6.6rem] xl:h-[8.9rem] xl:ml-[22px] rounded-full relative z-10 bg-gray-950",
         wheelTemplate2:
-          "mt-[-116px] md:mt-[-232px] w-[4.4rem] h-[5.2rem] mr-[151.5px] md:w-[8.8rem] md:h-[10.4rem] md:mr-[303px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-116px] xl:mt-[-232px] w-[4.4rem] h-[5.2rem] mr-[151.5px] xl:w-[8.8rem] xl:h-[10.4rem] xl:mr-[303px] rounded-full relative z-10 bg-gray-950",
       },
       {
         car_id: 2,
         wheelTemplate1:
-          "mt-[-150px] md:mt-[-300px] w-[3.3rem] h-[5.5rem] ml-[0px] md:w-[6.6rem] md:h-[11rem] md:ml-[0px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-150px] xl:mt-[-300px] w-[3.3rem] h-[5.5rem] ml-[0px] xl:w-[6.6rem] xl:h-[11rem] xl:ml-[0px] rounded-full relative z-10 bg-gray-950",
         wheelTemplate2:
-          "mt-[-130px] md:mt-[-260px] w-[4.6rem] h-[6.45rem] mr-[207px] md:w-[9.2rem] md:h-[12.9rem] md:mr-[414px] rounded-full relative z-10 wheels bg-gray-950",
+          "mt-[-130px] xl:mt-[-260px] w-[4.6rem] h-[6.45rem] mr-[207px] xl:w-[9.2rem] xl:h-[12.9rem] xl:mr-[414px] rounded-full relative z-10 wheels bg-gray-950",
       },
       {
         car_id: 3,
         wheelTemplate1:
-          "mt-[-125px] md:mt-[-250px] w-[3.3rem] h-[4.5rem] ml-[25px] md:w-[6.6rem] md:h-[9rem] md:ml-[50px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-125px] xl:mt-[-250px] w-[3.3rem] h-[4.5rem] ml-[25px] xl:w-[6.6rem] xl:h-[9rem] xl:ml-[50px] rounded-full relative z-10 bg-gray-950",
         wheelTemplate2:
-          "mt-[-109px] md:mt-[-218px] w-[4.6rem] h-[4.8rem] mr-[117px] md:w-[9.2rem] md:h-[9.6rem] md:mr-[234px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-109px] xl:mt-[-218px] w-[4.6rem] h-[4.8rem] mr-[117px] xl:w-[9.2rem] xl:h-[9.6rem] xl:mr-[234px] rounded-full relative z-10 bg-gray-950",
       },
       {
         car_id: 4,
         wheelTemplate1:
-          "mt-[-136px] md:mt-[-272px] w-[2.8rem] h-[5.5rem] ml-[0px] md:w-[5.6rem] md:h-[11rem] md:ml-[0px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-136px] xl:mt-[-272px] w-[2.8rem] h-[5.5rem] ml-[0px] xl:w-[5.6rem] xl:h-[11rem] xl:ml-[0px] rounded-full relative z-10 bg-gray-950",
         wheelTemplate2:
-          "mt-[-126px] md:mt-[-252px] w-[4.45rem] h-[6.25rem] mr-[208px] md:w-[8.9rem] md:h-[12.5rem] md:mr-[416px] rounded-full relative z-10 bg-gray-950",
+          "mt-[-126px] xl:mt-[-252px] w-[4.45rem] h-[6.25rem] mr-[208px] xl:w-[8.9rem] xl:h-[12.5rem] xl:mr-[416px] rounded-full relative z-10 bg-gray-950",
       },
       {
         car_id: 5,
         wheelTemplate1:
-          "mt-[-108.5px] md:mt-[-217px] w-[2.6rem] h-[3.7rem] ml-[49px] md:w-[5.2rem] md:h-[7.4rem] md:ml-[98px] rounded-full relative wheels bg-gray-950",
+          "mt-[-108.5px] xl:mt-[-217px] w-[2.6rem] h-[3.7rem] ml-[49px] xl:w-[5.2rem] xl:h-[7.4rem] xl:ml-[98px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-108px] md:mt-[-216px]  w-[4.2rem] h-[5rem] mr-[158px]  md:w-[8.4rem] md:h-[10rem] md:mr-[316px] rounded-full relative wheels bg-gray-950",
+          "mt-[-108px] xl:mt-[-216px]  w-[4.2rem] h-[5rem] mr-[158px]  xl:w-[8.4rem] xl:h-[10rem] xl:mr-[316px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 6,
         wheelTemplate1:
-          "mt-[-126px] md:mt-[-252px] w-[2.9rem] h-[5.5rem] ml-[40px] md:w-[5.8rem] md:h-[11rem] md:ml-[80px] rounded-full relative wheels bg-gray-950",
+          "mt-[-126px] xl:mt-[-252px] w-[2.9rem] h-[5.5rem] ml-[40px] xl:w-[5.8rem] xl:h-[11rem] xl:ml-[80px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-126.5px] md:mt-[-253px] w-[4.45rem] h-[6.25rem] mr-[156.5px] md:w-[8.9rem] md:h-[12.5rem] md:mr-[313px] rounded-full relative wheels bg-gray-950",
+          "mt-[-126.5px] xl:mt-[-253px] w-[4.45rem] h-[6.25rem] mr-[156.5px] xl:w-[8.9rem] xl:h-[12.5rem] xl:mr-[313px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 7,
         wheelTemplate1:
-          "mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.0rem] ml-[42.5px] md:w-[4.4rem] md:h-[8.0rem] md:ml-[85px] rounded-full relative  wheels bg-gray-950",
+          "mt-[-123px] xl:mt-[-246px] w-[2.2rem] h-[4.0rem] ml-[42.5px] xl:w-[4.4rem] xl:h-[8.0rem] xl:ml-[85px] rounded-full relative  wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-110px] md:mt-[-220px] w-[3.6rem] h-[5.2rem] mr-[169px] md:w-[7.2rem] md:h-[10.4rem] md:mr-[338px] rounded-full relative wheels bg-gray-950",
+          "mt-[-110px] xl:mt-[-220px] w-[3.6rem] h-[5.2rem] mr-[169px] xl:w-[7.2rem] xl:h-[10.4rem] xl:mr-[338px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 8,
         wheelTemplate1:
-          "mt-[-130px] md:mt-[-260px] w-[2.4rem] h-[4.7rem] ml-[17.5px] md:w-[4.8rem] md:h-[9.4rem] md:ml-[35px] rounded-full relative wheels bg-gray-950",
+          "mt-[-130px] xl:mt-[-260px] w-[2.4rem] h-[4.7rem] ml-[17.5px] xl:w-[4.8rem] xl:h-[9.4rem] xl:ml-[35px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-121px] md:mt-[-242px] w-[3.4rem] h-[5.4rem] mr-[225px] md:w-[6.8rem] md:h-[10.8rem] md:mr-[450px] rounded-full relative wheels bg-gray-950",
+          "mt-[-121px] xl:mt-[-242px] w-[3.4rem] h-[5.4rem] mr-[225px] xl:w-[6.8rem] xl:h-[10.8rem] xl:mr-[450px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 9,
         wheelTemplate1:
-          "mt-[-99px] md:mt-[-198px] w-[2.4rem] h-[3.7rem] ml-[58px]  md:w-[4.8rem] md:h-[7.4rem] md:ml-[116px] rounded-full relative wheels bg-gray-950",
+          "mt-[-99px] xl:mt-[-198px] w-[2.4rem] h-[3.7rem] ml-[58px]  xl:w-[4.8rem] xl:h-[7.4rem] xl:ml-[116px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-90px] md:mt-[-180px] w-[3.7rem] h-[4.5rem] mr-[177px]  md:w-[7.4rem] md:h-[9rem] md:mr-[354px] rounded-full relative wheels bg-gray-950",
+          "mt-[-90px] xl:mt-[-180px] w-[3.7rem] h-[4.5rem] mr-[177px]  xl:w-[7.4rem] xl:h-[9rem] xl:mr-[354px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 10,
         wheelTemplate1:
-          "mt-[-106px] md:mt-[-212px] w-[1.7rem] h-[3.4rem] ml-[65px] md:w-[3.4rem] md:h-[6.8rem] md:ml-[130px] rounded-full relative  wheels bg-gray-950",
+          "mt-[-106px] xl:mt-[-212px] w-[1.7rem] h-[3.4rem] ml-[65px] xl:w-[3.4rem] xl:h-[6.8rem] xl:ml-[130px] rounded-full relative  wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-100px] md:mt-[-200px] w-[3.7rem] h-[4.7rem] mr-[197px] md:w-[7.4rem] md:h-[9.4rem] md:mr-[394px] rounded-full relative wheels bg-gray-950",
+          "mt-[-100px] xl:mt-[-200px] w-[3.7rem] h-[4.7rem] mr-[197px] xl:w-[7.4rem] xl:h-[9.4rem] xl:mr-[394px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 11,
         wheelTemplate1:
-          "mt-[-147px] md:mt-[-294px] w-[2rem] h-[4.3rem] ml-[39px] md:w-[4rem] md:h-[8.6rem] md:ml-[78px] rounded-full relative wheels bg-gray-950",
+          "mt-[-147px] xl:mt-[-294px] w-[2rem] h-[4.3rem] ml-[39px] xl:w-[4rem] xl:h-[8.6rem] xl:ml-[78px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-142px] md:mt-[-284px] w-[3.5rem] h-[6rem] mr-[226px] md:w-[7.0rem] md:h-[12rem] md:mr-[452px] rounded-full relative wheels bg-gray-950",
+          "mt-[-142px] xl:mt-[-284px] w-[3.5rem] h-[6rem] mr-[226px] xl:w-[7.0rem] xl:h-[12rem] xl:mr-[452px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 12,
         wheelTemplate1:
-          "mt-[-101.5px] md:mt-[-203px] w-[2.2rem] h-[2.4rem] ml-[91.5px] md:w-[4.4rem] md:h-[4.8rem] md:ml-[183px] rounded-full relative wheels bg-gray-950",
+          "mt-[-101.5px] xl:mt-[-203px] w-[2.2rem] h-[2.4rem] ml-[91.5px] xl:w-[4.4rem] xl:h-[4.8rem] xl:ml-[183px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-87px] md:mt-[-174px] w-[2.7rem] h-[2.8rem] mr-[128px] md:w-[5.4rem] md:h-[5.6rem] md:mr-[256px] rounded-full relative wheels bg-gray-950",
+          "mt-[-87px] xl:mt-[-174px] w-[2.7rem] h-[2.8rem] mr-[128px] xl:w-[5.4rem] xl:h-[5.6rem] xl:mr-[256px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 13,
         wheelTemplate1:
-          "mt-[-123px] md:mt-[-246px] w-[2.2rem] h-[4.2rem] ml-[21.5px] md:w-[4.4rem] md:h-[8.4rem] md:ml-[43px] rounded-full relative wheels bg-gray-950",
+          "mt-[-123px] xl:mt-[-246px] w-[2.2rem] h-[4.2rem] ml-[21.5px] xl:w-[4.4rem] xl:h-[8.4rem] xl:ml-[43px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-103px] md:mt-[-206px] w-[3.6rem] h-[5.6rem] mr-[205px] md:w-[7.2rem] md:h-[11.2rem] md:mr-[410px] rounded-full relative wheels bg-gray-950",
+          "mt-[-103px] xl:mt-[-206px] w-[3.6rem] h-[5.6rem] mr-[205px] xl:w-[7.2rem] xl:h-[11.2rem] xl:mr-[410px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 14,
         wheelTemplate1:
-          "mt-[-81px] md:mt-[-162px] w-[3.35rem] h-[3.8rem] ml-[62.5px] md:w-[6.7rem] md:h-[7.6rem] md:ml-[125px] rounded-full relative wheels bg-gray-950",
+          "mt-[-81px] xl:mt-[-162px] w-[3.35rem] h-[3.8rem] ml-[62.5px] xl:w-[6.7rem] xl:h-[7.6rem] xl:ml-[125px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-69px] md:mt-[-138px] w-[3.9rem] h-[4.1rem] mr-[121px] md:w-[7.8rem] md:h-[8.2rem] md:mr-[242px] rounded-full relative wheels bg-gray-950",
+          "mt-[-69px] xl:mt-[-138px] w-[3.9rem] h-[4.1rem] mr-[121px] xl:w-[7.8rem] xl:h-[8.2rem] xl:mr-[242px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 15,
         wheelTemplate1:
-          "mt-[-90px] md:mt-[-180px] w-[2.1rem] h-[3.6rem] ml-[70px] md:w-[4.2rem] md:h-[7.2rem] md:ml-[140px] rounded-full relative wheels bg-gray-950",
+          "mt-[-90px] xl:mt-[-180px] w-[2.1rem] h-[3.6rem] ml-[70px] xl:w-[4.2rem] xl:h-[7.2rem] xl:ml-[140px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-84px] md:mt-[-168px] w-[3.4rem] h-[4.1rem] mr-[202.5px] md:w-[6.8rem] md:h-[8.2rem] md:mr-[405px] rounded-full relative wheels bg-gray-950",
+          "mt-[-84px] xl:mt-[-168px] w-[3.4rem] h-[4.1rem] mr-[202.5px] xl:w-[6.8rem] xl:h-[8.2rem] xl:mr-[405px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 16,
         wheelTemplate1:
-          "mt-[-109px] md:mt-[-218px] w-[2.1rem] h-[3.6rem] ml-[55px] md:w-[4.2rem] md:h-[7.2rem] md:ml-[110px] rounded-full relative wheels bg-gray-950",
+          "mt-[-109px] xl:mt-[-218px] w-[2.1rem] h-[3.6rem] ml-[55px] xl:w-[4.2rem] xl:h-[7.2rem] xl:ml-[110px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-114px] md:mt-[-228px] w-[3.2rem] h-[4.1rem] mr-[212.5px] md:w-[6.4rem] md:h-[8.2rem] md:mr-[415px] rounded-full relative wheels bg-gray-950",
+          "mt-[-114px] xl:mt-[-228px] w-[3.2rem] h-[4.1rem] mr-[212.5px] xl:w-[6.4rem] xl:h-[8.2rem] xl:mr-[415px] rounded-full relative wheels bg-gray-950",
       },
       {
         car_id: 17,
         wheelTemplate1:
-          "mt-[-155px] md:mt-[-310px] w-[2.1rem] h-[3.6rem] ml-[70px] md:w-[4.2rem] md:h-[7.2rem] md:ml-[140px] rounded-full relative wheels bg-gray-950",
+          "mt-[-155px] xl:mt-[-310px] w-[2.1rem] h-[3.6rem] ml-[70px] xl:w-[4.2rem] xl:h-[7.2rem] xl:ml-[140px] rounded-full relative wheels bg-gray-950",
         wheelTemplate2:
-          "mt-[-146px] md:mt-[-292px] w-[5.7rem] h-[6.3rem] mr-[172.5px] md:w-[11.4rem] md:h-[12.6rem] md:mr-[345px] rounded-full relative wheels bg-gray-950",
+          "mt-[-146px] xl:mt-[-292px] w-[5.7rem] h-[6.3rem] mr-[172.5px] xl:w-[11.4rem] xl:h-[12.6rem] xl:mr-[345px] rounded-full relative wheels bg-gray-950",
       },
     ];
 
