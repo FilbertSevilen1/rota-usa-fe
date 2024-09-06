@@ -10,7 +10,7 @@ import banner4 from "../assets/dummy/banner/banner4.webp";
 import banner5 from "../assets/about/carrota.webp";
 import banner6 from "../assets/about/rota14.jpg";
 
-import gallery1 from "../assets/cars/carhonda4color1.webp";
+import gallery1 from "../assets/about/rota22.webp";
 import gallery2 from "../assets/about/rota2.webp";
 import gallery3 from "../assets/about/rotadriver.webp";
 import gallery4 from "../assets/dummy/banner/banner1.webp";
@@ -143,7 +143,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
-                  src={gallery15}
+                  src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -247,7 +247,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
-                  src={gallery1}
+                  src={gallery15}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -307,7 +307,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery15}
+                  src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -406,7 +406,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery1}
+                  src={gallery15}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -470,7 +470,7 @@ function Dashboard() {
              <div className="w-full flex gap-8 justify-between">
               <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery15}
+                  src={gallery1}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -582,7 +582,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery1}
+                  src={gallery15}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
