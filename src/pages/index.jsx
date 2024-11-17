@@ -33,6 +33,8 @@ import gallery20 from "../assets/about/rota18.jpg";
 import gallery21 from "../assets/about/rota19.jpg";
 import gallery22 from "../assets/about/rota20.jpg";
 
+import video1 from "../assets/video/video1.mp4"
+
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
 import Heading from "../components/base/Heading";
@@ -124,6 +126,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
+      
       <div className="w-full mt-16 mb-8 flex flex-col items-center">
         <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
           <div
@@ -644,6 +647,25 @@ function Dashboard() {
               </div>
             </div>
           </Carousel>
+        </div>
+        <div className="w-full mt-16 mb-8 flex flex-col items-center">
+          <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
+            <div
+              className="text-white text-4xl md:text-6xl font-bold"
+              data-aos="fade-up"
+              data-aos-once="true"
+            >
+              Videos
+            </div>
+
+            <div className="w-[360px] mt-12">
+              <video width="360" height="480px" controls>
+                <source src={video1} type="video/mp4"/>
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
