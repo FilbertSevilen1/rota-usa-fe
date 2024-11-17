@@ -149,7 +149,7 @@ function Dashboard() {
               </div>
               <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
-                  src={gallery16}
+                  src={gallery19}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -169,7 +169,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="md:w-[360px] md:h-[360px] shadow-md rounded-2xl  transition-all hover:scale-[105%]">
                 <img
-                  src={gallery19}
+                  src={gallery16}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -313,7 +313,7 @@ function Dashboard() {
               </div>
               <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery16}
+                  src={gallery19}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -335,7 +335,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery19}
+                  src={gallery16}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -478,7 +478,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery16}
+                  src={gallery19}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
@@ -502,7 +502,7 @@ function Dashboard() {
             <div className="w-full flex gap-8 justify-between">
               <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
-                  src={gallery19}
+                  src={gallery16}
                   className="w-full h-full object-cover rounded-2xl"
                 ></img>
               </div>
