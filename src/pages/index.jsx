@@ -649,7 +649,7 @@ function Dashboard() {
           </Carousel>
         </div>
         <div className="w-full mt-16 mb-8 flex flex-col items-center">
-          <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
+          <div className="w-11/12 md:w-10/12 flex flex-col justify-center">
             <div
               className="text-white text-4xl md:text-6xl font-bold"
               data-aos="fade-up"
@@ -658,8 +658,8 @@ function Dashboard() {
               Videos
             </div>
 
-            <div className="w-[360px] mt-12">
-              <video width="360" height="480px" controls>
+            <div className="w-full md:w-[360px] mt-12">
+              <video width="100%" height="480px" controls>
                 <source src={video1} type="video/mp4"/>
                 Your browser does not support the video tag.
               </video>
