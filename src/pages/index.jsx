@@ -33,7 +33,9 @@ import gallery20 from "../assets/about/rota18.jpg";
 import gallery21 from "../assets/about/rota19.jpg";
 import gallery22 from "../assets/about/rota20.jpg";
 
-import video1 from "../assets/video/video1.mp4"
+import video1 from "../assets/video/video1.mp4";
+import video2 from "../assets/video/video1.mp4";
+import video3 from "../assets/video/video1.mp4";
 
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
@@ -42,6 +44,27 @@ import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const navigate = useNavigate();
+
+  const [videos, setVideos] = useState([video1, video2, video3]);
+
+  const generateVideos = () => {
+    return videos.map((item, index) => {
+      return (
+        <div key={index} className="w-full md:w-[360px] h-[640px]">
+          <video
+            width="100%"
+            height="640px"
+            controls
+            className="rounded-xl"
+          >
+            <source src={item} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      );
+    });
+  };
+  
   const [imageDetails, setImageDetails] = useState(true);
   return (
     <div className="w-full flex flex-col page-background bg-scroll">
@@ -51,14 +74,14 @@ function Dashboard() {
         slide={false}
         className="h-96 md:h-[91.5vh] bg-black shadow-2xl"
       >
-         <div className="flex h-full items-center justify-center bg-black">
+        <div className="flex h-full items-center justify-center bg-black">
           <img
             loading="lazy"
             src={banner6}
             className="w-full h-full object-contain xl:object-cover object-bottom"
           ></img>
         </div>
-         <div className="flex h-full items-center justify-center bg-black">
+        <div className="flex h-full items-center justify-center bg-black">
           <img
             loading="lazy"
             src={gallery12}
@@ -126,7 +149,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      
+
       <div className="w-full mt-16 mb-8 flex flex-col items-center">
         <div className="w-11/12 md:w-10/12 flex flex-col justify-start">
           <div
@@ -392,7 +415,6 @@ function Dashboard() {
               </div>
             </div>
             <div className="w-full flex gap-8 justify-between">
-              
               <div className="w-1/2 h-[250px] shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery9}
@@ -470,7 +492,7 @@ function Dashboard() {
             className="h-[340px] block sm:hidden "
             indicators={false}
           >
-             <div className="w-full flex gap-8 justify-between">
+            <div className="w-full flex gap-8 justify-between">
               <div className="w-full h-[250px] bg-white shadow-md rounded-2xl transition-all hover:scale-[105%]">
                 <img
                   src={gallery1}
@@ -658,13 +680,15 @@ function Dashboard() {
               Videos
             </div>
 
-            <div className="w-full md:w-[360px] mt-12">
-              <video width="100%" height="480px" controls className="rounded-xl">
-                <source src={video1} type="video/mp4"/>
-                Your browser does not support the video tag.
-              </video>
-            </div>
-
+            <Carousel
+              data-aos="fade-up"
+              data-aos-once="true"
+              slide={false}
+              className="h-[640px] mt-16 bg-black rounded-xl p-4"
+              indicators={false}
+            >
+              {generateVideos()}
+            </Carousel>
           </div>
         </div>
       </div>
