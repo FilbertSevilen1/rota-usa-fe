@@ -57,7 +57,7 @@ function Dashboard() {
             controls
             className="rounded-xl"
           >
-            <source src={item} type="video/mp4" />
+            <source src={item} type="video/mp4"  className="h-[640px]" />
             Your browser does not support the video tag.
           </video>
         </div>
