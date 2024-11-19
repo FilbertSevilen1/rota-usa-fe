@@ -47,24 +47,77 @@ function Dashboard() {
 
   const [videos, setVideos] = useState([video1, video2, video3]);
 
-  const generateVideos = () => {
-    return videos.map((item, index) => {
-      return (
-        <div key={index} className="w-full md:w-[360px] h-[640px]">
-          <video
-            width="100%"
-            height="640px"
-            controls
-            className="rounded-xl"
-          >
-            <source src={item} type="video/mp4"  className="h-[640px]" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+  const generateVideoSlides = () => {
+    const slides = [];
+    const videosPerSlide = {
+      xl: 4,
+      md: 2,
+      sm: 1,
+    };
+
+    for (let i = 0; i < videos.length; i += 4) {
+      slides.push(
+        <>
+          <div key={i} className="justify-center gap-4 hidden xl:flex">
+            {videos.slice(i, videosPerSlide.xl).map((item, index) => (
+              <div
+                key={index}
+                className="w-full xl:w-1/4 md:w-1/2 sm:w-full"
+              >
+                <video
+                  width="100%"
+                  height="100%"
+                  controls
+                  className="rounded-xl object-contain max-h-[720px]"
+                >
+                  <source src={item} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ))}
+          </div>
+          <div key={i} className="justify-center gap-4 hidden md:flex xl:hidden">
+            {videos.slice(i, videosPerSlide.md).map((item, index) => (
+              <div
+                key={index}
+                className="w-full xl:w-1/4 md:w-1/2 sm:w-full"
+              >
+                <video
+                  width="100%"
+                  height="100%"
+                  controls
+                  className="rounded-xl object-contain max-h-[720px]"
+                >
+                  <source src={item} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ))}
+          </div>
+          <div key={i} className="justify-center gap-4 flex md:hidden">
+            {videos.slice(i, videosPerSlide.sm).map((item, index) => (
+              <div
+                key={index}
+                className="w-full xl:w-1/4 md:w-1/2 sm:w-full"
+              >
+                <video
+                  width="100%"
+                  height="100%"
+                  controls
+                  className="rounded-xl object-contain max-h-[720px]"
+                >
+                  <source src={item} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ))}
+          </div>
+        </>
       );
-    });
+    }
+    return slides;
   };
-  
+
   const [imageDetails, setImageDetails] = useState(true);
   return (
     <div className="w-full flex flex-col page-background bg-scroll">
@@ -684,10 +737,10 @@ function Dashboard() {
               data-aos="fade-up"
               data-aos-once="true"
               slide={false}
-              className="h-[640px] mt-16 bg-black rounded-xl p-4"
+              className="mt-16 bg-black rounded-xl p-4 max-h-[760px]"
               indicators={false}
             >
-              {generateVideos()}
+              {generateVideoSlides()}
             </Carousel>
           </div>
         </div>
