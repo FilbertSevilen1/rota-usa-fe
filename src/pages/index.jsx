@@ -34,8 +34,8 @@ import gallery21 from "../assets/about/rota19.jpg";
 import gallery22 from "../assets/about/rota20.jpg";
 
 import video1 from "../assets/video/video1.mp4";
-import video2 from "../assets/video/video1.mp4";
-import video3 from "../assets/video/video1.mp4";
+import video2 from "../assets/video/video2.mp4";
+import video3 from "../assets/video/video3.mp4";
 
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
