@@ -36,6 +36,7 @@ import gallery22 from "../assets/about/rota20.jpg";
 import video1 from "../assets/video/video1.mp4";
 import video2 from "../assets/video/video2.mp4";
 import video3 from "../assets/video/video3.mp4";
+import video4 from "../assets/video/video4.mp4";
 
 import ProductCard from "../components/ProductCard";
 import SectionProduct from "../components/SectionProduct";
@@ -45,66 +46,30 @@ import { useNavigate } from "react-router-dom";
 function Dashboard() {
   const navigate = useNavigate();
 
-  const [videos, setVideos] = useState([video1, video2, video3]);
-
+  const [videos, setVideos] = useState([video4, video3, video2, video1]);
+  const slides = [];
   const generateVideoSlides = () => {
-    const slides = [];
+
     const videosPerSlide = {
       xl: 4,
       md: 2,
       sm: 1,
     };
 
-    for (let i = 0; i < videos.length; i += 4) {
+    for (let i = 0; i < videos.length; i += 1) {
       slides.push(
         <>
-          <div key={i} className="justify-center gap-4 hidden xl:flex">
-            {videos.slice(i, videosPerSlide.xl).map((item, index) => (
+          <div key={i} className="justify-center gap-4 flex">
+            {videos.slice(i, i+1).map((item, index) => (
               <div
                 key={index}
-                className="w-full xl:w-1/4 md:w-1/2 sm:w-full"
+                className="w-full"
               >
                 <video
                   width="100%"
                   height="100%"
                   controls
-                  className="rounded-xl object-contain max-h-[720px]"
-                >
-                  <source src={item} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            ))}
-          </div>
-          <div key={i} className="justify-center gap-4 hidden md:flex xl:hidden">
-            {videos.slice(i, videosPerSlide.md).map((item, index) => (
-              <div
-                key={index}
-                className="w-full xl:w-1/4 md:w-1/2 sm:w-full"
-              >
-                <video
-                  width="100%"
-                  height="100%"
-                  controls
-                  className="rounded-xl object-contain max-h-[720px]"
-                >
-                  <source src={item} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            ))}
-          </div>
-          <div key={i} className="justify-center gap-4 flex md:hidden">
-            {videos.slice(i, videosPerSlide.sm).map((item, index) => (
-              <div
-                key={index}
-                className="w-full xl:w-1/4 md:w-1/2 sm:w-full"
-              >
-                <video
-                  width="100%"
-                  height="100%"
-                  controls
-                  className="rounded-xl object-contain max-h-[720px]"
+                  className="rounded-xl object-contain h-[720px]"
                 >
                   <source src={item} type="video/mp4" />
                   Your browser does not support the video tag.
@@ -115,6 +80,7 @@ function Dashboard() {
         </>
       );
     }
+
     return slides;
   };
 
