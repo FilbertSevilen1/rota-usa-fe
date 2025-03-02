@@ -13,7 +13,7 @@ import banner6 from "../assets/about/rota14.jpg";
 import gallery1 from "../assets/about/rota22.webp";
 import gallery2 from "../assets/about/rota2.webp";
 import gallery3 from "../assets/about/rotadriver.webp";
-import gallery4 from "../assets/dummy/banner/banner1.webp";
+import gallery4 from "../assets/about/rota29.jpg";
 import gallery5 from "../assets/about/rota3.webp";
 import gallery6 from "../assets/about/rota4.webp";
 import gallery7 from "../assets/about/rota5.webp";
