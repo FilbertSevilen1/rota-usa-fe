@@ -92,7 +92,7 @@ import wheel76 from "../../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLI
 import wheel77 from "../../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIP STREAM_15X7_40_5X114.3_73_SATIN BLACK/plain/DSCF7567nobg.webp";
 import wheel78 from "../../assets/wheels/2024 02 16 - photo rota/SLIP STREAM/SLIPSTREAM R_18X9.5_40_5X120_64.1_MAG BLK/plain/DSCF8591nobg.webp";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Heading from "../../components/base/Heading";
 import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -114,24 +114,18 @@ function Wheels() {
 
   useEffect(() => {
     getDataAllWheels();
-  }, []);
+  }, [getDataAllWheels]);
 
-  const getDataAllWheels = () => {
+  const getDataAllWheels = useCallback(() => {
     setLoading(true);
     let query = "";
-    if (searchInput || filterInput || sortInput) {
-      query = "?";
-    }
+    if (searchInput || filterInput || sortInput) query = "?";
 
-    if (searchInput) {
-      query = query + "_name=" + searchInput;
-    }
+    if (searchInput) query += "_name=" + searchInput;
 
     if (filterInput) {
-      if (searchInput) {
-        query += "&";
-      }
-      query += query + "_filter=" + filterInput;
+      if (searchInput) query += "&";
+      query += "_filter=" + filterInput;
     }
 
     Axios.get(API_URL + "/wheel" + query)
@@ -140,29 +134,15 @@ function Wheels() {
           setListWheel(res.data);
           getMaxPage(res.data);
         } else {
-          toast.error("Failed to Get Data", {
-            position: "bottom-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            progress: undefined,
-            theme: "dark",
-          });
+          toast.error("Failed to Get Data", { position: "bottom-center", theme: "dark" });
         }
         setLoading(false);
       })
-      .catch((error) => {
-        toast.error("Failed to Get Data", {
-          position: "bottom-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          progress: undefined,
-          theme: "dark",
-        });
+      .catch(() => {
+        toast.error("Failed to Get Data", { position: "bottom-center", theme: "dark" });
         setLoading(false);
       });
-  };
+  }, [searchInput, filterInput, sortInput]);
 
   const getMaxPage = (item) => {
     console.log(item);
@@ -193,19 +173,16 @@ function Wheels() {
     }
 
     if (printWheel) {
-      return printWheel.map((item, index) => {
-        if ((page - 1) * 10 < index + 1 && index + 1 <= page * 10)
-          return (
-            <div onClick={() => gotoWheelDetails(item)}>
-              <ProductCard
-                key={index}
-                productImage={item.wheel_details_image}
-                productName={item.wheel_details_name}
-                // productPrice={item.wheelPrice}
-              ></ProductCard>
-            </div>
-          );
-      });
+      return printWheel
+        .filter((_, index) => (page - 1) * 10 < index + 1 && index + 1 <= page * 10)
+        .map((item, index) => (
+          <div key={index} onClick={() => gotoWheelDetails(item)}>
+            <ProductCard
+              productImage={item.wheel_details_image}
+              productName={item.wheel_details_name}
+            />
+          </div>
+        ));
     }
   };
 
@@ -231,12 +208,6 @@ function Wheels() {
 
   const handleSearchInput = (event) => {
     setSearchInput(event.target.value);
-  };
-  const handleFilterInput = (event) => {
-    setSortInput(event.target.value);
-  };
-  const handleSortInput = (event) => {
-    setFilterInput(event.target.value);
   };
 
   return (
