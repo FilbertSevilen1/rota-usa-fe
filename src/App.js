@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css'; 
 
 import React, { useEffect } from 'react';
@@ -32,7 +32,7 @@ function App() {
       <Route path="/wheels/:id" element={<WheelDetails />}></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/inventory" element={<Inventory />}></Route>
-
+      <Route path="/index2.html" element={<Navigate to="/" replace />} />
       <Route path="/inventory/upload" element={<UploadInventory />}></Route>
     </Routes>
     <Footer>
