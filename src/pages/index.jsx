@@ -48,41 +48,41 @@ function Dashboard() {
 
   const [videos, setVideos] = useState([video4, video3, video2, video1]);
   const slides = [];
-  const generateVideoSlides = () => {
+  // const generateVideoSlides = () => {
 
-    const videosPerSlide = {
-      xl: 4,
-      md: 2,
-      sm: 1,
-    };
+  //   const videosPerSlide = {
+  //     xl: 4,
+  //     md: 2,
+  //     sm: 1,
+  //   };
 
-    for (let i = 0; i < videos.length; i += 1) {
-      slides.push(
-        <>
-          <div key={i} className="justify-center gap-4 flex">
-            {videos.slice(i, i+1).map((item, index) => (
-              <div
-                key={index}
-                className="w-full"
-              >
-                <video
-                  width="100%"
-                  height="100%"
-                  controls
-                  className="rounded-xl object-contain h-[720px]"
-                >
-                  <source src={item} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            ))}
-          </div>
-        </>
-      );
-    }
+  //   for (let i = 0; i < videos.length; i += 1) {
+  //     slides.push(
+  //       <>
+  //         <div key={i} className="justify-center gap-4 flex">
+  //           {videos.slice(i, i+1).map((item, index) => (
+  //             <div
+  //               key={index}
+  //               className="w-full"
+  //             >
+  //               <video
+  //                 width="100%"
+  //                 height="100%"
+  //                 controls
+  //                 className="rounded-xl object-contain h-[720px]"
+  //               >
+  //                 <source src={item} type="video/mp4" />
+  //                 Your browser does not support the video tag.
+  //               </video>
+  //             </div>
+  //           ))}
+  //         </div>
+  //       </>
+  //     );
+  //   }
 
-    return slides;
-  };
+  //   return slides;
+  // };
 
   const [imageDetails, setImageDetails] = useState(true);
   return (
@@ -689,7 +689,7 @@ function Dashboard() {
             </div>
           </Carousel>
         </div>
-        <div className="w-full mt-16 mb-8 flex flex-col items-center">
+        {/* <div className="w-full mt-16 mb-8 flex flex-col items-center">
           <div className="w-11/12 md:w-10/12 flex flex-col justify-center">
             <div
               className="text-white text-4xl md:text-6xl font-bold"
@@ -709,7 +709,7 @@ function Dashboard() {
               {generateVideoSlides()}
             </Carousel>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
